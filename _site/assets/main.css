@@ -1,0 +1,50 @@
+html {
+	font-size: 15px; /* px significa 'pixels': o tamanho da fonte base é agora de 10 pixels */ 
+	font-family: 'Menlo', monospace; /* este deve ser o nome da fonte que você obteve no Google Fonts */ 
+	background-color: #111;
+	color: white;
+}
+
+
+body {
+	width: 1000px;
+	margin: 0 auto;
+	background-color: #111; /*#00a86b */
+	padding: 0 20px 20px 20px;
+	border: 5px solid #00a86b;
+}
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+	margin: 0;
+	padding: 20px 0;
+	color: white; /*anterior: #00539F*/
+	text-shadow: 3px 3px 1px black;*/
+}
+
+h5 {
+	font-size: 20px;
+	text-align: center;
+}
+
+p, li {
+	font-size: 14px;
+	line-height: 2;
+	letter-spacing: 1px;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+}
+
+ul {
+	text-align: left;
+	padding-left: 0px
+}
+
+h2 {
+	text-align: left;
+	padding-left: 40px;
+}

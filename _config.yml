@@ -1,0 +1,8 @@
+name: My Jekyll Website
+
+title: EMCA Website # Definindo o title
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/

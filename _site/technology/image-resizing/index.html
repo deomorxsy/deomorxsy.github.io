@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+
+		<link href='/assets/main.css' rel='stylesheet' type='text/css'>
+		<link href="/assets/style.css" rel="stylesheet">
+
+		<title>Image Resizing | EMCA Website</title>
+	</head>
+
+	<style>
+		a {
+		color: #c9cacc;
+	}
+	</style>
+
+	<body>
+		
+		<h1 id="redimensionando-imagens">Redimensionando Imagens</h1>
+
+<p>Imagens podem ficar desproporcionais dependendo da resolução e proporção do lugar onde ela aparecerá na internet. Usaremos bash para escrever um código que redimensiona a imagem baseado na resolução desejada.</p>
+
+<p>Requisitos:</p>
+
+<ul>
+  <li>Comandos básicos de linha de comando / Bash</li>
+  <li>Formatos de Imagem</li>
+  <li>Estrutura básica de diretórios</li>
+  <li>Edição básica de imagem, crop</li>
+</ul>
+
+<p>Vamos tomar como exemplo o <strong>Stories do Instagram</strong>, onde a resolução é sempre <strong>1080 x 1920</strong> e sua proporção <strong>9:16</strong>.</p>
+
+<p><em>PS: é prudente que antes de seguir os passos à seguir você <strong>edite</strong> a imagem que você quer o mais próximo da proporção 9:16, já que o script apenas redimensiona, e não <a href="https://en.wikipedia.org/wiki/Cropping_(image)">cropa</a>.</em></p>
+
+<p>Podemos então construir um pequeno script pela linha de comando que vai redimensionar as resoluções da imagem que você quer upar.</p>
+
+<p>Primeiramente, vá até o diretório onde as imagens que você quer redimensionar estão, crie a pasta de destino após o processo (que no caso é <strong>final</strong>), e o arquivo do script <strong>arquivo.sh</strong> com os comandos abaixo</p>
+
+<p><img src="https://i.imgur.com/iJBSyjm.jpg" alt="" /></p>
+
+<p>Abra o arquivo .sh no seu editor de código, e crie uma variável l1. O resultado do ls(list) será uma String guardada na variável l1 (dentro dos apóstrofos, entre parênteses). O formato no nome de todas as imagens devem ser o mesmo (.jpg ou .png); edite retirando todos aqueles nomes de arquivo que não são imagens ou que você não quer.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
+
+<span class="nv">l1</span><span class="o">=(</span><span class="s1">'cole aqui o código'</span><span class="o">)</span>
+
+<span class="k">for </span>l1 <span class="k">in</span> <span class="k">*</span>.jpg<span class="p">;</span> <span class="k">do </span>convert <span class="nv">$l1</span> <span class="nt">-resize</span> 1080x1920! final/<span class="nv">$l1</span><span class="p">;</span> <span class="k">done</span></code></pre></figure>
+
+<p>Acima usamos o <strong>For Loop</strong> para indicar que todas as imagens .jpg devem ser convertidas. O comando convert chama o programa Magick para redimensionar todas as imagens que estão na variável l1, jogando a conversão na pasta final, com todas as imagens com seus respectivos nomes (como estavam em l1).</p>
+<p>Por fim, rode o programa com</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sh ./script.sh </code></pre></figure>
+
+<p>Confira o arquivo do código no <a href="http://github.com/deomorxsy">repositório github</a></p>
+
+
+	</body>
+</html>
