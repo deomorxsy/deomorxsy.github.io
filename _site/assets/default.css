@@ -7,7 +7,7 @@ html {
 
 
 body {
-	width: 1000px;
+	width: 950px;
 	margin: 0 auto;
 	background-color: #111; /*#00a86b */
 	padding: 0 20px 20px 20px;
@@ -28,10 +28,20 @@ h5 {
 	text-align: center;
 }
 
-p, li {
+p {
 	font-size: 14px;
 	line-height: 2;
 	letter-spacing: 1px;
+	width: 700px;
+	padding-left: 120px;
+}
+
+li {
+	font-size: 14px;
+	line-height: 2;
+	letter-spacing: 1px;
+	margin-left: 60px;
+	margin-right: 0px;
 }
 
 img {
@@ -41,10 +51,11 @@ img {
 
 ul {
 	text-align: left;
-	padding-left: 0px
+	padding-left: 90px;
 }
 
 h2 {
 	text-align: left;
 	padding-left: 40px;
 }
+

@@ -1,6 +1,6 @@
 ---
 layout: index
-title: Home
+title: Yare Yare ~/.ðÐ...
 ---
 
 # {{page.title}}
@@ -35,6 +35,7 @@ Temos como exemplo os seguintes filmes com Kaiju:
 - Ghidorah the Three Headed Monster (1964)
 - Gamera (1965)
 
+[my blog](/blog)
 
 <ul>
   {% assign mypages = site.pages | sort: "order" %}
