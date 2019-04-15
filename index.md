@@ -24,18 +24,9 @@ I also wrote my thoughts on Twitter.
 
 ## Projects
 
-Kaijū (怪獣, kaijū?) é uma palavra japonesa que significa "besta estranha", "animal incomum", mas que costuma ser traduzida como "monstro". Especificamente, é usada para se referir a um gênero de tokusatsu, que são filmes de efeitos especiais, normalmente de heróis ou monstros. Termos relacionados incluem "kaiju eiga (怪獣映画 ? filme de monstro)", um filme com kaiju, "kaijin" (referindo-se a monstros vagamente humanóides) e daikaijū (大怪獣? monstro grande), especificamente se referindo a uma variação maior de monstro.
+- [website](deomorxsy.github.io/blog)
 
-Temos como exemplo os seguintes filmes com Kaiju:
 
-- Gojira (1954)
-- Rodan (1956)
-- Varan the Unbelievable (1958)
-- Mothra (1961)
-- Ghidorah the Three Headed Monster (1964)
-- Gamera (1965)
-
-[my blog](/blog)
 
 <ul>
   {% assign mypages = site.pages | sort: "order" %}

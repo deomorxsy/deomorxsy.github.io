@@ -59,3 +59,12 @@ h2 {
 	padding-left: 40px;
 }
 
+/*========= Mobile view test =========*/
+
+@media (max-width: 320px) {
+	
+	/* adicionar aqui os novos estilos para mobile */
+	.container {
+		width: 96%;
+	}
+}
