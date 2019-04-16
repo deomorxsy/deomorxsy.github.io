@@ -61,7 +61,7 @@ h2 {
 
 /*========= Mobile view test =========*/
 
-@media (max-width: 220px) {
+@media (max-width: 720px) {
 	
 	/* adicionar aqui os novos estilos para mobile */
 	.container {
