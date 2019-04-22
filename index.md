@@ -6,12 +6,14 @@ title: Yare Yare ~/.ðÐ...
 # {{page.title}}
 ![banana](images/kong1.jpg)
 ## About
+
 I am deomorxsy, a self-taught programmer.
 Find me training in Github, Codewars, URIOnlineJudge, and HackerRank. 
 I also wrote my thoughts on Twitter.
 
-## Latest posts
+## Blog
 
+#### Latest posts
 <ul class="myposts">
 {% for post in site.posts limit: 8%}
     <ul>

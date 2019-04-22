@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset='utf-8'>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 		<link href='/assets/default.css' rel='stylesheet' type='text/css'>
 		<link href="/assets/highlighter.css" rel="stylesheet">
@@ -14,11 +14,21 @@
 		a {
 		color: #c9cacc;
 	}
+
+	@media (max-width: 300px) {
+	h1 {
+		font-size: 36px;
+	}
+	li {
+		display: block;
+		padding: 5px;
+	}
+	
 	</style>
 
 	<body>
-		
-		<h1 id="redimensionando-imagens">Redimensionando Imagens</h1>
+		<header>
+			<h1 id="redimensionando-imagens">Redimensionando Imagens</h1>
 
 <p>Imagens podem ficar desproporcionais dependendo da resolução e proporção do lugar onde ela aparecerá na internet. Usaremos bash para escrever um código que redimensiona a imagem baseado na resolução desejada.</p>
 
@@ -56,6 +66,6 @@
 
 <p>Confira o arquivo do código no <a href="http://github.com/deomorxsy">repositório github</a></p>
 
-
+		</header>
 	</body>
 </html>
