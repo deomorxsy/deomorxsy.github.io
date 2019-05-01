@@ -54,52 +54,12 @@ h2 {
 	padding-left: 20px;
 }
 
-@media (min-width: 500px) {
-	body {
-		max-width: 430px;
-		padding: 20px;
-		margin: 0 auto;
-		font-size: 15px;
-
-	}
-
-	p {
-		font-size: 15px;
-	}
-	
-	a {
-		font-size: 15px;
-	}
-
-	h1 {
-		font-size: 40px;
-		text-align: center;
-		margin: 0;
-		padding: 20px 0px 0px 0px;
-		color: white; /*anterior: #00539F*/
-		text-shadow: 3px 3px 1px black;*/
-	}
-
-	img {
-		max-width: 415px;
-		margin: 40px 0px 0px 0px;
-		border: 7px solid white;
-		border-radius: 20px;
-    }
-	}
-
-	li {
-		display: block;
-		padding: 5px;
-	}
-}
 @media (max-width: 500px) {
 	body {
-		max-width: 430px;
 		padding: 20px;
 		margin: 0 auto;
 		font-size: 15px;
-
+		background: #ff0000;
 	}
 
 	p {
