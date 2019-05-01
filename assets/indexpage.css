@@ -54,7 +54,7 @@ h2 {
 	padding-left: 20px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
 	body {
 		padding: 20px;
 		margin: 0 auto;
