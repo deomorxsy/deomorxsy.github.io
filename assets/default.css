@@ -11,7 +11,7 @@ body {
 	margin: 0 auto;
 	background-color: #111; /*#00a86b */
 	padding: 0 20px 20px 20px;
-	/*border: 5px solid #00a86b;*/
+	border: 5px solid #00a86b;
 }
 
 h1 {

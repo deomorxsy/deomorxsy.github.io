@@ -5,22 +5,15 @@ html {
 	color: white;
 }
 
-
 body {
-	width: 550px;
+	font-size: 100%;
 	margin: 0 auto;
-	background-color: #111; /*#00a86b */
 	padding: 0 70px 20px 20px;
 	border: 7px solid #00a86b;
 }
 
 h1 {
-	font-size: 60px;
-	text-align: center;
-	margin: 0;
-	padding: 20px 0;
-	color: white; /*anterior: #00539F*/
-	text-shadow: 3px 3px 1px black;*/
+	font-size: 2.5em;
 }
 
 h5 {
