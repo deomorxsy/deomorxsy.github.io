@@ -14,6 +14,9 @@ body {
 
 h1 {
 	font-size: 2.5em;
+	text-align: center;
+	color: white;
+	text-shadow: 3px 3px 1px black;
 }
 
 h5 {
@@ -47,41 +50,42 @@ h2 {
 	padding-left: 20px;
 }
 
-@media (max-width: 400px) {
+@media screen and (max-width: 50em) {
 	body {
-		padding: 20px;
-		margin: 0 auto;
-		font-size: 15px;
 		background: #ff0000;
 	}
 
-	p {
-		font-size: 15px;
-	}
-	
-	a {
-		font-size: 15px;
-	}
-
 	h1 {
-		font-size: 40px;
-		text-align: center;
-		margin: 0;
-		padding: 20px 0px 0px 0px;
-		color: white; /*anterior: #00539F*/
-		text-shadow: 3px 3px 1px black;*/
+		font-size: 2em;
 	}
 
 	img {
-		max-width: 415px;
-		margin: 40px 0px 0px 0px;
+		max-width: 400px;
+		margin: center;
 		border: 7px solid white;
 		border-radius: 20px;
-    }
+	}
+}
+
+@media screen and (max-width: 40em) {
+	h1 {
+		font-size: 2em;
 	}
 
-	li {
-		display: block;
-		padding: 5px;
+	h2 {
+		font-size: 1.2em;
+	}
+
+	img {
+		max-width:320px;
+	}
+
+@media screen and (max-width: 30em) {
+	h1 {
+		font-size: 1.6em;
+	}
+
+	img {
+
 	}
 }
