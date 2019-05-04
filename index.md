@@ -4,7 +4,8 @@ title: Yare Yare ~/.ðÐ...
 ---
 
 # {{page.title}}
-![banana](images/kong1.jpg)
+<img class="product-img" src="images/kong1.jpg" alt="banana" />
+
 ## About
 
 I am deomorxsy, a self-taught programmer.
@@ -13,7 +14,7 @@ I am deomorxsy, a self-taught programmer.
 
 ## Blog
 
-#### Latest posts
+#### [Latest posts](localhost:4000/blog)
 <ul class="myposts">
 {% for post in site.posts limit: 8%}
     <ul>
