@@ -10,6 +10,7 @@ body {
 	margin: 0 auto;
 	padding: 0 70px 20px 20px;
 	border: 7px solid #00a86b;
+	line-height: 1.725;
 }
 
 h1 {
@@ -19,6 +20,12 @@ h1 {
 	text-shadow: 3px 3px 1px black;
 }
 
+h2 {
+	font-size: 1.6em;
+	text-align: left;
+	padding-left: 20px;
+}
+
 h5 {
 	font-size: 20px;
 	text-align: center;
@@ -26,7 +33,6 @@ h5 {
 
 p, li {
 	font-size: 15px;
-	line-height: 2;
 	letter-spacing: 1px;
 }
 
@@ -42,12 +48,9 @@ img {
 
 ul {
 	text-align: left;
-	padding-left: 0px
-}
-
-h2 {
-	text-align: left;
-	padding-left: 20px;
+	padding: 0;
+	margin: 3px;
+	color: #666666;
 }
 
 @media screen and (max-width: 50em) {
@@ -65,13 +68,13 @@ h2 {
 		border: 7px solid white;
 		border-radius: 20px;
 	}
+
+	p {
+		line-height: 1.600;
+	}
 }
 
 @media screen and (max-width: 40em) {
-	h1 {
-		font-size: 2em;
-	}
-
 	h2 {
 		font-size: 1.2em;
 	}
@@ -87,5 +90,12 @@ h2 {
 
 	img {
 
+	}
+}
+
+@media screen and (min-width: 40.5em) {
+	.product-img {
+		width: 50%;
+		float: left;
 	}
 }

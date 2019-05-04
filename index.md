@@ -8,8 +8,8 @@ title: Yare Yare ~/.ðÐ...
 ## About
 
 I am deomorxsy, a self-taught programmer.
-Find me training in Github, Codewars, URIOnlineJudge, and HackerRank. 
-I also wrote my thoughts on Twitter.
+<p>Find me training in Github, Codewars, URIOnlineJudge, and HackerRank. 
+I also wrote my thoughts on Twitter.</p>
 
 ## Blog
 
