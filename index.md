@@ -8,8 +8,8 @@ title: Yare Yare ~/.ðÐ...
 ## About
 
 I am deomorxsy, a self-taught programmer.
-<p>Find me training in Github, Codewars, URIOnlineJudge, and HackerRank. 
-I also wrote my thoughts on Twitter.</p>
+<p>I also wrote my thoughts on Twitter.</p>
+<p>Find me training in Github, Codewars, URIOnlineJudge, and HackerRank.</p>
 
 ## Blog
 
@@ -18,7 +18,7 @@ I also wrote my thoughts on Twitter.</p>
 {% for post in site.posts limit: 8%}
     <ul>
     <span class="postDate">{{ post.date | date: "%b-%-d-%Y" }}</span>
-    <a href="{{ post.url }}">{{ post.title }}</a>
+    <a href="{{ post.url }}" class="adatepost">{{ post.title }}</a>
     </ul>
 {% endfor %}
 </ul>
