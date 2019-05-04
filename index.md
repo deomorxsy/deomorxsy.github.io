@@ -40,8 +40,19 @@ I am deomorxsy, a self-taught programmer.
 
 O mais famoso Kaiju é o [Godzilla](https://pt.wikipedia.org/wiki/Godzilla).
 
-últimos posts:
+## Quotes
 
-- Hello, World!()
+<section class="quotes">
+	<span class="h1">Quotes</span>
+	<blockquote>
+		<strong>"If you want to master something, teach it."</strong>
+		<p>— Richard Feynman</p>
+	</blockquote>
+</section>
 
-MEu gatinho é um flerkin muito mal humorado.
+⏤ Richard Feynman
+> últimos posts:
+
+> Hello, World!()
+
+>MEu gatinho é um flerkin muito mal humorado.
