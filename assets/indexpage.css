@@ -130,6 +130,10 @@ hr {
 	margin-bottom: 35px;
 	width: 90px;
 }
+.mydivbars {
+	font-size: 15px;
+	letter-spacing: -5px;
+}
 
 @media screen and (max-width: 50em) {
 	body {

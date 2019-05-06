@@ -27,18 +27,7 @@ I am deomorxsy, a self-taught programmer.
 
 ## Projects
 
-- [website](deomorxsy.github.io/blog)
-
-
-
-<ul>
-  {% assign mypages = site.pages | sort: "order" %}
-    {% for page in mypages %}
-    <li><a href="{{ page.url | absolute_url }}">{{ page.title }}</a></li>
-    {% endfor %}
-</ul>
-
-O mais famoso Kaiju é o [Godzilla](https://pt.wikipedia.org/wiki/Godzilla).
+- [Website <span class="mydivbars">///</span> **WIP**]({{ site.post }})
 
 ## Quotes
 
@@ -54,7 +43,6 @@ O mais famoso Kaiju é o [Godzilla](https://pt.wikipedia.org/wiki/Godzilla).
 	</blockquote>
 </section>
 
-⏤ Richard Feynman
 > últimos posts:
 
 > Hello, World!()
