@@ -1,0 +1,9 @@
+#footer .footer-left {
+  height: 20px;
+  line-height: 20px;
+}
+
+#footer .footer-right nav ul{
+	display: inline-block;
+	padding: 2px 4px;
+}

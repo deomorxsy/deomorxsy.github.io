@@ -14,7 +14,7 @@ I am deomorxsy, a self-taught programmer.
 
 ## Blog
 
-#### [Latest posts](localhost:4000/blog)
+#### [recent posts](localhost:4000/blog)
 <ul class="myposts">
 {% for post in site.posts limit: 8%}
     <ul>
@@ -48,6 +48,10 @@ O mais famoso Kaiju é o [Godzilla](https://pt.wikipedia.org/wiki/Godzilla).
 		<strong>"If you want to master something, teach it."</strong>
 		<p>— Richard Feynman</p>
 	</blockquote>
+	<blockquote>
+		<strong>There is nothing to writing. All you do is sit down at a typewriter and bleed.</strong>
+    	<p>— Ernest Hemingway</p>
+	</blockquote>
 </section>
 
 ⏤ Richard Feynman
@@ -56,3 +60,5 @@ O mais famoso Kaiju é o [Godzilla](https://pt.wikipedia.org/wiki/Godzilla).
 > Hello, World!()
 
 >MEu gatinho é um flerkin muito mal humorado.
+
+

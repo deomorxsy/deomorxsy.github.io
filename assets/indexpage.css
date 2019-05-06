@@ -19,6 +19,7 @@ h1 {
 	text-align: center;
 	color: white;
 	text-shadow: 3px 3px 1px black;
+	margin: 50px;
 }
 
 h2 {
@@ -63,6 +64,37 @@ ul {
 	line-height: 26px;
 	border-left: 1px solid;
 	padding-left: 15px;
+}
+
+.menu{
+	text-align: center;
+	margin-bottom: 5em;
+	padding: 40px;
+}
+.menu-item {
+	border-bottom:0;
+	color:#FAFAFA;
+	padding:2px 0;
+	margin-left:10px;
+	margin-right:10px;
+	display:inline-block;
+}
+
+.menu-item.-home {
+	font-weight:700
+	}
+.menu-item.-active {
+	color:#FAFAFA;
+	border-bottom:2px solid #FAFAFA;
+}
+.menu-item:active,.menu-item:hover {
+	background:0 0;
+	color:#ff0000;
+	outline:0;
+}
+.menu-item:focus {
+	color:#00a86b;
+	background:#FAFAFA; /*#ff0000; red*/
 }
 
 @media screen and (max-width: 50em) {
