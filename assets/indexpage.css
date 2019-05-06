@@ -19,7 +19,7 @@ h1 {
 	text-align: center;
 	color: white;
 	text-shadow: 3px 3px 1px black;
-	margin: 50px;
+	margin: 10px;
 }
 
 h2 {
@@ -95,6 +95,40 @@ ul {
 .menu-item:focus {
 	color:#00a86b;
 	background:#FAFAFA; /*#ff0000; red*/
+}
+
+
+summary {
+	display:list-item
+}
+summary {
+	-ms-touch-action:manipulation;
+	touch-action:manipulation
+}
+
+.summary {
+	-webkit-hyphens:none;
+	-ms-hyphens:none;
+	hyphens:none;
+	font-style:italic;
+	color:#777;
+	font-family:"pt-serif",serif;
+	margin-bottom:1.5em;
+	margin-top: 1.5em;
+	line-height:1.45;
+	text-align:center
+}
+.summary p {
+	margin-top: 1.5em
+}
+
+hr {
+	box-sizing: content-box;
+	overflow: visible;
+	border: 1;
+	margin-top: 35px;
+	margin-bottom: 35px;
+	width: 90px;
 }
 
 @media screen and (max-width: 50em) {
