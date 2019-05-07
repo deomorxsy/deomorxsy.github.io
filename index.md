@@ -14,7 +14,7 @@ I am deomorxsy, a self-taught programmer.
 
 ## Blog
 
-#### [recent posts](localhost:4000/blog)
+#### [recent posts]({{ site.blog }})
 <ul class="myposts">
 {% for post in site.posts limit: 8%}
     <ul>
