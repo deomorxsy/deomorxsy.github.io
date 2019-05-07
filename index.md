@@ -29,24 +29,4 @@ I am deomorxsy, a self-taught programmer.
 
 - [Website <span class="mydivbars">///</span> **WIP**]({{ site.baseurl }})
 
-## Quotes
-
-<section class="quotes">
-	<span class="h1">Quotes</span>
-	<blockquote>
-		<strong>"If you want to master something, teach it."</strong>
-		<p>— Richard Feynman</p>
-	</blockquote>
-	<blockquote>
-		<strong>There is nothing to writing. All you do is sit down at a typewriter and bleed.</strong>
-    	<p>— Ernest Hemingway</p>
-	</blockquote>
-</section>
-
-> últimos posts:
-
-> Hello, World!()
-
->MEu gatinho é um flerkin muito mal humorado.
-
 

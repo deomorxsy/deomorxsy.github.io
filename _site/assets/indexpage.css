@@ -3,13 +3,20 @@ html {
 	font-family: 'Menlo', 'Meslo LG', monospace; /* este deve ser o nome da fonte que você obteve no Google Fonts */ 
 	background-color: #111;
 	color: white;
+	box-sizing: border-box;
+	cursor: default;
+	border: 7px solid #00a86b;/*#e6e6e6;*/
+    border-top-width: 7px;
+    border-right-width: 7px;
+    border-bottom-width: 7px;
+    border-left-width: 7px;
+    min-height: 100vh;
 }
 
 body {
 	font-size: 100%;
 	margin: 0 auto;
 	padding: 0 70px 20px 20px;
-	border: 7px solid #00a86b;
 	line-height: 1.500;
 	font-family: 'Menlo', monospace;
 }
@@ -19,7 +26,9 @@ h1 {
 	text-align: center;
 	color: white;
 	text-shadow: 3px 3px 1px black;
-	margin: 10px;
+	margin-bottom: 2em;
+	margin-top: 2em;
+
 }
 
 h2 {
@@ -68,7 +77,7 @@ ul {
 
 .menu{
 	text-align: center;
-	margin-bottom: 5em;
+	margin-bottom: -2em;
 	padding: 40px;
 }
 .menu-item {
