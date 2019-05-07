@@ -14,7 +14,7 @@ I am deomorxsy, a self-taught programmer.
 
 ## Blog
 
-#### [recent posts]({{ site.blog }})
+#### [recent posts]({{ site.baseurl }}/blog/)
 <ul class="myposts">
 {% for post in site.posts limit: 8%}
     <ul>
@@ -27,7 +27,7 @@ I am deomorxsy, a self-taught programmer.
 
 ## Projects
 
-- [Website <span class="mydivbars">///</span> **WIP**]({{ site.post }})
+- [Website <span class="mydivbars">///</span> **WIP**]({{ site.baseurl }})
 
 ## Quotes
 
