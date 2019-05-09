@@ -2,9 +2,9 @@
 <html>
 	<head>
 		<meta charset='utf-8'>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
 
-		<link href='/assets/default.css' rel='stylesheet' type='text/css'>
+		<link href='/assets/indexpage.css' rel='stylesheet' type='text/css'>
 		<link href="/assets/highlighter.css" rel="stylesheet">
 
 		<title>Kaijus | EMCA Website</title>
@@ -12,23 +12,30 @@
 
 	<style>
 		a {
-		color: #c9cacc;
-	}
+			color: #c9cacc;
+		}
 
-	@media (max-width: 300px) {
-	h1 {
-		font-size: 36px;
-	}
-	li {
-		display: block;
-		padding: 5px;
-	}
-	
+		.content {
+			max-width: 500px;
+			margin: auto;
+		}
+
 	</style>
 
 	<body>
 		<header>
-			<h1 id="kaijus">Kaijus</h1>
+				<nav class="menu">
+				<a href="/" class="menu-item -home -active">Index</a>
+				<a href="/about/" class="menu-item">About</a>
+				<a href="/blog/" class="menu-item">Blog</a>
+				<a class="menu-item" onclick="theme()">Dark/Light</a>
+				<a href="/work/" class="menu-item">Work</a>
+				<a href="/quotes/" class="menu-item">Quotes</a>
+				</nav>
+		</header>
+
+		<div class="content">
+		<h1 id="kaijus">Kaijus</h1>
 <p><img src="../../images/kong1.jpg" alt="Kong vs Gojira" /></p>
 
 <p>Kaijū (怪獣, kaijū?) é uma palavra japonesa que significa “besta estranha”, “animal incomum”, mas que costuma ser traduzida como “monstro”. Especificamente, é usada para se referir a um gênero de tokusatsu, que são filmes de efeitos especiais, normalmente de heróis ou monstros. Termos relacionados incluem “kaiju eiga (怪獣映画 ? filme de monstro)”, um filme com kaiju, “kaijin” (referindo-se a monstros vagamente humanóides) e daikaijū (大怪獣? monstro grande), especificamente se referindo a uma variação maior de monstro.</p>
@@ -69,6 +76,6 @@
 
 <p>MEu gatinho é um flerkin muito mal humorado.</p>
 
-		</header>
+		</div>
 	</body>
 </html>
