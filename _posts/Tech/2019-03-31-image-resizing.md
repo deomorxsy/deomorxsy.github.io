@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: index
 title:  "Image Resizing"
 date:   2018-12-11 15:40:50
 categories: technology

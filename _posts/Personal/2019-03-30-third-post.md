@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: index
 title: My Third Post
 category: personal
 order: 2

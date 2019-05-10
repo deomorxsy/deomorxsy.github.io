@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: index
 title: My First Post
 category: personal
 order: 1
