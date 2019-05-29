@@ -1,8 +1,8 @@
 html {
 	font-size: 15px; /* px significa 'pixels': o tamanho da fonte base é agora de 10 pixels */ 
 	font-family: 'Menlo', 'Meslo LG', monospace; /* este deve ser o nome da fonte que você obteve no Google Fonts */ 
-	background-color: #111;
-	color: white;
+	/*background-color: #1b1b1b;/*#111*/
+	color: #c9cacc;
 	box-sizing: border-box;
 	cursor: default;
 	border: 7px solid #00a86b;/*#e6e6e6;*/
@@ -16,10 +16,11 @@ html {
 body {
 	font-size: 100%;
 	margin: 0 auto;
-	padding: 0 70px 20px 20px;
-	line-height: 1.500;
+	padding: 0 20px;
+	line-height: 1.725;
 	font-family: 'Menlo', monospace;
 	text-align: justify;
+	background-color: #1b1b1b;/*#111*/
 }
 
 h1 {
@@ -27,8 +28,8 @@ h1 {
 	text-align: center;
 	color: white;
 	text-shadow: 3px 3px 1px black;
-	margin-bottom: 2em;
-	margin-top: 2em;
+	margin-bottom: 0em;
+	margin-top: 1.20em;
 
 }
 
@@ -68,6 +69,9 @@ ul {
 	font-size: 12px;
 	padding-left: 15px;
 	margin-bottom: 30px;
+
+	display: block;
+	line-height: 26px;
 }
 .quotes blockquote strong {
 	font-size: 18px;
@@ -87,9 +91,9 @@ ul {
 	border-bottom:0;
 	color:#FAFAFA;
 	padding:2px 0;
-	margin-left:10px;
-	margin-right:10px;
-	display:inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	display: inline-block;
 }
 
 .menu-item.-home {
@@ -123,28 +127,92 @@ summary {
 	-ms-hyphens:none;
 	hyphens:none;
 	font-style:italic;
-	color:#777;
-	font-family:"pt-serif",serif;
-	margin-bottom:1.5em;
+	color:#c9cacc;
+	margin-bottom:0em;
 	margin-top: 1.5em;
-	line-height:1.45;
-	text-align:center
+	line-height:1.70;
+	text-align:center;
+	font-size: 16px;
 }
 .summary p {
-	margin-top: 1.5em
+	margin-top: .5em
+
+}
+.summary-index {
+	-webkit-hyphens:none;
+	-ms-hyphens:none;
+	hyphens:none;
+	font-style:italic;
+	color:#c9cacc;
+	margin-bottom:0em;
+	margin-top: 1.5em;
+	line-height:1.70;
+	text-align:left;
+	font-size: 16px;
 }
 
 hr {
 	box-sizing: content-box;
 	overflow: visible;
 	border: 1;
-	margin-top: 35px;
-	margin-bottom: 35px;
+	margin-top: 25px;
+	margin-bottom: 45px;
 	width: 90px;
 }
 .mydivbars {
 	font-size: 15px;
 	letter-spacing: -5px;
+}
+
+.article-date {
+vertical-align:middle;
+display:block;
+font-size:12px;
+text-transform:uppercase;
+color:#777;
+letter-spacing:2.5px;
+white-space:nowrap;
+line-height:1.5
+margin-bottom: 0em;
+margin-top: 3em;
+}
+.article-date p {
+vertical-align:middle;
+display:block;
+font-size:12px;
+text-transform:uppercase;
+color:#777;
+letter-spacing:2.5px;
+white-space:nowrap;
+line-height:1.5
+margin-bottom: 0em;
+margin-top: 0em;
+}
+.article-title {
+	margin-bottom: 1.20em;
+	margin-top: 0em;
+}
+header{display:block}
+
+.header{
+	text-align:center
+}
+
+pre {
+  font-family: "Menlo", "Meslo LG", monospace;
+  font-size: 13px;
+  padding: 10px 15px;
+  line-height: 22px;
+  -webkit-border-radius: 4px;
+  overflow-x: auto;
+}
+
+@media (min-width:800px) {
+	.article .header {
+		width:800px;
+		margin-left:-120px;
+		margin-right:-
+	}
 }
 
 @media screen and (max-width: 50em) {
@@ -153,11 +221,11 @@ hr {
 	}
 
 	h1 {
-		font-size: 2em;
+		font-size: 100%;
 	}
 
 	img {
-		max-width: 400px;
+		max-width: 100%;
 		margin: center;
 		border: 7px solid white;
 		border-radius: 20px;
@@ -170,20 +238,16 @@ hr {
 
 @media screen and (max-width: 40em) {
 	h2 {
-		font-size: 1.2em;
+		font-size: 100%;
 	}
 
 	img {
-		max-width:320px;
+		max-width:100%;
 	}
 
 @media screen and (max-width: 30em) {
 	h1 {
-		font-size: 1.6em;
-	}
-
-	img {
-
+		font-size: 100%;
 	}
 }
 

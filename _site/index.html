@@ -16,9 +16,8 @@
 		}
 
 		.content {
-			max-width: 60%;
+			max-width: 500px;
 			margin: auto;
-			}
 		}
 
 	</style>
@@ -27,10 +26,8 @@
 		<header>
 				<nav class="menu">
 				<a href="/" class="menu-item -home -active">Index</a>
-				<a href="/about/" class="menu-item">About</a>
 				<a href="/blog/" class="menu-item">Blog</a>
-				<a class="menu-item" onclick="theme()">Dark/Light</a>
-				<a href="/work/" class="menu-item">Work</a>
+				<a href="/about/" class="menu-item">About</a>
 				<a href="/quotes/" class="menu-item">Quotes</a>
 				</nav>
 		</header>
@@ -41,14 +38,21 @@
 
 <h2 id="about">About</h2>
 
-<p>I am deomorxsy, a self-taught programmer.</p>
-<p>I also wrote my thoughts on Twitter.</p>
-<p>Find me training in Github, Codewars, URIOnlineJudge, and HackerRank.</p>
+<section class="quotes">
+	<div class="summary-index">I am deomorxsy, a self-taught programmer. I also wrote my thoughts on Twitter. Find me training in Github, Codewars, URIOnlineJudge, and HackerRank.
+	</div>
+	<hr class="-center" />
+</section>
 
 <h2 id="blog">Blog</h2>
 
 <h4 id="recent-posts"><a href="/blog/">recent posts</a></h4>
 <ul class="myposts">
+
+    <ul>
+    <span class="postDate">Mar-31-2019</span>
+    <a href="/kaiju/gojira/" class="adatepost">Gojira // Godzilla</a>
+    </ul>
 
     <ul>
     <span class="postDate">Mar-31-2019</span>
@@ -58,11 +62,6 @@
     <ul>
     <span class="postDate">Mar-31-2019</span>
     <a href="/kaiju/kaijus/" class="adatepost">Kaijus</a>
-    </ul>
-
-    <ul>
-    <span class="postDate">Mar-31-2019</span>
-    <a href="/kaiju/gojira/" class="adatepost">Gojira</a>
     </ul>
 
     <ul>
@@ -82,7 +81,7 @@
 
     <ul>
     <span class="postDate">Dec-11-2018</span>
-    <a href="/technology/image-resizing/" class="adatepost">Image Resizing</a>
+    <a href="/tech/image-resizing/" class="adatepost">Image Resizing</a>
     </ul>
 
 </ul>

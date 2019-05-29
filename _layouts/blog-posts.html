@@ -16,8 +16,9 @@
 		}
 
 		.content {
-			max-width: 500px;
-			margin: auto;
+			max-width: 580px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 	</style>
@@ -32,6 +33,16 @@
 				</nav>
 		</header>
 
+		<header class="header">
+			<a>
+			<time class="article-date" datetime="{{post.date | date: "%b-%-d-%Y"}}">
+			{{ page.date | date: "%B %d, %Y "}}
+			<p>{% include read_time.html %} read</p>
+			</time>
+			</a>
+			<h1 class="article-title">{{page.title}}</h1>
+		</header>
+	
 		<div class="content">
 		{{ content }}
 		</div>

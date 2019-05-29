@@ -7,7 +7,7 @@ title: Quotes
 
 
 <section class="quotes">
-	<div class="summary">Some words that I get inspired everytime I read.</div>
+	<div class="summary">Some words that I get inspired everytime I read. [WIP]</div>
 	<hr class="-center">
 	<blockquote>
 		<strong>"If you want to master something, teach it."</strong>

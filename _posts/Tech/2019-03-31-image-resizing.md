@@ -1,13 +1,11 @@
 ---
-layout: index
+layout: blog-posts
 title:  "Image Resizing"
 date:   2018-12-11 15:40:50
-categories: technology
+categories: tech
 tags:
 - shellscript
 ---
-
-# Redimensionando Imagens
 
 Imagens podem ficar desproporcionais dependendo da resolução e proporção do lugar onde ela aparecerá na internet. Usaremos bash para escrever um código que redimensiona a imagem baseado na resolução desejada.
 
@@ -30,22 +28,20 @@ Primeiramente, vá até o diretório onde as imagens que você quer redimensiona
 
 Abra o arquivo .sh no seu editor de código, e crie uma variável l1. O resultado do ls(list) será uma String guardada na variável l1 (dentro dos apóstrofos, entre parênteses). O formato no nome de todas as imagens devem ser o mesmo (.jpg ou .png); edite retirando todos aqueles nomes de arquivo que não são imagens ou que você não quer.
 
-{% highlight bash %}
+```
 #!/bin/bash
 
 l1=('cole aqui o código')
 
 for l1 in *.jpg; do convert $l1 -resize 1080x1920! final/$l1; done
+```
+> Acima usamos o **For Loop** para indicar que todas as imagens .jpg devem ser convertidas. O comando convert chama o programa Magick para redimensionar todas as imagens que estão na variável l1, jogando a conversão na pasta final, com todas as imagens com seus respectivos nomes (como estavam em l1).
 
-{% endhighlight %}
+> por fim, rode com:
 
-Acima usamos o **For Loop** para indicar que todas as imagens .jpg devem ser convertidas. O comando convert chama o programa Magick para redimensionar todas as imagens que estão na variável l1, jogando a conversão na pasta final, com todas as imagens com seus respectivos nomes (como estavam em l1).
-<p>Por fim, rode o programa com</p>
+```
+sh ./script.sh
+```
 
-{%highlight bash%}
+Confira o arquivo do código no [repositório](http://github.com/deomorxsy)
 
-sh ./script.sh 
-
-{% endhighlight%}
-
-Confira o arquivo do código no [repositório github](http://github.com/deomorxsy)
