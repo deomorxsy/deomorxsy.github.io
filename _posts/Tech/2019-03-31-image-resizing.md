@@ -16,6 +16,8 @@ Requisitos:
  - Estrutura básica de diretórios
  - Edição básica de imagem, crop
 
+---
+
 Vamos tomar como exemplo o **Stories do Instagram**, onde a resolução é sempre **1080 x 1920** e sua proporção **9:16**.
 
 _PS: é prudente que antes de seguir os passos à seguir você **edite** a imagem que você quer o mais próximo da proporção 9:16, já que o script apenas redimensiona, e não [cropa](https://en.wikipedia.org/wiki/Cropping_(image))._

@@ -1,6 +1,6 @@
 html {
-	font-size: 15px; /* px significa 'pixels': o tamanho da fonte base é agora de 10 pixels */ 
-	font-family:'Menlo', 'Meslo LG', monospace; /* este deve ser o nome da fonte que você obteve no Google Fonts */
+	font-size: 15px; /* 15px significa 'pixels': o tamanho da fonte base é agora de 10 pixels */ 
+	font-family: 'Menlo', 'Meslo LG', monospace; /* este deve ser o nome da fonte que você obteve no Google Fonts */
 	background-color: #1b1b1b; /*#111*/
 	color: #c9cacc;
 	box-sizing: border-box;
@@ -41,6 +41,7 @@ h2 {
 p {
 	font-size: 15px;
 	letter-spacing: 1px;
+	font-family: "Runescape Chat Font Regular";;
 }
 
 a {
@@ -95,6 +96,7 @@ img {
 }
 
 .menu{
+	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
 	margin-bottom: -2em;
 	padding: 40px;

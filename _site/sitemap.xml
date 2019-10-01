@@ -47,6 +47,13 @@
 
     
     <url>
+        <loc>/tech/bannerpost/</loc>
+        <lastmod>2019-10-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>/tech/mcomix-external/</loc>
         <lastmod>2019-10-01</lastmod>
         <changefreq>daily</changefreq>

@@ -10,6 +10,8 @@
 
 		<title>{{ page.title }} | {{ site.title }}</title>
 
+		<link rel="stylesheet" href="/assets/osrs-font/os-font.css" />
+
 		
 	</head>
 
@@ -27,14 +29,6 @@
 	</style>
 
 	<body>
-		<header>
-				<nav class="menu">
-				<a href="{{site.baseurl}}/" class="menu-item -home -active">Index</a>
-				<a href="{{site.baseurl}}/blog/" class="menu-item">Blog</a>
-				<a href="{{site.baseurl}}/about/" class="menu-item">About</a>
-				<a href="{{site.baseurl}}/quotes/" class="menu-item">Quotes</a>
-				</nav>
-		</header>
 
 		<header class="header">
 			<a>
@@ -49,6 +43,15 @@
 		<div class="content">
 		{{ content }}
 		</div>
+
+		<footer>
+			<nav class="menu">
+			<a href="{{site.baseurl}}/" class="menu-item -home -active">Index</a>
+			<a href="{{site.baseurl}}/blog/" class="menu-item">Blog</a>
+			<a href="{{site.baseurl}}/about/" class="menu-item">About</a>
+			<a href="{{site.baseurl}}/quotes/" class="menu-item">Quotes</a>
+			</nav>
+		</footer>
 
 		<script type="text/javascript" src="/assets/osrs-font/os-font.js"></script>
         <script type="text/javascript">
