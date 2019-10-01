@@ -21,4 +21,12 @@ title: Quotes
 		<strong>Do not remain nameless to yourself.</strong>
 		<p>— Richard Feynman</p>
 	</blockquote>
+	<blockquote>
+		<strong>"[...] the Linux philosophy is ‘Laugh in the face of danger’. Oops. Wrong One. ‘Do it yourself’. Yes, that’s it."</strong>
+		<p> — Linus Torvalds</p>
+	</blockquote>
+	<blockquote>
+		<strong>Everybody needs a fishbowl.</strong>
+		<p>— B. Schwartz</p>
+	</blockquote>
 </section>

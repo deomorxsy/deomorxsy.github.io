@@ -1,11 +1,11 @@
 html {
 	font-size: 15px; /* px significa 'pixels': o tamanho da fonte base é agora de 10 pixels */ 
-	font-family: 'Menlo', 'Meslo LG', monospace; /* este deve ser o nome da fonte que você obteve no Google Fonts */ 
-	/*background-color: #1b1b1b;/*#111*/
+	font-family:'Menlo', 'Meslo LG', monospace; /* este deve ser o nome da fonte que você obteve no Google Fonts */
+	background-color: #1b1b1b; /*#111*/
 	color: #c9cacc;
 	box-sizing: border-box;
 	cursor: default;
-	border: 7px solid #00a86b;/*#e6e6e6;*/
+	border: 7px solid #00a86b; /*#e6e6e6;*/
     border-top-width: 7px;
     border-right-width: 7px;
     border-bottom-width: 7px;
@@ -16,6 +16,7 @@ html {
 body {
 	font-size: 100%;
 	margin: 0 auto;
+	margin-bottom: 30px;
 	padding: 0 20px;
 	line-height: 1.725;
 	font-family: 'Menlo', monospace;
@@ -37,7 +38,7 @@ h2 {
 	font-size: 1.6em;
 }
 
-p, li {
+p {
 	font-size: 15px;
 	letter-spacing: 1px;
 }
@@ -47,8 +48,26 @@ a {
 	line-height: 1.5;
 }
 
+ol li a{
+	font-family: 'Runescape Chat Font Regular'; /*'Menlo', monospace; */
+	font-size: 18px;
+	display: block;
+	margin-bottom: -5px;
+	/*border-left: 1px solid;*/
+	padding-left: 0px;
+}
+
+.reference {
+	font-family: 'Runescape Chat Font Regular';
+	font-size: 20px;
+	text-align: left;
+	padding: 0;
+	margin: 3px;
+	color: #666666;
+}
+
 .postDate {
-	padding: 0px 23px 0px 0px;
+	padding: 0px 10px 0px 0px;
 }
 
 img {
@@ -56,13 +75,6 @@ img {
 	margin: center;
 	display: block;
 	margin: 0 auto;
-}
-
-ul {
-	text-align: left;
-	padding: 0;
-	margin: 3px;
-	color: #666666;
 }
 
 .quotes blockquote p {

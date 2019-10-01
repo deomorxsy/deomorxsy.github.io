@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+    <title>Misti-DEO MP</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="/assets/music-player/music-player.css">
+    <script type="text/javascript" src="/assets/music-player/jqueryMP.min.js"></script>
+    <script>
+        function changeMusic(vid, songartist, songtitle) {
+            
+            $('iframe#muframe').attr('src', 'https://www.youtube.com/embed/' + vid + '?autoplay=1&showinfo=0&autohide=0&controls=2&enablejsapi=1');
+            
+            $('#songartist').text(songartist + " -");
+            $('#songtitle').text(songtitle);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="titlebar"> <img src="/assets/music-player/img/folder.gif" alt="Folder"> Yare Yare ~/.ðÐ...</div>
+    <div id="wrapper">
+        <div id="songwrapper">
+            <div id="button"><img src="/assets/music-player/img/play.png" id="play" alt="null"><img src="/assets/music-player/img/pause.png" id="pause" alt="null"></div>
+            <div id="songinfo"><img src="/assets/music-player/img/bars.gif" alt="Music"> <span id="songartist"> </span> <span id="songtitle"> </span> <img src="/assets/music-player/img/bars.gif" alt="Music"></div>
+            <iframe id="muframe" width="690" height="50" src="/assets/music-player/img/note.gif" allowfullscreen></iframe>
+        </div>
+
+        <iframe src="/songlist.html" id="songlist">Your browser does not support inline frames. :(</iframe>
+
+    </div>
+    
+    <p style="text-align: center; margin-top: 30px; color: white;">
+        design by <a href="http://misti.neocities.com">misti</a> graphics by <a href="google.com">Deomorxsy</a><br><br>
+        <a href="google.com">idk</a>
+    </p>
+    
+    <script>
+        
+        var player;
+        
+        function showPlayButton() {
+            $("#play").css('display', 'inline');
+            $("#pause").css('display', 'none');
+        }
+        
+        function showPauseButton() {
+            $("#play").css('display', 'none');
+            $("#pause").css('display', 'inline');
+        }
+
+        function onYouTubePlayerAPIReady() {
+            player = new YT.Player('muframe', {
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+        
+        $('#muframe').on('load', function() {
+            setInterval( function() {
+               var state = player.getPlayerState();
+
+                switch(state) {
+                    case 0:
+                        showPlayButton();
+                        break;
+                    case 1:
+                        showPauseButton();
+                        break;
+                    case 2:
+                        showPlayButton();
+                        break;
+                }
+            }, 10);
+        });
+        
+        function onPlayerReady(event) {
+
+            $("#play").on('click', function() {
+                player.playVideo();
+                showPauseButton();
+            });
+            
+            $("#pause").on('click', function() {
+                player.pauseVideo();
+                showPlayButton();
+            });
+            
+        }
+
+        var tag = document.createElement('script');
+        tag.src = "//www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        
+    </script>
+</body>

@@ -6,7 +6,7 @@ title: About
 # About
 
 <section class="quotes">
-	<div class="summary">Curiosity and passion for reading. Taking notes and explain things that I don't 100% understand. Computers: that’s what led me here.</div>
+	<div class="summary">Curiosity about how things work and taking notes. That's the idea behind this blog. </div>
 	<hr class="-center">
 </section>
 

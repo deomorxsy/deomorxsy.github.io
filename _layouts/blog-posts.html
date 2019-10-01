@@ -6,8 +6,11 @@
 
 		<link href='/assets/indexpage.css' rel='stylesheet' type='text/css'>
 		<link href="/assets/highlighter.css" rel="stylesheet">
+		<link href='/assets/osrs-font/os-font.css' rel='stylesheet' type='text/css'>
 
 		<title>{{ page.title }} | {{ site.title }}</title>
+
+		
 	</head>
 
 	<style>
@@ -46,5 +49,10 @@
 		<div class="content">
 		{{ content }}
 		</div>
+
+		<script type="text/javascript" src="/assets/osrs-font/os-font.js"></script>
+        <script type="text/javascript">
+            OsFont.compile();
+        </script>
 	</body>
 </html>
