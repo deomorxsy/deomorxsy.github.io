@@ -41,7 +41,7 @@ h2 {
 p {
 	font-size: 15px;
 	letter-spacing: 1px;
-	font-family: "Runescape Chat Font Regular";;
+	font-family: Arial,Helvetica,sans-serif;
 }
 
 a {
@@ -51,11 +51,12 @@ a {
 
 ol li a{
 	font-family: 'Runescape Chat Font Regular'; /*'Menlo', monospace; */
-	font-size: 18px;
+	font-size: 20px;
 	display: block;
 	margin-bottom: -5px;
 	/*border-left: 1px solid;*/
 	padding-left: 0px;
+	letter-spacing: 0px;
 }
 
 .reference {

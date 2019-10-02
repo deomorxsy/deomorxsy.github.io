@@ -30,7 +30,7 @@ with
 
 ---
 
-##### complementary reading:
+Complementary reading:
 
 1. ["How can I open a file that results from grep?"](https://sourceforge.net/p/mcomix/wiki/External_Commands/)
 
