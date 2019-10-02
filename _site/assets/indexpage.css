@@ -19,7 +19,7 @@ body {
 	margin-bottom: 30px;
 	padding: 0 20px;
 	line-height: 1.725;
-	font-family: 'Menlo', monospace;
+	font-family: Arial,Helvetica,sans-serif; /*'Menlo', monospace;*/
 	text-align: justify;
 	background-color: #1b1b1b;/*#111*/
 }

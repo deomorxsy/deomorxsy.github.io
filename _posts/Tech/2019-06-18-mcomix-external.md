@@ -20,7 +20,6 @@ The program doesn't have enough functionalities, so they allow the user to defin
 
 - *The relevant menu can be accessed via "File→Open with". Initially, this submenu will be empty. New commands can be added with the "Edit commands" menu item.*
 
-#
 
 ### Execute external programs
 
@@ -30,13 +29,13 @@ with
 
 ---
 
-Complementary reading:
+*Complementary reading:*
 
-1. ["How can I open a file that results from grep?"](https://sourceforge.net/p/mcomix/wiki/External_Commands/)
+1. *["How can I open a file that results from grep?"](https://sourceforge.net/p/mcomix/wiki/External_Commands/)*
 
-2. ["How to start line with command from output of another command"](https://unix.stackexchange.com/questions/110146/how-to-start-line-with-command-from-output-of-another-command)
+2. *["How to start line with command from output of another command"](https://unix.stackexchange.com/questions/110146/how-to-start-line-with-command-from-output-of-another-command)*
 
-3. what the
+3. *what the f*
 
 ---
 
