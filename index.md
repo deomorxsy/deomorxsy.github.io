@@ -3,7 +3,7 @@ layout: index
 title: Yare Yare \~/.ðÐ...
 ---
 
-# {{page.title}}
+# {{page.title | escape}}
 <img class="product-img" src="images/kong1.jpg" alt="banana" />
 
 ## About

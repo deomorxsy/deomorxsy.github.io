@@ -43,7 +43,8 @@
 			<a>
 			<time class="article-date" datetime="{{post.date | date: "%b-%-d-%Y"}}">
 			{{ page.date | date: "%B %d, %Y "}}
-			<p>{% include read_time.html %} read</p>
+			<p> <i class="fa fa-clock-o" aria-hidden=true>  </i> {% include read_time.html %} read
+			</p>
 			</time>
 			</a>
 			<h1 class="article-title">{{page.title}}</h1>

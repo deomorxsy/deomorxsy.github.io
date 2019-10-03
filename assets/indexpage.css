@@ -97,7 +97,7 @@ img {
 }
 
 .menu{
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Menlo', 'Meslo LG', monospace; /*Arial, Helvetica, sans-serif;*/
 	text-align: center;
 	margin-bottom: -2em;
 	padding: 40px;
@@ -180,18 +180,20 @@ hr {
 }
 
 .article-date {
-vertical-align:middle;
-display:block;
-font-size:12px;
-text-transform:uppercase;
-color:#777;
-letter-spacing:2.5px;
-white-space:nowrap;
-line-height:1.5
-margin-bottom: 0em;
-margin-top: 3em;
+	font-family: 'Menlo', 'Meslo LG', monospace;
+	vertical-align:middle;
+	display:block;
+	font-size:12px;
+	text-transform:uppercase;
+	color:#777;
+	letter-spacing:2.5px;
+	white-space:nowrap;
+	line-height:1.5
+	margin-bottom: 0em;
+	margin-top: 3em;
 }
 .article-date p {
+font-family: 'Menlo', 'Meslo LG', monospace;
 vertical-align:middle;
 display:block;
 font-size:12px;
@@ -220,6 +222,16 @@ pre {
   line-height: 22px;
   -webkit-border-radius: 4px;
   overflow-x: auto;
+}
+
+.fa, fa-clock-o { /*the comma is important*/
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+        font-size: 14px;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 @media (min-width:800px) {
