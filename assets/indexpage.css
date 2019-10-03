@@ -166,13 +166,28 @@ summary {
 	font-size: 16px;
 }
 
-hr {
+hr { /*<hr class="-center">*/
 	box-sizing: content-box;
 	overflow: visible;
 	border: 1;
 	margin-top: 25px;
 	margin-bottom: 45px;
 	width: 90px;
+}
+.-footnotes { /*<hr class="-footnotes">*/
+    /*box-sizing: content-box;
+    overflow: visible;
+    border: 1;
+    margin-top: 25px;
+    margin-bottom: 45px;
+    width: 90px*/
+
+	background-color: purple;
+	width: 120%;
+	height: 12px;
+	border-top: 1px solid black
+
+	margin-top: -5px;
 }
 .mydivbars {
 	font-size: 15px;
@@ -224,7 +239,7 @@ pre {
   overflow-x: auto;
 }
 
-.fa, fa-clock-o { /*the comma is important*/
+.fa, fa-clock-o { /* Readtime icon. The comma is important.*/
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
         font-size: 14px;
