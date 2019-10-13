@@ -4,11 +4,12 @@
 		<meta charset='utf-8'>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
 
-		<link href='/assets/indexpage.css' rel='stylesheet' type='text/css'>
+		<link href="/assets/indexpage.css" rel="stylesheet" type="text/css">
 		<link href="/assets/highlighter.css" rel="stylesheet">
 		<link rel="shortcut icon" type="image/png" href="/images/index.png">
 
-		<title>About | EMCA Website</title>
+		<link href="/assets/sidebar.css" rel="stylesheet" type="text/css">
+		<title>About | ACME Website</title>
 	</head>
 	
 	<style>
@@ -24,7 +25,67 @@
 	</style>
 
 	<body>
-		<header>
+		<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!--NOTE: add "checked" at the end of the input to show the bar whenever you acess or refresh the page.-->
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p></p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+    
+
+    <a class="sidebar-nav-item" href="/archive/v.zip">Download</a>
+    <a class="sidebar-nav-item" href="">GitHub project</a>
+    <span class="sidebar-nav-item">Currently v</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2019. All rights reserved.
+    </p>
+  </div>
+</div>
+
+<label for="sidebar-checkbox" class="sidebar-toggle"></label> <!--NOTE: IMPORTANT! this is the icon decoy for the sidebar. -->
+		<!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+		<!-- <header>
 				<nav class="menu">
 				<a href="/" class="menu-item -home -active">Index</a>
 				<a href="/blog/" class="menu-item">Blog</a>
@@ -32,7 +93,7 @@
 				<a href="/quotes/" class="menu-item">Quotes</a>
 				</nav>
 		</header>
-
+	-->
 		<div class="content">
 		<h1 id="about">About</h1>
 
@@ -46,5 +107,21 @@
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quas, esse laudantium quis ipsa consequuntur iure atque! Necessitatibus quam quidem illum, corrupti molestiae, maxime neque, consequuntur quia alias, modi commodi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem ducimus dolores repellat itaque perferendis corporis ex dicta doloremque optio harum excepturi, ut, praesentium asperiores! Voluptatum amet perspiciatis iusto, fugiat!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, libero quia placeat necessitatibus culpa mollitia, illum, quam sed ratione ad eaque suscipit consectetur itaque quasi aperiam. Quaerat, nihil voluptas tenetur?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos unde quam autem fugit, aliquam perspiciatis, accusamus numquam, pariatur impedit excepturi debitis repellendus consectetur laboriosam voluptatem temporibus sunt illo magnam! Voluptates.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam repudiandae quidem, fuga eaque, deserunt eius. Aperiam, maxime fuga alias ad vel amet et facere soluta asperiores quasi. A, aperiam, ipsam.</p>
 
 		</div>
+
+		<script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    	</script>
+    
 	</body>
 </html>

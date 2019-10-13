@@ -1,15 +1,15 @@
 ---
 layout: index
-title: Yare Yare \~/.ðÐ...
+title: Home
 ---
 
-# {{page.title | escape}}
+# Yare Yare \~/.ðÐ...
 <img class="product-img" src="images/kong1.jpg" alt="banana" />
 
 ## About
 
 <section class="quotes">
-	<div class="summary-index">I am deomorxsy, a programmer from Brazil. I also wrote my thoughts on Twitter. Find me training in Github, Codewars, URIOnlineJudge, and HackerRank.
+	<div class="summary-index"> I am deomorxsy, a programmer from Brazil. Find me training in Github, Codewars, URIOnlineJudge, and HackerRank.
 	</div>
 	<hr class="-center">
 </section>
@@ -34,3 +34,10 @@ title: Yare Yare \~/.ðÐ...
 + [mzll-GSW]({{site.baseurl}}/mzll-GSW), "Getting started with the web" from Mozilla Developer.
 
 + [Jukebox-js]({{site.baseurl}}/jukebox)
+
+
+{% assign beatles = "John, Paul, George, Ringo" | split: ", " %}
+
+{% for member in beatles %}
+  {{ member }}
+{% endfor %}

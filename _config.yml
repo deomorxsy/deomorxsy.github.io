@@ -1,8 +1,11 @@
 name: My Jekyll Website
 
-title: EMCA Website # Definindo o title
+title: ACME Website # setting the title
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:title/
+
+#variables
+version: 1.1
