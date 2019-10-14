@@ -74,6 +74,10 @@ ol li a{
 	padding: 0px 10px 0px 0px;
 }
 
+.myposts-index {
+	padding-left: 0px;
+}
+
 img {
 	max-width: 100%;
 	margin: center;
@@ -191,6 +195,12 @@ hr { /*<hr class="-center">*/
 
 	margin-top: -5px;
 }
+
+.footer-c, .footer-c a {
+	font-size: 11px;
+	margin-top: 70px;
+}
+
 .mydivbars {
 	font-size: 15px;
 	letter-spacing: -5px;
@@ -234,11 +244,22 @@ header{display:block}
 
 pre {
   font-family: "Menlo", "Meslo LG", monospace;
-  font-size: 13px;
+  /*font-size: 13px;
   padding: 10px 15px;
-  line-height: 22px;
+  line-height: 22px
   -webkit-border-radius: 4px;
-  overflow-x: auto;
+  overflow-x: auto;*/
+
+	padding: 16px;
+	overflow: auto;
+	font-size: 90%;
+	line-height: 1.45;
+	background-color: #f6f8fa;
+	border-radius: 3px;
+
+    margin-bottom: 0;
+    word-break: normal;
+    word-wrap: normal;
 }
 
 .fa, fa-clock-o { /* Readtime icon. The comma is important.*/

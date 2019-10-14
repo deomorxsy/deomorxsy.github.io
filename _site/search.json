@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "Liquid Syntax",
+      "url"      : "/tech/liquid-syntax/",
+      "category" : "",
+      "tags"     : "liquid, jekyll",
+      "date"     : "2019-10-14 08:06:30 -0300"
+
+    } ,
+  
+    {
+
       "title"    : "Banner testing",
       "url"      : "/tech/bannerpost/",
       "category" : "",

@@ -9,7 +9,7 @@
 		<link href='/assets/osrs-font/os-font.css' rel='stylesheet' type='text/css'>
 		<link rel="shortcut icon" type="image/png" href="/images/index.png">
 
-		<title>search.md | ACME Website</title>
+		<title>Liquid Syntax | ACME Website</title>
 
 		<link rel="stylesheet" href="/assets/osrs-font/os-font.css" />
 
@@ -42,7 +42,7 @@
 		<header class="header">
 			<a>
 			<time class="article-date" datetime="">
-			October 13, 2019 
+			October 14, 2019 
 			<p> <i class="fa fa-clock-o" aria-hidden=true>  </i> <span class="reading-time" title="Estimated read time">
   
   
@@ -54,28 +54,21 @@
 			</p>
 			</time>
 			</a>
-			<h3 class="article-title">search.md</h3>
+			<h3 class="article-title">Liquid Syntax</h3>
 		</header>
 	
 		<div class="content">
-		<!-- Html Elements for Search -->
-<div id="search-container">
-<input type="text" id="search-input" placeholder="search..." />
-<ul id="results-container"></ul>
-</div>
+		<p><strong>|&gt; My liquid notes. WIP</strong></p>
 
-<!-- Script pointing to search-script.js -->
-<script src="scripts/search-script.js" type="text/javascript"></script>
+<ol>
+  <li>For Looping with lists</li>
+</ol>
 
-<!-- Configuration -->
-<script>
-SimpleJekyllSearch({
-  searchInput: document.getElementById('search-input'),
-  resultsContainer: document.getElementById('results-container'),
-  json: 'search.json',
-  searchResultTemplate: '<div><a href="{url}"><h1>{title}</h1></a><span>{date}</span></div>',
-})
-</script>
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">beatles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"John, Paul, George, Ringo"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">split</span><span class="p">:</span><span class="w"> </span><span class="s2">", "</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>member<span class="w"> </span>in<span class="w"> </span>beatles<span class="w"> </span><span class="p">%}</span>
+	<span class="p">{{</span><span class="w"> </span><span class="nv">member</span><span class="w"> </span><span class="p">}}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
 
 
 		</div>

@@ -14,14 +14,16 @@ title: Home
 	<hr class="-center">
 </section>
 
+
 ## Blog
 
-#### [recent posts]({{site.baseurl}}/blog/)
-<ul class="myposts">
-{% for post in site.posts limit: 8%}
+[Recent posts]({{site.baseurl}}/blog/)
+
+<ul class="myposts-index">
+{% for post in site.posts limit: 8 %}
     <ul>
-    <span class="postDate">{{ post.date | date: "%b-%-d-%Y" }}</span>
-    <a href="{{ post.url }}" class="adatepost">{{ post.title }}</a>
+    <span class="postDate">{{ post.date | date: "%b %d %Y  ー" }}</span>
+    <a href="{{ post.url }}">{{ post.title }}</a>
     </ul>
 {% endfor %}
 </ul>
@@ -30,14 +32,7 @@ title: Home
 ## Projects
 
 + [Website <span class="mydivbars">///</span> **WIP**]({{site.baseurl}})
-
 + [mzll-GSW]({{site.baseurl}}/mzll-GSW), "Getting started with the web" from Mozilla Developer.
-
 + [Jukebox-js]({{site.baseurl}}/jukebox)
 
 
-{% assign beatles = "John, Paul, George, Ringo" | split: ", " %}
-
-{% for member in beatles %}
-  {{ member }}
-{% endfor %}

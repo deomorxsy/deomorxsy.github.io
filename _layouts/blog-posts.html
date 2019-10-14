@@ -47,20 +47,14 @@
 			</p>
 			</time>
 			</a>
-			<h1 class="article-title">{{page.title}}</h1>
+			<h3 class="article-title">{{page.title}}</h3>
 		</header>
 	
 		<div class="content">
 		{{ content }}
 		</div>
-		<footer>
-			<nav class="menu">
-			<a href="{{site.baseurl}}/" class="menu-item -home -active">Index</a>
-			<a href="{{site.baseurl}}/blog/" class="menu-item">Blog</a>
-			<a href="{{site.baseurl}}/about/" class="menu-item">About</a>
-			<a href="{{site.baseurl}}/quotes/" class="menu-item">Quotes</a>
-			</nav>
-		</footer>
+
+		{% include footer.html %}
 
 		<script type="text/javascript" src="/assets/osrs-font/os-font.js"></script>
         <script type="text/javascript">
