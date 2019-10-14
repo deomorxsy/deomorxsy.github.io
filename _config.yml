@@ -7,5 +7,8 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:title/
 
+
 #variables
-version: 1.1
+description: 'My personal website, built from the scratch by testing css and html features. Made by <a href="https://twitter.com/deomorxsy" target="_blank">@deomorxsy</a>.'
+version: '1.1.0'
+bar: foo

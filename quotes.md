@@ -1,6 +1,7 @@
 ---
 layout: index
 title: Quotes
+description: Quotting the entire world
 ---
 
 # {{page.title}}
