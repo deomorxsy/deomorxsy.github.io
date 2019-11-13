@@ -1,5 +1,5 @@
 ---
-layout: interface
+layout: jukebox-js
 title: testando aqui ó
 ---
 

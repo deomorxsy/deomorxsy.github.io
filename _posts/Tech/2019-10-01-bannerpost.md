@@ -7,12 +7,28 @@ tags:
 - gimp, banner
 ---
 
+## Blog
+
+<span class="yellow-circle">●</span>[Recent posts:]({{site.baseurl}}/blog/)
+
+<ul class="myposts-index">
+{% for post in site.posts limit: 8 %}
+    <a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
+   	<span class="post-date">{{ post.date | date: "%b %d %Y" }}</span>
+{% endfor %}
+</ul>
+
+---
+
 ## Github ? why ? 
 
 ![kamado gonpaoirrrasd](/images/banner-base-kny-102-min.jpg)
 
 
-Here we test the footnotes.
+<div contenteditable="">this content can be edited.</div>
+
+<p contenteditable="">Here we test the footnotes.</p>
+
 
 
 ---

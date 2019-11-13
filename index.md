@@ -15,19 +15,20 @@ title: Home
 </section>
 
 
-## Blog
+### *Latest blogs*
 
-[Recent posts]({{site.baseurl}}/blog/)
+[✍ all entries]({{site.baseurl}}/blog/)
 
 <ul class="myposts-index">
-{% for post in site.posts limit: 8 %}
-    <ul>
-    <span class="postDate">{{ post.date | date: "%b %d %Y  ー" }}</span>
+{% for post in site.posts limit:8 %}
+	<ul class="alter-padding" style="padding-left: 0px; margin-left: 0px;">
+    <span class="old-postDate">{{ post.date | date: "%b %d %Y  ー" }}</span>
     <a href="{{ post.url }}">{{ post.title }}</a>
-    </ul>
+	</ul>
 {% endfor %}
 </ul>
 
+---
 
 ## Projects
 

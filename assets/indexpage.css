@@ -51,7 +51,56 @@ a {
 	line-height: 1.5;
 }
 
-ol li a{
+.post-title { /*a inside the ul from blog posts.*/
+	/*dssc-config*/
+	box-shadow:none;
+	font-size:16px;
+	line-height:1.25;
+	color:#c9cacc;
+	letter-spacing:0;
+	font-family:Istok Web,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,sans-serif;
+	text-transform:none;
+	font-weight:400;
+	text-decoration: none; /*!IMPORTANT! NOTE: retira o sublinhado do link.*/
+
+	/*display:block;
+	font-size:100%;
+	color:#c9cacc;
+	letter-spacing:2.5px;
+	white-space:nowrap;
+	line-height:1.5;
+	padding-top:2px;*/
+}
+
+.post-title:hover, .post-title:focus { /*Colore a parte de trás do texto*/
+	background-color: #c44;
+}
+
+.post-date {
+	/*dssc-config */
+	vertical-align:middle;
+	display:block;
+	font-size:12px;
+	text-transform:uppercase;
+	color:#777;
+	letter-spacing:2.5px;
+	white-space:nowrap;
+	line-height:1.5;
+	padding: 4px 0 18px 19px;
+	border: 15px;
+}
+
+.myposts-index {/*ul posts*/
+	padding-left: 0px;
+	margin-left: 18px;
+}
+
+.yellow-circle {
+	color:#efd516;font-family:Vollkorn
+}
+
+
+ol li {
 	font-family: 'Runescape Chat Font Regular'; /*'Menlo', monospace; */
 	font-size: 20px;
 	display: block;
@@ -68,14 +117,6 @@ ol li a{
 	padding: 0;
 	margin: 3px;
 	color: #666666;
-}
-
-.postDate {
-	padding: 0px 10px 0px 0px;
-}
-
-.myposts-index {
-	padding-left: 0px;
 }
 
 img {
@@ -117,6 +158,9 @@ img {
 	display: inline-block;
 }
 
+	
+}
+
 .menu-item.-home {
 	font-weight:700
 	}
@@ -124,9 +168,9 @@ img {
 	color:#FAFAFA;
 	border-bottom:2px solid #FAFAFA;
 }
-.menu-item:active,.menu-item:hover {
+.menu-item:active,.menu-item:hover {/*colore a parte de trás do texto*/
 	background:0 0;
-	color:#ff0000;
+	background-color: #c44;
 	outline:0;
 }
 .menu-item:focus {
@@ -196,7 +240,7 @@ hr { /*<hr class="-center">*/
 	margin-top: -5px;
 }
 
-.footer-c, .footer-c a {
+.footer-c, .footer-c {
 	font-size: 11px;
 	margin-top: 70px;
 }
@@ -272,6 +316,9 @@ pre {
     -moz-osx-font-smoothing: grayscale;
 }
 
+
+.search-container
+
 /*--------MEDIA QUERIES------------*/
 
 @media (min-width:800px) {
@@ -288,7 +335,7 @@ pre {
 	}
 
 	h1 {
-		font-size: 100%;
+		font-size: 133%;
 	}
 
 	img {
@@ -314,7 +361,7 @@ pre {
 
 @media screen and (max-width: 30em) {
 	h1 {
-		font-size: 100%;
+		font-size: 133%;
 	}
 }
 
