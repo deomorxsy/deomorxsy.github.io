@@ -1,0 +1,30 @@
+{% comment %}
+
+It goes on index page: Latest posts session. The limit of shown posts are 8.
+
+{% endcomment %}
+
+<h3 style="margin-top: 45px; margin-bottom: 25px; font-style:italic; text-transform: uppercase;">
+	✍ Latest blogs
+		<span style="float: right;text-transform: none; font-size: 20px; font-style:normal;">
+			<span class="yellow-circle"> 
+				»
+			</span> 
+				<a class="post-article" href="{{site.baseurl}}/blog/" style="text-transform: none; text-decoration: none; font-size: 15px; font-style:normal">
+					<b>entries</b>
+				</a>
+				<span 
+				style="font-weight:1000">
+					→
+				</span>
+		</span>
+</h3>
+
+<ul class="myposts-index">
+{% for post in site.posts limit:8 %}
+	<ul class="alter-padding" style="padding-left: 0px; margin-left: 0px;">
+    <span class="old-postDate">{{ post.date | date: "%b %d %Y  ー" }}</span>
+    <a class="post-article" href="{{ post.url }}">{{ post.title }}</a>
+	</ul>
+{% endfor %}
+</ul>

@@ -22,11 +22,31 @@
   
     {
 
+      "title"    : "Pendrive Formatting by the CLI",
+      "url"      : "/tech/penformat/",
+      "category" : "",
+      "tags"     : "",
+      "date"     : "2019-08-17 17:52:40 -0300"
+
+    } ,
+  
+    {
+
       "title"    : "MComix&#39;s External Commands",
       "url"      : "/tech/mcomix-external/",
       "category" : "",
       "tags"     : "gimp, mcomix",
       "date"     : "2019-06-18 12:40:50 -0300"
+
+    } ,
+  
+    {
+
+      "title"    : "Reading time with Liquid (for jekyll)",
+      "url"      : "/tech/reading-time/",
+      "category" : "",
+      "tags"     : "",
+      "date"     : "2019-05-25 15:44:00 -0300"
 
     } ,
   

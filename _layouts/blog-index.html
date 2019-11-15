@@ -3,15 +3,8 @@ layout: index
 ---
 
 {{ content }}
-<ul class="myposts-blog">
-{% for post in site.posts %}
-    <ul>
-    <span class="old-postDate">{{ post.date | date: "%b %d %Y  ー" }}</span>
-    <a href="{{ post.url }}">{{ post.title }}</a>
-    </ul>
-{% endfor %}
-</ul>
 
+{% include blog_all-posts.html %}
 
 <! Liquid Syntax: Anything you put between {% comment %} and {% endcomment %} tags
 is turned into a comment. >

@@ -9,7 +9,7 @@
 		<link href='/assets/osrs-font/os-font.css' rel='stylesheet' type='text/css'>
 		<link rel="shortcut icon" type="image/png" href="/images/index.png">
 
-		<title>Kaijus | ACME Website</title>
+		<title>Pendrive Formatting by the CLI | ACME Website</title>
 
 		<link rel="stylesheet" href="/assets/osrs-font/os-font.css" />
 
@@ -42,7 +42,7 @@
 		<header class="header">
 			<a>
 			<time class="article-date" datetime="">
-			March 31, 2019 
+			August 17, 2019 
 			<p> <i class="fa fa-clock-o" aria-hidden=true>  </i> <span class="reading-time" title="Estimated read time">
   
   
@@ -54,24 +54,39 @@
 			</p>
 			</time>
 			</a>
-			<h3 class="article-title">Kaijus</h3>
+			<h3 class="article-title">Pendrive Formatting by the CLI</h3>
 		</header>
 	
 		<div class="content">
-		<p><img src="../../images/kong1.jpg" alt="Kong vs Gojira" /></p>
+		<ol>
+  <li>detecting the pendrive:</li>
+</ol>
 
-<p>Kaijū (怪獣, kaijū?) é uma palavra japonesa que significa “besta estranha”, “animal incomum”, mas que costuma ser traduzida como “monstro”. Especificamente, é usada para se referir a um gênero de tokusatsu, que são filmes de efeitos especiais, normalmente de heróis ou monstros. Termos relacionados incluem “kaiju eiga (怪獣映画 ? filme de monstro)”, um filme com kaiju, “kaijin” (referindo-se a monstros vagamente humanóides) e daikaijū (大怪獣? monstro grande), especificamente se referindo a uma variação maior de monstro.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>fdisk <span class="nt">-l</span>
+</code></pre></div></div>
+<ol>
+  <li>unmounting pendrive</li>
+</ol>
 
-<p>Temos como exemplo os seguintes filmes com Kaiju:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>umount /dev/sdf1
+</code></pre></div></div>
+
+<ol>
+  <li>formatting the pendrive</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>mkfs.vfat <span class="nt">-n</span> ‘Nome Pendrive’ <span class="nt">-I</span> /dev/sdf1
+</code></pre></div></div>
+
+<p>where:</p>
 
 <ul>
-  <li>Gojira (1954)</li>
-  <li>Rodan (1956)</li>
-  <li>Varan the Unbelievable (1958)</li>
-  <li>Mothra (1961)</li>
-  <li>Ghidorah the Three Headed Monster (1964)</li>
-  <li>Gamera (1965)</li>
+  <li>‘-n’ = Volume Name</li>
+  <li>‘mkfs’ = command responsible for format the file system</li>
+  <li>‘vfat’ = formats in the file system FAT. Others avaible: mkfs.bfs, mkfs.ext2, mkfs.ext3, mkfs.ext4, mkfs.minix, mkfs.msdos, mkfs.vfat, mkfs.xfs, mkfs.xiafs.</li>
+  <li>‘-I’ = pen drive’s partition</li>
 </ul>
+
 
 		</div>
 
