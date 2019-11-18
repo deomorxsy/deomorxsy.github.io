@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<html id="b1" style="border: 7px solid #1b1b1b;">
+
 <head>
     <title>Deo-jukebox</title>
     <meta charset="utf-8">
@@ -28,11 +30,20 @@
 
     </div>
     
-    <p style="text-align: center; margin-top: 30px; color: white;">
-        design by <a href="https://misti.neocities.com">misti</a> graphics by <a href="https://github.com/deomorxsy">Deomorxsy</a><br><br>
-        <a href="https://duckduckgo.com">idk</a>
-        <a href="/">home</a>
-    </p>
+
+    <footer>
+    <nav class="menu">
+    <div class="footer-c">
+        &copy; 2019 <a class="footer-a" href="https://github.com/deomorxsy" style="font-style:oblique;"> <b>~/.ðÐ</b> </a>
+        <p>All rights reserved.</p>
+    </div>
+    </nav>
+    <!-- <p style="text-align: center; margin-top: 30px; color: white;">
+    design by <a href="https://misti.neocities.com">misti</a> graphics by <a href="https://github.com/deomorxsy">Deomorxsy</a><br><br>
+    <a href="https://duckduckgo.com">idk</a>
+    <a href="/">home</a>
+    </p> -->
+    </footer>
     
     <script>
         
@@ -93,5 +104,7 @@
         var firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
         
+        <input type="button" value="Hide border" onclick="document.getElementById('b1').style.border='hidden'"> /*this makes the bar from the html invisible. Make sure to add the STYLE ATTRIBUTE to the html, because it doesn't affect the css property from the *.css file. Also, if you give css properties such as 'border' to the html in the css file, it will repeat unless you use the proper attribute here, in the *.html page, and dispose of the "design-conflictant" code in the css file.*/
     </script>
 </body>
+</html>

@@ -274,9 +274,26 @@ hr {
 	margin-top: -5px;
 }
 
-.footer-c, .footer-c {
+.footer-c {
 	font-size: 11px;
 	margin-top: 70px;
+	text-decoration: none;
+}
+
+.footer-a {
+	font-size: 13px;
+	margin-top: 70px;
+	text-decoration: none;
+}
+
+.footer-a:hover, .footer-a:focus { /*Colore a parte de trás do texto*/
+	background-color: #c44;
+}
+
+.footer-c p {
+	font-size: 11px;
+	margin-top: 2px;
+	text-decoration: none;
 }
 
 .mydivbars {

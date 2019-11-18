@@ -1,5 +1,11 @@
 @import 'https://fonts.googleapis.com/css?family=Ubuntu+Mono';
 
+
+html {
+    /*if u change this, then it will repeat in the DOM's html. Borders will repeat, the only way
+    you can avoid it is by adding the style attribute in the html tag inside the *.html file.*/
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,9 +17,41 @@ body {
     font-family: "Ubuntu Mono", sans-serif;
     font-size: 11px;
     letter-spacing: 1px;
-    color: #888;
+    color: #888; /*#888*/
+
+}
+/* From "/assets/indexpage.css": */
+.menu{
+    font-family: 'Menlo', 'Meslo LG', monospace; /*Arial, Helvetica, sans-serif;*/
+    text-align: center;
+    /*margin-bottom: -2em; /*note: this makes the border doesn't fit in the bottom part of the page.*/
+    padding: 40px;
 }
 
+.footer-c {
+    font-size: 11px;
+    margin-top: 70px;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-a {
+    font-size: 13px;
+    margin-top: 70px;
+    text-decoration: none;
+}
+
+.footer-a:hover, .footer-a:focus { /*Colore a parte de trás do texto*/
+    background-color: #c44;
+}
+
+.footer-c p {
+    font-size: 11px;
+    margin-top: 2px;
+    text-decoration: none;
+}
+
+/*-----------------------*/
 #titlebar {
     height: 20px;
     width: 930px;
@@ -40,7 +78,6 @@ body {
 iframe {
     display: block;
     margin: 20px auto;
-    border: 0;
 }
 
 h3 {
@@ -58,7 +95,7 @@ br {
 a {
     color: white;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 a:hover {
@@ -102,13 +139,16 @@ p.song a {
     font-size: 15px;
 }
 
-#songlist {
+#songlist:not(html) {
     width: 100%;
     height: 500px;
     overflow: hidden;
     border-top: 1px solid #ccc;
     padding-top: 10px;
+
 }
+
+
 
 .floatleft {
     float: left;
