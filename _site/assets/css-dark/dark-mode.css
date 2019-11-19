@@ -1,0 +1,37 @@
+html[data-theme='light'] {
+	--bg: #fff;
+	--bg-secondary: #fcfcfc;
+	--headings: #07f;
+	--text: #333;
+}
+
+html[data-theme='dark'] {
+	--bg: #333;
+	--bg-secondary: #444;
+	--headings: #39f;
+	--text: #bbb;
+}
+
+body {
+	background-color: var(--bg);
+}
+
+.container {
+	background-color: var(--bg-secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--headings);
+}
+
+p, strong, b, em, span, code, small {
+	color: var(--text);
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+	transition: all 650ms !important;
+	transition-delay: 0 !important;
+}

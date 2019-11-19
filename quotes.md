@@ -26,4 +26,8 @@ description: Quotting the entire world
 		<strong>There is nothing to writing. All you do is sit down at a typewriter and bleed.</strong>
     	<p>— Ernest Hemingway</p>
 	</blockquote>
+	<blockquote>
+		<strong>“Well, everyone’s unsure of their abilities. When that happens, just train more! When you’re afraid, just train! When something doesn’t feel right, just train! When you don’t believe in yourself anymore, just train! The only thing that won’t betray you is your training.” </strong>
+			<p>– Sakaki (Kenichi, 2006, Ep.5)</p>
+	</blockquote>
 </section>

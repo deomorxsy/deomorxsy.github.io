@@ -1,13 +1,16 @@
   <!DOCTYPE html>
-<html>
+<html data-theme="light">
 	<head>
 		<meta charset='utf-8'>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
 
-		<link href="/assets/indexpage.css" rel="stylesheet" type="text/css">
+		<link href="/assets/css-dark/dark-mode.css" rel="stylesheet" type="text/css">
+		<!--<link href="/assets/indexpage.css" rel="stylesheet" type="text/css">-->
 		<link href="/assets/highlighter.css" rel="stylesheet">
 		<link rel="shortcut icon" type="image/png" href="/images/index.png">
 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js"></script> <!-- to kept the chosen theme while navigating in the site. -->
+		<script src="/scripts/js-dark/dark-mode.js"></script>
 		<link href="/assets/sidebar.css" rel="stylesheet" type="text/css">
 		<title>blog | ACME Website</title>
 	</head>
@@ -193,6 +196,9 @@ is turned into a comment. >
 
 		</div>
 
+		<button class="theme-toggle">Toggle Dark Mode</button>
+
+
 		<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
@@ -289,6 +295,5 @@ SimpleJekyllSearch ({
         }, false);
       })(document);
     	</script>
-    	
 	</body>
 </html>

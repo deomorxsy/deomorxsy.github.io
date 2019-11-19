@@ -141,11 +141,13 @@ img {
 
 .quotes blockquote p {
 	font-size: 12px;
+	font-family: 'Menlo', 'Meslo LG', monospace; /*note new*/
 	padding-left: 15px;
 	margin-bottom: 30px;
 
 	display: block;
 	line-height: 26px;
+	text-transform: uppercase; /*note new*/
 }
 .quotes blockquote strong {
 	font-size: 18px;
