@@ -7,6 +7,7 @@ title: Home
 <img class="avatar" src="https://avatars1.githubusercontent.com/u/32879431?s=460&v=4" alt="banana" />
 
 
+
 ---
 
 {% include index_latests-posts.html %}

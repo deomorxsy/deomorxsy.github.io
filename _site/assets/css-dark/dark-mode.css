@@ -1,15 +1,17 @@
 html[data-theme='light'] {
-	--bg: #fff;
-	--bg-secondary: #fcfcfc;
-	--headings: #07f;
-	--text: #333;
+	--bg: #fff; /*background-color*/
+	--bg-secondary: #fcfcfc; /**/
+	--headings: #444; /*#07f, azul*/
+	--text: #444; /*#333*/
+	--border-color: #e6e6e6; /*new one*/
 }
 
 html[data-theme='dark'] {
-	--bg: #333;
-	--bg-secondary: #444;
-	--headings: #39f;
-	--text: #bbb;
+	--bg: #1b1b1b; /*background-color*/
+	--bg-secondary: #444; /**/
+	--headings: white; /*#39f, azul*/
+	--text: #c9cacc; /*bbb*/
+	--border-color: #00a86b;
 }
 
 body {
@@ -20,11 +22,15 @@ body {
 	background-color: var(--bg-secondary);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 { /*anterior: h2, h3, h4, h5, h6 */
 	color: var(--headings);
 }
 
-p, strong, b, em, span, code, small {
+h2, h3, h4, h5, h6 {
+	color: var(--text);
+}
+
+p, strong, b, em, span, code, small, a { /*anterior não tinha 'a'*/
 	color: var(--text);
 }
 

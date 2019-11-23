@@ -10,8 +10,34 @@ html {
     border-right-width: 7px;
     border-bottom-width: 7px;
     border-left-width: 7px;
-    min-height: 100vh;
+    min-height: 100vh;   
 }
+
+/*------------Toggleable color themes----------*/
+
+/* 
+html[data-theme='light'] {
+	--bg: #fff; /*background-color
+	--bg-secondary: #fcfcfc; /*
+	--headings: #444; /*#07f, azul
+	--text: #444; /*#333
+	--border-color: #e6e6e6; /*new one
+}
+
+html[data-theme='dark'] {
+	--bg: #1b1b1b; /*background-color
+	--bg-secondary: #444; 
+	--headings: white; /*#39f, azul
+	--text: #c9cacc; /*bbb
+	--border-color: #00a86b;
+}
+
+p, strong, em, code, small { /*anterior não tinha 'a'
+	color: var(--text);
+}
+
+*/
+/*---------------------------------------------*/
 
 body {
 	font-size: 100%;
@@ -23,13 +49,14 @@ body {
 	line-height: 1.725;
 	font-family: Arial,Helvetica,sans-serif; /*'Menlo', monospace;*/
 	text-align: left;
-	background-color: #1b1b1b;/*#111*/
+	background-color: #1b1b1b; /*dark-theme | background-color: #1b1b1b;/*#111*/
+
 }
 
 h1 {
 	font-size: 2.5em;
 	text-align: center;
-	color: white;
+	color: white; /*dark-theme | color: white;*/
 	text-shadow: 3px 3px 1px black;
 	margin-bottom: 0em;
 	margin-top: 1.20em;
@@ -39,6 +66,7 @@ h1 {
 h2 {
 	font-size: 1.6em;
 }
+
 
 p {
 	font-size: 15px;
@@ -56,7 +84,7 @@ a {
 	box-shadow:none;
 	font-size:16px;
 	line-height:1.25;
-	color:#c9cacc; /**/
+	color: #c9cacc; /*gray #c9cacc*/
 	letter-spacing:0;
 	font-family:Istok Web,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,sans-serif;
 	text-transform:none;
@@ -96,7 +124,7 @@ a {
 }
 
 .yellow-circle {
-	color: #00a86b;/*yellow-tonality #efd516;*/
+	color: #00a86b;/*green #00a86b or yellow-tonality #efd516;*/
 	font-family:Vollkorn;
 	font-size: 20px;
 }
@@ -135,8 +163,12 @@ img {
 .avatar {
     margin-top: 0; /*margin-top: 30px;*/
     width: 200px;/*width: 130px;*/
-    box-shadow: 35px -35px 0 #00a86b; /*box-shadow: 24px -24px 0 #efd415;*/
+    box-shadow: 35px -35px 0 #00a86b; /*green #00a86b or box-shadow: 24px -24px 0 #efd415;*/
     border-radius: 9999px;
+}
+
+.banner {
+	border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px) 60;
 }
 
 .quotes blockquote p {
@@ -202,7 +234,7 @@ img {
 	outline:0;
 }
 .menu-item:focus {
-	color:#00a86b;
+	color: #00a86b; /*green #00a86b*/
 	background:#FAFAFA; /*#ff0000; red*/
 }
 

@@ -1,22 +1,19 @@
   <!DOCTYPE html>
-<html data-theme="light">
+<html data-theme="dark">
 	<head>
 		<meta charset='utf-8'>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
 
-		<link href="/assets/css-dark/dark-mode.css" rel="stylesheet" type="text/css">
-		<!--<link href="/assets/indexpage.css" rel="stylesheet" type="text/css">-->
+		<link href="/assets/indexpage.css" rel="stylesheet" type="text/css">
 		<link href="/assets/highlighter.css" rel="stylesheet">
 		<link rel="shortcut icon" type="image/png" href="/images/index.png">
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js"></script> <!-- to kept the chosen theme while navigating in the site. -->
-		<script src="/scripts/js-dark/dark-mode.js"></script>
 		<link href="/assets/sidebar.css" rel="stylesheet" type="text/css">
 		<title>My Third Post | ACME Website</title>
 	</head>
 	
 	<style>
-		a {
+		a { /*cor pra lista de projetos*/
 			color: #c9cacc;
 		}
 
@@ -45,8 +42,8 @@
 
 		</div>
 
-		<button class="theme-toggle">Toggle Dark Mode</button>
-
+		<!--<button class="theme-toggle">Toggle Dark Mode</button>-->
+		<!-- <input id="night-mode" class="lamp" type="checkbox" aria-label="night-mode" /> -->
 
 		<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
@@ -56,7 +53,7 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-    <p>My personal website, built from the scratch by testing css and html features. Made by <a href="https://twitter.com/deomorxsy" target="_blank">@deomorxsy</a>.</p>
+    <p>My personal website, built from the scratch by testing html, css and js features. <p>Made with ❤ by <a class="footer-a" href="https://github.com/deomorxsy" style="font-style:oblique;" target="_blank">@deomorxsy</a>.</p></p>
   </div>
 
   <!-- Html Elements for Search -->
@@ -123,11 +120,27 @@ SimpleJekyllSearch ({
   </nav>
 
   <div class="sidebar-item">
-    <p>
-      &copy; 2019. All rights reserved.
+    <p style="margin-bottom: 0px; position: center;">
+      &copy; 2019. 
+      <a class="footer-a" href="https://github.com/deomorxsy" style="font-style:oblique;"> <b>~/.ðÐ</b> </a>
+      <p style="margin-top: 1px;">All rights reserved.<p>
     </p>
   </div>
 </div>
+
+<footer>
+	<nav class="menu">
+	<div class="footer-c">
+		&copy; 2019 <a class="footer-a" href="https://github.com/deomorxsy" style="font-style:oblique;"> <b>~/.ðÐ</b> </a>
+		<p>All rights reserved.</p>
+	</div>
+	</nav>
+	<!-- <a href="/" class="menu-item -home -active">Index</a>
+	<a href="/blog/" class="menu-item">Blog</a>
+	<a href="/about/" class="menu-item">About</a>
+	<a href="/quotes/" class="menu-item">Quotes</a>
+	</nav>-->
+</footer>
 
 <label for="sidebar-checkbox" class="sidebar-toggle"></label> <!--NOTE: IMPORTANT! this is the icon decoy for the sidebar. -->
 		<script>
