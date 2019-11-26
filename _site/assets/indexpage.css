@@ -1,7 +1,8 @@
 html {
 	font-size: 15px; /* 15px significa 'pixels': o tamanho da fonte base é agora de 10 pixels */ 
 	font-family: 'Menlo', 'Meslo LG', monospace; /* este deve ser o nome da fonte que você obteve no Google Fonts */
-	background-color: #1b1b1b; /*#111*/
+	/*background-color: #1b1b1b; /*#111*/
+	/*background-image: url('https://i.imgur.com/0S817q9.jpg');*/
 	color: #c9cacc;
 	box-sizing: border-box;
 	cursor: default;
@@ -51,6 +52,7 @@ body {
 	text-align: left;
 	background-color: #1b1b1b; /*dark-theme | background-color: #1b1b1b;/*#111*/
 
+
 }
 
 h1 {
@@ -61,6 +63,10 @@ h1 {
 	margin-bottom: 0em;
 	margin-top: 1.20em;
 
+}
+
+.index-title {
+	margin-bottom: 1em
 }
 
 h2 {
@@ -416,11 +422,17 @@ pre {
 
 @media screen and (max-width: 50em) {
 	body {
-		background: #ff0000;
+		/*background: #ff0000; /*viewport: red background*/
+		background-color: #1b1b1b;
 	}
 
 	h1 {
 		font-size: 133%;
+	}
+
+	.index-title {
+		font-size: 190%;
+		margin-bottom: 1.7em;
 	}
 
 	img {
