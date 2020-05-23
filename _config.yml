@@ -9,6 +9,6 @@ permalink: /:categories/:title/
 
 
 #variables
-description: 'My personal website, built from the scratch by testing html, css and js features. <p>Made with ❤ by <a class="footer-a" href="https://github.com/deomorxsy" style="font-style:oblique;" target="_blank">@deomorxsy</a>.</p>'
+description: 'My personal website, built from the scratch by testing html, css and js features.'
 version: '1.1.0'
 bar: foo

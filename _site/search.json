@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "Japanese input in linux with Fcitx-Mozc",
+      "url"      : "/tech/fcitx-mozc/",
+      "category" : "",
+      "tags"     : "nihongo, xsession, xim, qt5, gtk3",
+      "date"     : "2020-05-22 21:56:42 -0300"
+
+    } ,
+  
+    {
+
       "title"    : "Liquid Syntax",
       "url"      : "/tech/liquid-syntax/",
       "category" : "",

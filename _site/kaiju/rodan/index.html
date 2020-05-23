@@ -83,10 +83,10 @@
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
       <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nb">document</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">toggle</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'.sidebar-toggle'</span><span class="p">);</span>
-        <span class="kd">var</span> <span class="nx">sidebar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#sidebar'</span><span class="p">);</span>
-        <span class="kd">var</span> <span class="nx">checkbox</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#sidebar-checkbox'</span><span class="p">);</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">toggle</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">.sidebar-toggle</span><span class="dl">'</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">sidebar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#sidebar</span><span class="dl">'</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">checkbox</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#sidebar-checkbox</span><span class="dl">'</span><span class="p">);</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
           <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">;</span>
           <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">checkbox</span><span class="p">.</span><span class="nx">checked</span> <span class="o">||</span>
              <span class="nx">sidebar</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="nx">target</span><span class="p">)</span> <span class="o">||</span>
@@ -100,7 +100,7 @@
 <p>Javascript highlight</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">sayHello</span><span class="p">(){</span>
-	<span class="k">return</span> <span class="s1">'hi!'</span><span class="p">;</span>
+	<span class="k">return</span> <span class="dl">'</span><span class="s1">hi!</span><span class="dl">'</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -141,9 +141,9 @@
 <div class="language-scheme highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">+</span> <span class="mi">137</span> <span class="mi">349</span><span class="p">)</span>
 <span class="mi">486</span>
 </code></pre></div></div>
-<pre><code class="language-lisp">(- 1000 334)
-666
-</code></pre>
+<div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">-</span> <span class="mi">1000</span> <span class="mi">334</span><span class="p">)</span>
+<span class="mi">666</span>
+</code></pre></div></div>
 
 <div class="language-scheme highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">*</span> <span class="mi">5</span> <span class="mi">99</span><span class="p">)</span>
 <span class="mi">495</span>

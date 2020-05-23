@@ -63,7 +63,7 @@
 </blockquote>
 
 <p>We can estimate the reading time with the measure called Words per Minute, (WPM).
-An average person can read 180 words per minute in a computer monitor<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. So, we can include this in our blog post layout with one of these hibrid snippets between HTML (to style with CSS later) and Liquid:</p>
+An average person can read 180 words per minute in a computer monitor<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>. So, we can include this in our blog post layout with one of these hibrid snippets between HTML (to style with CSS later) and Liquid:</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"reading-time"</span> <span class="na">title=</span><span class="s">"Estimated read time"</span><span class="nt">&gt;</span>
 </code></pre></div></div>
@@ -92,7 +92,7 @@ An average person can read 180 words per minute in a computer monitor<sup id="fn
 <p>You can call it with</p>
 
 <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span><span class="na">read_time</span><span class="p">.</span><span class="na">html</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>read_time.html<span class="w"> </span><span class="p">%}</span>
 
 </code></pre></div></div>
 
@@ -100,10 +100,10 @@ An average person can read 180 words per minute in a computer monitor<sup id="fn
 
 <p>References:</p>
 
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1">
-      <p><a href="https://en.wikipedia.org/wiki/Words_per_minute">WPM</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://en.wikipedia.org/wiki/Words_per_minute">WPM</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>

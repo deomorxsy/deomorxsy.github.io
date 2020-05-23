@@ -65,7 +65,7 @@
 </ol>
 
 <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">beatles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"John, Paul, George, Ringo"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">split</span><span class="p">:</span><span class="w"> </span><span class="s2">", "</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>member<span class="w"> </span>in<span class="w"> </span>beatles<span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">member</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">beatles</span><span class="w"> </span><span class="p">%}</span>
 	<span class="p">{{</span><span class="w"> </span><span class="nv">member</span><span class="w"> </span><span class="p">}}</span>
 <span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
 </code></pre></div></div>

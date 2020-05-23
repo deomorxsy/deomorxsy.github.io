@@ -1,0 +1,13 @@
+I"ò<p>Install fcitx-mozc</p>
+
+<p>Create .pam_environment file in your home directory with the following contents:</p>
+
+<p>XMODIFIERS=@im=fcitx
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+DefaultIMModule=fcitx</p>
+
+<p>Run fcitx-autostart in terminal. Re-login. Press Ctrl+Shift in text editor. Japanese input should become available. Pressing Ctrl+Shift should switch you back to your default language input. No need to add kbd layouts.</p>
+
+<p>PS: if using KDE, add input method plasmoid to the panel.</p>
+:ET
