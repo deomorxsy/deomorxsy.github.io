@@ -30,6 +30,7 @@ further reading:
 1. [xsession](https://en.m.wikipedia.org/wiki/X_session_manager)
 2. [X Window Manager](https://en.m.wikipedia.org/wiki/X_window_manager)
 3. [X Window System Protocols and Architecture](https://en.m.wikipedia.org/wiki/X_Window_System_protocols_and_architecture)
+4. [Difference between .xinitrc, .xsession and .xsessionrc](https://unix.stackexchange.com/questions/281858/difference-between-xinitrc-xsession-and-xsessionrc)
 
 ---
 sources:

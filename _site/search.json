@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "Can&#39;t find Gem Jekyll error",
+      "url"      : "/tech/gem-not-path/",
+      "category" : "",
+      "tags"     : "ruby, gems, jekyll",
+      "date"     : "2020-05-23 08:32:00 -0300"
+
+    } ,
+  
+    {
+
       "title"    : "Japanese input in linux with Fcitx-Mozc",
       "url"      : "/tech/fcitx-mozc/",
       "category" : "",

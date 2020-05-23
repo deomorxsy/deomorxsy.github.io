@@ -1,4 +1,4 @@
-I"�<h1 class="index-title">Yare Yare ~/.ðÐ...</h1>
+I"�<h1 class="index-title">Yare Yare ~/.ðÐ...</h1>
 <p><img class="avatar" src="https://avatars1.githubusercontent.com/u/32879431?s=460&amp;v=4" alt="banana" /></p>
 
 <div class="navigation-wrapper" style="text-align:center; margin-top: 45px;">
@@ -116,6 +116,11 @@
 <ul class="myposts-index">
 
 	<ul class="alter-padding" style="padding-left: 0px; margin-left: 0px;">
+    <span class="old-postDate">May 23 2020  ー</span>
+    <a class="post-article" href="/tech/gem-not-path/">Can't find Gem Jekyll error</a>
+	</ul>
+
+	<ul class="alter-padding" style="padding-left: 0px; margin-left: 0px;">
     <span class="old-postDate">May 22 2020  ー</span>
     <a class="post-article" href="/tech/fcitx-mozc/">Japanese input in linux with Fcitx-Mozc</a>
 	</ul>
@@ -148,11 +153,6 @@
 	<ul class="alter-padding" style="padding-left: 0px; margin-left: 0px;">
     <span class="old-postDate">Mar 31 2019  ー</span>
     <a class="post-article" href="/kaiju/osrs/">osrstest</a>
-	</ul>
-
-	<ul class="alter-padding" style="padding-left: 0px; margin-left: 0px;">
-    <span class="old-postDate">Mar 31 2019  ー</span>
-    <a class="post-article" href="/kaiju/gojira/">Gojira // Godzilla</a>
 	</ul>
 
 </ul>
