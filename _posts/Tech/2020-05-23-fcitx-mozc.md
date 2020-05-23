@@ -7,9 +7,9 @@ tags:
 - nihongo, xsession, xim, qt5, gtk3
 ---
 
-Install fcitx-mozc
+1. Install fcitx-mozc
 
-Create .pam_environment file in your home directory with the following contents:
+2. Create .pam_environment file in your home directory with the following contents:
 
 ```
 XMODIFIERS=@im=fcitx
@@ -18,7 +18,7 @@ QT_IM_MODULE=fcitx
 DefaultIMModule=fcitx
 ```
 
-Run ```fcitx-autostart``` in terminal. Re-login. Press ```Ctrl+Shift``` in text editor. Japanese input should become available. Pressing Ctrl+Shift should switch you back to your default language input. No need to add kbd layouts.
+3. Run ```fcitx-autostart``` in terminal. Re-login. Press ```Ctrl+Shift``` in text editor. Japanese input should become available. Pressing Ctrl+Shift should switch you back to your default language input. No need to add kbd layouts.
 
 PS: if using KDE, add input method plasmoid to the panel.
 
@@ -28,6 +28,10 @@ PS: if using KDE, add input method plasmoid to the panel.
 further reading:
 
 1. [xsession](https://en.m.wikipedia.org/wiki/X_session_manager)
-2.
-3.
+2. [X Window Manager](https://en.m.wikipedia.org/wiki/X_window_manager)
+3. [X Window System Protocols and Architecture](https://en.m.wikipedia.org/wiki/X_Window_System_protocols_and_architecture)
+
+---
+sources:
+1. [openminded's post on Manjaro Forum](https://forum.manjaro.org/t/japanese-input/94580/6)
 

@@ -58,9 +58,14 @@
 		</header>
 	
 		<div class="content">
-		<p>Install fcitx-mozc</p>
-
-<p>Create .pam_environment file in your home directory with the following contents:</p>
+		<ol>
+  <li>
+    <p>Install fcitx-mozc</p>
+  </li>
+  <li>
+    <p>Create .pam_environment file in your home directory with the following contents:</p>
+  </li>
+</ol>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>XMODIFIERS=@im=fcitx
 GTK_IM_MODULE=fcitx
@@ -68,7 +73,9 @@ QT_IM_MODULE=fcitx
 DefaultIMModule=fcitx
 </code></pre></div></div>
 
-<p>Run <code class="highlighter-rouge">fcitx-autostart</code> in terminal. Re-login. Press <code class="highlighter-rouge">Ctrl+Shift</code> in text editor. Japanese input should become available. Pressing Ctrl+Shift should switch you back to your default language input. No need to add kbd layouts.</p>
+<ol>
+  <li>Run <code class="highlighter-rouge">fcitx-autostart</code> in terminal. Re-login. Press <code class="highlighter-rouge">Ctrl+Shift</code> in text editor. Japanese input should become available. Pressing Ctrl+Shift should switch you back to your default language input. No need to add kbd layouts.</li>
+</ol>
 
 <p>PS: if using KDE, add input method plasmoid to the panel.</p>
 
@@ -77,9 +84,15 @@ DefaultIMModule=fcitx
 <p>further reading:</p>
 
 <ol>
-  <li><a href="https://en.m.wikipedia.org/wiki/X_session_manager">xsession</a>
-2.
-3.</li>
+  <li><a href="https://en.m.wikipedia.org/wiki/X_session_manager">xsession</a></li>
+  <li><a href="https://en.m.wikipedia.org/wiki/X_window_manager">X Window Manager</a></li>
+  <li><a href="https://en.m.wikipedia.org/wiki/X_Window_System_protocols_and_architecture">X Window System Protocols and Architecture</a></li>
+</ol>
+
+<hr />
+<p>sources:</p>
+<ol>
+  <li><a href="https://forum.manjaro.org/t/japanese-input/94580/6">openminded’s post on Manjaro Forum</a></li>
 </ol>
 
 
