@@ -1,5 +1,5 @@
 html {
-	font-size: 15px; /* 15px significa 'pixels': o tamanho da fonte base é agora de 10 pixels */ 
+	font-size: 10px; /* 15px significa 'pixels': o tamanho da fonte base é agora de 10 pixels */ 
 	font-family: Arial,Helvetica,sans-serif; /*'Menlo', 'Meslo LG', monospace; /* este deve ser o nome da fonte que você obteve no Google Fonts */
 	/*background-color: #1b1b1b; /*#111*/
 	/*background-image: url('https://i.imgur.com/0S817q9.jpg');*/
@@ -67,7 +67,7 @@ body {
 }
 
 h1 {
-	font-size: 2.5em;
+	font-size: 30em;
 	text-align: center;
 	color: white; /*dark-theme | color: white;*/
 	text-shadow: 3px 3px 1px black;
@@ -390,28 +390,32 @@ header{display:block}
 	text-align:center
 }
 
-pre { /*code highlight w/ rouge*/
+/*pre { /*code highlight w/ rouge
   font-family: "Menlo", "Meslo LG", monospace;
   /*font-size: 13px;
   padding: 10px 15px;
   line-height: 22px
   -webkit-border-radius: 4px;
-  overflow-x: auto;*/
+  overflow-x: auto;
 
 	padding: 16px;
 	overflow: auto;
-	font-size: 90%;
+	font-size: 130%;
 	line-height: 1.45;
-	background-color: #282a36;/*#f6f8fa;*/
+	background-color: #282a36;/*#f6f8fa;
 	border-radius: 3px;
 
     margin-bottom: 0;
     word-break: normal;
     word-wrap: normal;
 
- 	/*white-space: pre;*/
-}
+ 	/*white-space: pre;
+}*/
 
+pre {
+	font-size: 100%;
+	padding: 16px;
+}
 .fa, fa-clock-o { /* Readtime icon. The comma is important.*/
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
@@ -440,14 +444,20 @@ pre { /*code highlight w/ rouge*/
     border-left: 3px solid
 }*/
 
-code.highlighter-rouge {
+code.highlighter-rouge { 
+	/*fenced_code_blocks rouge highlighting*/
     background: #282a36;
     color: #f8f8f2;
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
  	font-size: 12px;
 
  	padding: 4px;
-
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  margin: 0;
+  font-size: 90%;
+  background-color: rgba(226,84,64,0.8)/*#e25440;/*rgba(0,0,0,0.04);*/
+  border-radius: 3px;
 }
 
 /*===== SVG ICONS =====*/

@@ -1,6 +1,6 @@
 html {
 	font-size: 15px; /* 15px significa 'pixels': o tamanho da fonte base é agora de 10 pixels */ 
-	font-family: 'Menlo', 'Meslo LG', monospace; /* este deve ser o nome da fonte que você obteve no Google Fonts */
+	font-family: Arial,Helvetica,sans-serif; /*'Menlo', 'Meslo LG', monospace; /* este deve ser o nome da fonte que você obteve no Google Fonts */
 	/*background-color: #1b1b1b; /*#111*/
 	/*background-image: url('https://i.imgur.com/0S817q9.jpg');*/
 	color: #c9cacc;
@@ -94,6 +94,7 @@ p {
 a {
 	font-size: 15px;
 	line-height: 1.5;
+	text-decoration: none;
 }
 
 .post-article { /*a inside the ul from blog posts.*/
@@ -118,7 +119,7 @@ a {
 }
 
 .post-article:hover, .post-article:focus { /*Colore a parte de trás do texto*/
-	background-color: #c44;
+	background-color: #c44; /*salmon salmão*/
 }
 
 .post-date {
@@ -152,17 +153,18 @@ a {
 }
 
 ol li {
-	font-family: 'Runescape Chat Font Regular'; /*'Menlo', monospace; */
+	font-family: Arial,Helvetica,sans-serif;/*'Runescape Chat Font Regular'; /*'Menlo', monospace; */
 	font-size: 15px;
-	display: block;
-	margin-bottom: -5px;
-	/*border-left: 1px solid;*/
-	padding-left: 0px;
+	/*display: block; /**/
+	margin-bottom: -4px;
+	/*border-left: 5px solid;*/
+	padding-left: 5px;
 	letter-spacing: 0px;
+
 }
 
 .reference {
-	font-family: 'Runescape Chat Font Regular';
+	font-family: /*'Runescape Chat Font Regular';*/
 	font-size: 20px;
 	text-align: left;
 	padding: 0;
@@ -388,7 +390,7 @@ header{display:block}
 	text-align:center
 }
 
-pre {
+pre { /*code highlight w/ rouge*/
   font-family: "Menlo", "Meslo LG", monospace;
   /*font-size: 13px;
   padding: 10px 15px;
@@ -400,12 +402,14 @@ pre {
 	overflow: auto;
 	font-size: 90%;
 	line-height: 1.45;
-	background-color: #f6f8fa;
+	background-color: #282a36;/*#f6f8fa;*/
 	border-radius: 3px;
 
     margin-bottom: 0;
     word-break: normal;
     word-wrap: normal;
+
+ 	/*white-space: pre;*/
 }
 
 .fa, fa-clock-o { /* Readtime icon. The comma is important.*/
@@ -426,6 +430,24 @@ pre {
     display: inline-block;
     margin: 0 2px;
     line-height: 1em;
+}
+
+/*blockquote {
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    padding: 1px 5px;
+    background-color: #c44; /*#303e80;
+    border-left: 3px solid
+}*/
+
+code.highlighter-rouge {
+    background: #282a36;
+    color: #f8f8f2;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+ 	font-size: 12px;
+
+ 	padding: 4px;
+
 }
 
 /*===== SVG ICONS =====*/

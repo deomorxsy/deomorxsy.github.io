@@ -1,6 +1,8 @@
-I"�<p>After a long time without using jekyll to serve my website, I come across this error when executing “Jekyll serve”:</p>
+I"\<p>After a long time without using jekyll to serve my website, I come across this error when executing <code class="highlighter-rouge">jekyll serve</code>:</p>
 
-<p><code class="highlighter-rouge">/usr/lib/ruby/2.7.0/rubygems.rb:275:in `find_spec_for_exe': can't find gem jekyll (&gt;= 0.a) with executable jekyll (Gem::GemNotFoundException)</code></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/lib/ruby/2.7.0/rubygems.rb:275:in `find_spec_for_exe':
+	can't find gem jekyll (&gt;= 0.a) with executable jekyll (Gem::GemNotFoundException)
+</code></pre></div></div>
 
 <p>Uninstall Jekyll and try to install following the guide in the <a href="https://jekyllrb.com/">official docs</a>.</p>
 
@@ -16,6 +18,7 @@ Successfully uninstalled jekyll-4.0.1
   <p>the error that comes with the install (don’t mind for the interruption command, just pay attention to the WARNING.):</p>
 </blockquote>
 
+<p>teste</p>
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>asari@asari-pc ~]<span class="nv">$ </span>gem <span class="nb">install </span>bundler jekyll 
 WARNING:  You don<span class="s1">'t have /home/asari/.gem/ruby/2.7.0/bin in your PATH, 
           gem executables will not run. 
@@ -25,7 +28,7 @@ Done installing documentation for bundler after 4 seconds
 ^CERROR:  Interrupted 
 </span></code></pre></div></div>
 
-<p>So, basically, to install Jekyll and use gems inside your directory, you need to have a environment variable that points to your ruby’s binaries. If you already haven’t, uninstall the current jekyll (just follow the penultimate snippet code above). The environment variable can be put in different files, but if you have an Xsession, is more likely that <code class="highlighter-rouge">~/.profile</code> will work.</p>
+<p>So, basically, to install Jekyll and use gems inside your directory, you need to have a <strong>Environment Variable</strong> that points to your ruby’s binaries. If you already haven’t, uninstall the current Jekyll (just follow the penultimate snippet code above). The environment variable can be put in different files, but if you have an Xsession, is more likely that <code class="highlighter-rouge">~/.profile</code> will work.</p>
 
 <blockquote>
   <p>PS: how do I know if I have a Xsession?</p>
@@ -96,18 +99,20 @@ Done installing documentation for jekyll after 2 seconds
 
 <hr />
 
-<p>further reading/sources</p>
-<ol>
+<p>Further reading/sources</p>
+
+<ul>
   <li><a href="https://wiki.archlinux.org/index.php/RVM#Gems">Uninstalling RubyGems (just ctrl+f)</a></li>
   <li><a href="https://wiki.archlinux.org/index.php/ruby#Setup">Allowing RubyGems to be executed</a></li>
-  <li><a href="https://superuser.com/a/789465/905337">Choosing between .bashrc, .profile, .bash_profile</a>
-3.<a href="https://unix.stackexchange.com/a/45687/358160">What is the difference between ~/.profile and ~/.bash_profile?</a>
-4.<a href=""></a></li>
-</ol>
+  <li><a href="https://superuser.com/a/789465/905337">Choosing between .bashrc, .profile, .bash_profile</a></li>
+  <li><a href="https://unix.stackexchange.com/a/45687/358160">What is the difference between ~/.profile and ~/.bash_profile?</a></li>
+</ul>
 
 <hr />
-<p>forum sources (just the topics to contextualize though)</p>
-<ol>
+
+<p>Forum sources (just the topics to contextualize though)</p>
+
+<ul>
   <li><a href="https://askubuntu.com/questions/406643/warning-you-dont-have-a-directory-in-your-path-gem-executables-will-not-run">WARNING: You don’t have &lt;\a directory&gt; in your PATH, gem executables will not run</a></li>
-</ol>
+</ul>
 :ET

@@ -7,9 +7,13 @@ tags:
 - ruby, gems, jekyll
 ---
 
-After a long time without using jekyll to serve my website, I come across this error when executing "Jekyll serve":
+After a long time without using jekyll to serve my website, I come across this error when executing ```jekyll serve```:
 
-```/usr/lib/ruby/2.7.0/rubygems.rb:275:in `find_spec_for_exe': can't find gem jekyll (>= 0.a) with executable jekyll (Gem::GemNotFoundException)```
+
+```
+/usr/lib/ruby/2.7.0/rubygems.rb:275:in `find_spec_for_exe':
+	can't find gem jekyll (>= 0.a) with executable jekyll (Gem::GemNotFoundException)
+```
 
 Uninstall Jekyll and try to install following the guide in the [official docs](https://jekyllrb.com/).
 
@@ -24,6 +28,7 @@ Successfully uninstalled jekyll-4.0.1
 ```
 >the error that comes with the install (don't mind for the interruption command, just pay attention to the WARNING.): 
 
+teste
 ```sh
 [asari@asari-pc ~]$ gem install bundler jekyll 
 WARNING:  You don't have /home/asari/.gem/ruby/2.7.0/bin in your PATH, 
@@ -34,7 +39,7 @@ Done installing documentation for bundler after 4 seconds
 ^CERROR:  Interrupted 
 ```
 
-So, basically, to install Jekyll and use gems inside your directory, you need to have a environment variable that points to your ruby's binaries. If you already haven't, uninstall the current jekyll (just follow the penultimate snippet code above). The environment variable can be put in different files, but if you have an Xsession, is more likely that ```~/.profile``` will work.
+So, basically, to install Jekyll and use gems inside your directory, you need to have a __Environment Variable__ that points to your ruby's binaries. If you already haven't, uninstall the current Jekyll (just follow the penultimate snippet code above). The environment variable can be put in different files, but if you have an Xsession, is more likely that ```~/.profile``` will work.
 
 > PS: how do I know if I have a Xsession?
 
@@ -107,14 +112,13 @@ Done installing documentation for jekyll after 2 seconds
 
 Further reading/sources
 
-1. [Uninstalling RubyGems (just ctrl+f)](https://wiki.archlinux.org/index.php/RVM#Gems)
-2. [Allowing RubyGems to be executed](https://wiki.archlinux.org/index.php/ruby#Setup)
-2. [Choosing between .bashrc, .profile, .bash_profile](https://superuser.com/a/789465/905337)
-3.[What is the difference between ~/.profile and ~/.bash_profile?](https://unix.stackexchange.com/a/45687/358160)
-4.[]()
-
+- [Uninstalling RubyGems (just ctrl+f)](https://wiki.archlinux.org/index.php/RVM#Gems)
+- [Allowing RubyGems to be executed](https://wiki.archlinux.org/index.php/ruby#Setup)
+- [Choosing between .bashrc, .profile, .bash_profile](https://superuser.com/a/789465/905337)
+- [What is the difference between ~/.profile and ~/.bash_profile?](https://unix.stackexchange.com/a/45687/358160)
+ 
 ---
 
 Forum sources (just the topics to contextualize though)
 
-1. [WARNING: You don't have <\a directory> in your PATH, gem executables will not run](https://askubuntu.com/questions/406643/warning-you-dont-have-a-directory-in-your-path-gem-executables-will-not-run)
+- [WARNING: You don't have <\a directory> in your PATH, gem executables will not run](https://askubuntu.com/questions/406643/warning-you-dont-have-a-directory-in-your-path-gem-executables-will-not-run)
