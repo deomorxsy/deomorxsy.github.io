@@ -1,4 +1,4 @@
-I"�<p>After a long time without using jekyll to serve my website, I come across this error when executing <code class="highlighter-rouge">jekyll serve</code>:</p>
+I"<p>After a long time without using jekyll to serve my website, I come across this error when executing <code class="highlighter-rouge">jekyll serve</code>:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/lib/ruby/2.7.0/rubygems.rb:275:in `find_spec_for_exe':
 	can't find gem jekyll (&gt;= 0.a) with executable jekyll (Gem::GemNotFoundException)
@@ -46,19 +46,15 @@ Successfully uninstalled jekyll-4.0.1
   <p>uninstalling jekyll</p>
 </blockquote>
 
-<p>put <code class="highlighter-rouge">PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"</code> under your <strong>~/.profile</strong>. It means, in bash:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">foo</span>
-  <span class="nb">puts</span> <span class="s1">'foo'</span>
-<span class="k">end</span>
-</pre></td></tr></tbody></table></code></pre></figure>
+<p>put <code class="highlighter-rouge">PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"</code> under your <code class="highlighter-rouge">~/.profile</code>. It means, in bash:</p>
 
 <ol>
   <li>PATH=”$PATH:</li>
-  <li>$(ruby -e ‘puts Gem.user_dir’)/bin”</li>
+  <li>$(ruby -e ‘puts Gem.user_dir’)/bin”
+    <ul>
+      <li>-e command     Specifies script from command-line while telling Ruby notto search the rest of the arguments for a script filename.</li>
+    </ul>
+  </li>
 </ol>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#

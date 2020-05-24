@@ -1,4 +1,4 @@
-I"\<p>After a long time without using jekyll to serve my website, I come across this error when executing <code class="highlighter-rouge">jekyll serve</code>:</p>
+I"(<p>After a long time without using jekyll to serve my website, I come across this error when executing <code class="highlighter-rouge">jekyll serve</code>:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/lib/ruby/2.7.0/rubygems.rb:275:in `find_spec_for_exe':
 	can't find gem jekyll (&gt;= 0.a) with executable jekyll (Gem::GemNotFoundException)
@@ -50,7 +50,11 @@ Successfully uninstalled jekyll-4.0.1
 
 <ol>
   <li>PATH=”$PATH:</li>
-  <li>$(ruby -e ‘puts Gem.user_dir’)/bin”</li>
+  <li>$(ruby -e ‘puts Gem.user_dir’)/bin”
+    <ul>
+      <li><code class="highlighter-rouge">-e command</code> Specifies script from command-line while telling Ruby not to search the rest of the arguments for a script filename.</li>
+    </ul>
+  </li>
 </ol>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#

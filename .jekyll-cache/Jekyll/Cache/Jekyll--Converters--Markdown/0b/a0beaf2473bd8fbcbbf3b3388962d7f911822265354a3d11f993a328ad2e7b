@@ -1,64 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset='utf-8'>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-
-		<link href='/assets/indexpage.css' rel='stylesheet' type='text/css'>
-		<link href="/assets/highlighter.css" rel="stylesheet">
-		<!--link href='/assets/osrs-font/os-font.css' rel='stylesheet' type='text/css'-->
-		<link rel="shortcut icon" type="image/png" href="/images/index.png">
-
-		<title>Can't find Gem Jekyll error | ACME Website</title>
-
-		<link rel="stylesheet" href="/assets/osrs-font/os-font.css" />
-
-		
-	</head>
-
-	<style>
-		a {
-			color: #c9cacc;
-		}
-
-		.content {
-			max-width: 890px; /*580*/
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-	</style>
-
-	<body>
-		<header>
-				<nav class="menu">
-				<a href="/" class="menu-item -home -active">Index</a>
-				<a href="/blog/" class="menu-item">Blog</a>
-				<a href="/about/" class="menu-item">About</a>
-				<a href="/quotes/" class="menu-item">Quotes</a>
-				</nav>
-		</header>
-
-		<header class="header">
-			<a>
-			<time class="article-date" datetime="">
-			May 23, 2020 
-			<p> <i class="fa fa-clock-o" aria-hidden=true>  </i> <span class="reading-time" title="Estimated read time">
-  
-  
-    4 mins
-  
-</span>
-
- read
-			</p>
-			</time>
-			</a>
-			<h3 class="article-title">Can't find Gem Jekyll error</h3>
-		</header>
-	
-		<div class="content">
-		<p>After a long time without using jekyll to serve my website, I come across this error when executing <code class="highlighter-rouge">jekyll serve</code>:</p>
+I"(<p>After a long time without using jekyll to serve my website, I come across this error when executing <code class="highlighter-rouge">jekyll serve</code>:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/lib/ruby/2.7.0/rubygems.rb:275:in `find_spec_for_exe':
 	can't find gem jekyll (&gt;= 0.a) with executable jekyll (Gem::GemNotFoundException)
@@ -112,7 +52,7 @@ Successfully uninstalled jekyll-4.0.1
   <li>PATH=”$PATH:</li>
   <li>$(ruby -e ‘puts Gem.user_dir’)/bin”
     <ul>
-      <li><code class="highlighter-rouge">-e command</code> Specifies script from command-line while telling Ruby not to search the rest of the arguments for a script filename.</li>
+      <li><code class="highlighter-rouge">-e</code> command Specifies script from command-line while telling Ruby not to search the rest of the arguments for a script filename.</li>
     </ul>
   </li>
 </ol>
@@ -179,26 +119,4 @@ Done installing documentation for jekyll after 2 seconds
 <ul>
   <li><a href="https://askubuntu.com/questions/406643/warning-you-dont-have-a-directory-in-your-path-gem-executables-will-not-run">WARNING: You don’t have &lt;\a directory&gt; in your PATH, gem executables will not run</a></li>
 </ul>
-
-		</div>
-
-		<footer>
-	<nav class="menu">
-	<div class="footer-c">
-		&copy; 2019 <a class="footer-a" href="https://github.com/deomorxsy" style="font-style:oblique;"> <b>~/.ðÐ</b> </a>
-		<p>All rights reserved.</p>
-	</div>
-	</nav>
-	<!-- <a href="/" class="menu-item -home -active">Index</a>
-	<a href="/blog/" class="menu-item">Blog</a>
-	<a href="/about/" class="menu-item">About</a>
-	<a href="/quotes/" class="menu-item">Quotes</a>
-	</nav>-->
-</footer>
-
-		<script type="text/javascript" src="/assets/osrs-font/os-font.js"></script>
-        <script type="text/javascript">
-            OsFont.compile();
-        </script>
-	</body>
-</html>
+:ET

@@ -58,6 +58,8 @@ put ```PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin" ``` under your ```~/.prof
 
 1. PATH="$PATH:
 2. $(ruby -e 'puts Gem.user_dir')/bin"
+	- ```-e command``` Specifies script from command-line while telling Ruby not to search the rest of the arguments for a script filename.
+
 
 
 

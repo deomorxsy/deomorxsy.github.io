@@ -432,13 +432,13 @@ pre { /*code highlight w/ rouge*/
     line-height: 1em;
 }
 
-/*blockquote {
+blockquote.p{
     -webkit-border-radius: 2px;
     border-radius: 2px;
     padding: 1px 5px;
-    background-color: #c44; /*#303e80;
+    background-color: #c44; /*#303e80;*/
     border-left: 3px solid
-}*/
+}
 
 code.highlighter-rouge {
     background: #282a36;
