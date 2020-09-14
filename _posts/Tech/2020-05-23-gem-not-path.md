@@ -6,6 +6,7 @@ categories: tech
 tags:
 - ruby, gems, jekyll
 ---
+**Edited on 14/09/2020**
 
 After a long time without using jekyll to serve my website, I come across this error when executing ```jekyll serve```:
 
@@ -28,7 +29,6 @@ Successfully uninstalled jekyll-4.0.1
 ```
 >the error that comes with the install (don't mind for the interruption command, just pay attention to the WARNING.): 
 
-teste
 ```sh
 [asari@asari-pc ~]$ gem install bundler jekyll 
 WARNING:  You don't have /home/asari/.gem/ruby/2.7.0/bin in your PATH, 
@@ -39,9 +39,9 @@ Done installing documentation for bundler after 4 seconds
 ^CERROR:  Interrupted 
 ```
 
-So, basically, to install Jekyll and use gems inside your directory, you need to have a __Environment Variable__ that points to your ruby's binaries. If you already haven't, uninstall the current Jekyll (just follow the penultimate snippet code above). The environment variable can be put in different files, but if you have an Xsession, is more likely that ```~/.profile``` will work.
+So, basically, to install Jekyll and use gems inside your directory, you need to have a __Environment Variable__ that points to your ruby's binaries. If you already haven't, uninstall the current Jekyll (just follow the penultimate snippet code above). The environment variable can be put in different files, but if you have an Xsession, is more likely that ```~/.profile``` will work. Or you can just run ```PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"``` and it should work.
 
-> PS: how do I know if I have a Xsession?
+> PS: [**how do I know if I have a Xsession?**](https://unix.stackexchange.com/a/281923/358160)
 
 ```sh
 [asari@asari-pc ~]$ gem uninstall jekyll 

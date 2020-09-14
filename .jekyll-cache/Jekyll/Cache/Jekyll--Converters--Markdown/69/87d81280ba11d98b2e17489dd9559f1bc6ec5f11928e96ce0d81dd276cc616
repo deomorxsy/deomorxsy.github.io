@@ -1,4 +1,6 @@
-I"�<p>After a long time without using jekyll to serve my website, I come across this error when executing <code class="language-plaintext highlighter-rouge">jekyll serve</code>:</p>
+I"�<p><strong>Edited on 14/09/2020</strong></p>
+
+<p>After a long time without using jekyll to serve my website, I come across this error when executing <code class="language-plaintext highlighter-rouge">jekyll serve</code>:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/lib/ruby/2.7.0/rubygems.rb:275:in `find_spec_for_exe':
 	can't find gem jekyll (&gt;= 0.a) with executable jekyll (Gem::GemNotFoundException)
@@ -18,7 +20,6 @@ Successfully uninstalled jekyll-4.0.1
   <p>the error that comes with the install (don’t mind for the interruption command, just pay attention to the WARNING.):</p>
 </blockquote>
 
-<p>teste</p>
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>asari@asari-pc ~]<span class="nv">$ </span>gem <span class="nb">install </span>bundler jekyll 
 WARNING:  You don<span class="s1">'t have /home/asari/.gem/ruby/2.7.0/bin in your PATH, 
           gem executables will not run. 
@@ -28,10 +29,10 @@ Done installing documentation for bundler after 4 seconds
 ^CERROR:  Interrupted 
 </span></code></pre></div></div>
 
-<p>So, basically, to install Jekyll and use gems inside your directory, you need to have a <strong>Environment Variable</strong> that points to your ruby’s binaries. If you already haven’t, uninstall the current Jekyll (just follow the penultimate snippet code above). The environment variable can be put in different files, but if you have an Xsession, is more likely that <code class="language-plaintext highlighter-rouge">~/.profile</code> will work.</p>
+<p>So, basically, to install Jekyll and use gems inside your directory, you need to have a <strong>Environment Variable</strong> that points to your ruby’s binaries. If you already haven’t, uninstall the current Jekyll (just follow the penultimate snippet code above). The environment variable can be put in different files, but if you have an Xsession, is more likely that <code class="language-plaintext highlighter-rouge">~/.profile</code> will work. Or you can just run <code class="language-plaintext highlighter-rouge">PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"</code> and it should work.</p>
 
 <blockquote>
-  <p>PS: how do I know if I have a Xsession?</p>
+  <p>PS: <a href="https://unix.stackexchange.com/a/281923/358160"><strong>how do I know if I have a Xsession?</strong></a></p>
 </blockquote>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>asari@asari-pc ~]<span class="nv">$ </span>gem uninstall jekyll 
