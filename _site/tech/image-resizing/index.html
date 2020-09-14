@@ -83,11 +83,11 @@
 
 <p>Abra o arquivo .sh no seu editor de código, e crie uma variável l1. O resultado do ls(list) será uma String guardada na variável l1 (dentro dos apóstrofos, entre parênteses). O formato no nome de todas as imagens devem ser o mesmo (.jpg ou .png); edite retirando todos aqueles nomes de arquivo que não são imagens ou que você não quer.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 
-<span class="nv">l1</span><span class="o">=(</span><span class="s1">'cole aqui o código'</span><span class="o">)</span>
+l1=('cole aqui o código')
 
-<span class="k">for </span>l1 <span class="k">in</span> <span class="k">*</span>.jpg<span class="p">;</span> <span class="k">do </span>convert <span class="nv">$l1</span> <span class="nt">-resize</span> 1080x1920! final/<span class="nv">$l1</span><span class="p">;</span> <span class="k">done</span>
+for l1 in *.jpg; do convert $l1 -resize 1080x1920! final/$l1; done
 </code></pre></div></div>
 <blockquote>
   <p>Acima usamos o <strong>For Loop</strong> para indicar que todas as imagens .jpg devem ser convertidas. O comando convert chama o programa Magick para redimensionar todas as imagens que estão na variável l1, jogando a conversão na pasta final, com todas as imagens com seus respectivos nomes (como estavam em l1).</p>
@@ -97,7 +97,7 @@
   <p>por fim, rode com:</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh ./script.sh
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh ./script.sh
 </code></pre></div></div>
 
 <p>Confira o arquivo do código no <a href="http://github.com/deomorxsy">repositório</a></p>

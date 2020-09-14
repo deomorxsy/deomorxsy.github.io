@@ -1,4 +1,4 @@
-I"˜<ol>
+I"Ñ<ol>
   <li>
     <p>Install fcitx-mozc</p>
   </li>
@@ -7,14 +7,14 @@
   </li>
 </ol>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>XMODIFIERS=@im=fcitx
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>XMODIFIERS=@im=fcitx
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 DefaultIMModule=fcitx
 </code></pre></div></div>
 
 <ol>
-  <li>Run <code class="highlighter-rouge">fcitx-autostart</code> in terminal. Re-login. Press <code class="highlighter-rouge">Ctrl+Shift</code> in text editor. Japanese input should become available. Pressing Ctrl+Shift should switch you back to your default language input. No need to add kbd layouts.</li>
+  <li>Run <code class="language-plaintext highlighter-rouge">fcitx-autostart</code> in terminal. Re-login. Press <code class="language-plaintext highlighter-rouge">Ctrl+Shift</code> in text editor. Japanese input should become available. Pressing Ctrl+Shift should switch you back to your default language input. No need to add kbd layouts.</li>
 </ol>
 
 <p>PS: if using KDE, add input method plasmoid to the panel.</p>
