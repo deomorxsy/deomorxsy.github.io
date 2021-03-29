@@ -1,0 +1,30 @@
+I"A<ol>
+  <li>detecting the pendrive:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>fdisk <span class="nt">-l</span>
+</code></pre></div></div>
+<ol>
+  <li>unmounting pendrive</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>umount /dev/sdf1
+</code></pre></div></div>
+
+<ol>
+  <li>formatting the pendrive</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>mkfs.vfat <span class="nt">-n</span> ‘Nome Pendrive’ <span class="nt">-I</span> /dev/sdf1
+</code></pre></div></div>
+
+<p>where:</p>
+
+<ul>
+  <li>‘-n’ = Volume Name</li>
+  <li>‘mkfs’ = command responsible for format the file system</li>
+  <li>‘vfat’ = formats in the file system FAT. Others avaible: mkfs.bfs, mkfs.ext2, mkfs.ext3, mkfs.ext4, mkfs.minix, mkfs.msdos, mkfs.vfat, mkfs.xfs, mkfs.xiafs.</li>
+  <li>‘-I’ = pen drive’s partition</li>
+</ul>
+
+:ET

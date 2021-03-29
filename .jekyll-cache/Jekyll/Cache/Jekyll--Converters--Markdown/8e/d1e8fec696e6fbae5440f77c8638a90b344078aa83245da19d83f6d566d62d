@@ -1,0 +1,97 @@
+I"3'<p><img src="https://vignette.wikia.nocookie.net/godzilla/images/4/4e/Rodan.jpg" alt="Rodan" /></p>
+
+<p>Rodan (ラドン Radon?) is a giant pteranodon kaiju created by Toho that first appeared in the 1956 Toho film, Rodan, and made his first appearance alongside Godzilla in the 1964 Godzilla film, Ghidorah, the Three-Headed Monster.</p>
+
+<hr />
+
+<p>Python highlight</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="s">'a'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">to_camel_case</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="c1">#your code here
+</span>    <span class="c1">#return [i.strip('-' and '_') for i in text]
+</span>    <span class="n">alto</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
+    	<span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="s">'-'</span> <span class="ow">or</span> <span class="s">'_'</span><span class="p">:</span>
+    		<span class="n">alto</span> <span class="o">=</span> <span class="n">text</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">'-'</span> <span class="ow">or</span> <span class="s">'_'</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    		<span class="n">text</span><span class="p">[</span><span class="n">alto</span><span class="p">].</span><span class="n">upper</span><span class="p">()</span>
+</code></pre></div></div>
+
+<hr />
+<p>HTML highlight</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+      <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nb">document</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">toggle</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">.sidebar-toggle</span><span class="dl">'</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">sidebar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#sidebar</span><span class="dl">'</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">checkbox</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#sidebar-checkbox</span><span class="dl">'</span><span class="p">);</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+          <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">;</span>
+          <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">checkbox</span><span class="p">.</span><span class="nx">checked</span> <span class="o">||</span>
+             <span class="nx">sidebar</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="nx">target</span><span class="p">)</span> <span class="o">||</span>
+             <span class="p">(</span><span class="nx">target</span> <span class="o">===</span> <span class="nx">checkbox</span> <span class="o">||</span> <span class="nx">target</span> <span class="o">===</span> <span class="nx">toggle</span><span class="p">))</span> <span class="k">return</span><span class="p">;</span>
+          <span class="nx">checkbox</span><span class="p">.</span><span class="nx">checked</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
+      <span class="p">})(</span><span class="nb">document</span><span class="p">);</span>
+    	<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+<hr />
+<p>Javascript highlight</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">sayHello</span><span class="p">(){</span>
+	<span class="k">return</span> <span class="dl">'</span><span class="s1">hi!</span><span class="dl">'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+<p>CSS highlight</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* Style and "hide" the sidebar */</span>
+<span class="nc">.sidebar</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">fixed</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">bottom</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">left</span><span class="p">:</span> <span class="m">-14rem</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">14rem</span><span class="p">;</span>
+  <span class="nl">visibility</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+  <span class="nl">overflow-y</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s1">"PT Sans"</span><span class="p">,</span> <span class="n">Helvetica</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">.875rem</span><span class="p">;</span> <span class="c">/* 15px */</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">255</span><span class="p">,</span><span class="m">.6</span><span class="p">);</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#202020</span><span class="p">;</span>
+  <span class="nl">-webkit-transition</span><span class="p">:</span> <span class="n">all</span> <span class="m">.3s</span> <span class="n">ease-in-out</span><span class="p">;</span>
+          <span class="nl">transition</span><span class="p">:</span> <span class="n">all</span> <span class="m">.3s</span> <span class="n">ease-in-out</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">30em</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.sidebar</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">.75rem</span><span class="p">;</span> <span class="c">/* 14px */</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<hr />
+<ul>
+  <li><strong>Combinations</strong>
+    <blockquote>
+      <p>Expressions formed by delimiting a list of expressions within parentheses in order to denote <em>procedure application</em>;</p>
+    </blockquote>
+  </li>
+</ul>
+
+<div class="language-scheme highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">+</span> <span class="mi">137</span> <span class="mi">349</span><span class="p">)</span>
+<span class="mi">486</span>
+</code></pre></div></div>
+<div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">-</span> <span class="mi">1000</span> <span class="mi">334</span><span class="p">)</span>
+<span class="mi">666</span>
+</code></pre></div></div>
+
+<div class="language-scheme highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">*</span> <span class="mi">5</span> <span class="mi">99</span><span class="p">)</span>
+<span class="mi">495</span>
+</code></pre></div></div>
+<div class="language-scheme highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">+</span> <span class="p">(</span><span class="nb">*</span> <span class="mi">3</span>
+	<span class="p">(</span><span class="nb">+</span> <span class="p">(</span><span class="nb">*</span> <span class="mi">2</span> <span class="mi">4</span><span class="p">)</span>
+		<span class="p">(</span><span class="nb">+</span> <span class="mi">3</span> <span class="mi">5</span><span class="p">)))</span>
+	<span class="p">(</span><span class="nb">+</span> <span class="p">(</span><span class="nb">-</span> <span class="mi">10</span> <span class="mi">7</span><span class="p">)</span>
+		<span class="mi">6</span><span class="p">))</span>
+</code></pre></div></div>
+:ET
