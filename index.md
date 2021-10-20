@@ -16,6 +16,7 @@ title: Home
 
 ### Projects
 
++ [algorithms](https://github.com/deomorxsy/algorithms) /// WIP
 + [Website <span class="mydivbars">///</span> **WIP**]({{site.baseurl}})
 + [mzll-GSW]({{site.baseurl}}/mzll-GSW), "Getting started with the web" from Mozilla Developer.
 

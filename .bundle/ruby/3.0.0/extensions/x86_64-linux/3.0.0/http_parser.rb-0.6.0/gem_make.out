@@ -1,0 +1,16 @@
+current directory: /home/asari/Documentos/coding/projetos/blogs/deomorxsy.github.io/.bundle/ruby/3.0.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+/usr/bin/ruby -I /usr/lib/ruby/3.0.0 -r ./siteconf20211019-757942-q35rw1.rb extconf.rb
+creating Makefile
+
+current directory: /home/asari/Documentos/coding/projetos/blogs/deomorxsy.github.io/.bundle/ruby/3.0.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make DESTDIR\= clean
+
+current directory: /home/asari/Documentos/coding/projetos/blogs/deomorxsy.github.io/.bundle/ruby/3.0.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make DESTDIR\=
+compiling ruby_http_parser.c
+compiling ryah_http_parser.c
+linking shared-object ruby_http_parser.so
+
+current directory: /home/asari/Documentos/coding/projetos/blogs/deomorxsy.github.io/.bundle/ruby/3.0.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 ruby_http_parser.so ./.gem.20211019-757942-rff602
