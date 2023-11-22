@@ -73,6 +73,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ffi (~> 1.15)
   jekyll
   jekyll-gist
   kramdown (>= 2.3.1)
