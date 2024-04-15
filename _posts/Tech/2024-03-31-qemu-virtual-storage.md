@@ -1,3 +1,12 @@
+---
+layout: blog-posts
+title:  "Image Resizing"
+date:   2018-12-11 15:40:50
+categories: tech
+tags:
+- shellscript
+---
+
 ## Virtual Storage for QEMU
 
 quick notes about the different ways to handle storage virtualization for QEMU

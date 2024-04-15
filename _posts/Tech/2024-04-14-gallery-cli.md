@@ -1,3 +1,12 @@
+---
+layout: blog-posts
+title:  "Image Resizing"
+date:   2018-12-11 15:40:50
+categories: tech
+tags:
+- shellscript
+---
+
 ## list and display png files on CLI
 
 find all filetype png, sort by time, newest first, grep a pattern, filter the stream of its filename and pass the filename as stdin to the sxiv image viewer.
