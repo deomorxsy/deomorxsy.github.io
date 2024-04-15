@@ -1,7 +1,7 @@
 ---
 layout: blog-posts
-title:  "Image Resizing"
-date:   2018-12-11 15:40:50
+title:  "Setup QEMU storage virtualization"
+date:   2024-03-31 15:40:50
 categories: tech
 tags:
 - shellscript

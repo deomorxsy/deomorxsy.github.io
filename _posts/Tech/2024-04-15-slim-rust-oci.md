@@ -1,13 +1,13 @@
 ---
 layout: blog-posts
-title:  "Image Resizing"
-date:   2018-12-11 15:40:50
+title:  "Slim rust/wasm OCI Container"
+date:   2024-04-15
 categories: tech
 tags:
 - shellscript
 ---
 
-## slim Rust+wasm OCI Containers: common error return messages
+## Slim Rust/wasm OCI Containers: common error return messages
 
 This post covers the outcome of a multi-stage Dockerfile for Rust, which handles the app artifact binary to the last layer, discarding the build layer.
 

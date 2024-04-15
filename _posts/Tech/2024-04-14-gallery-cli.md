@@ -1,7 +1,7 @@
 ---
 layout: blog-posts
-title:  "Image Resizing"
-date:   2018-12-11 15:40:50
+title:  "List and display png files on CLI"
+date:   2024-04-14
 categories: tech
 tags:
 - shellscript

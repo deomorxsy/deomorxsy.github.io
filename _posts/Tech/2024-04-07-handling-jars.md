@@ -1,7 +1,7 @@
 ---
 layout: blog-posts
-title:  "Image Resizing"
-date:   2018-12-11 15:40:50
+title:  "Handling jar compressed files"
+date:   2024-04-07
 categories: tech
 tags:
 - shellscript
