@@ -1,5 +1,5 @@
 html {
-	font-size: 15px; /* 15px significa 'pixels': o tamanho da fonte base é agora de 10 pixels */ 
+	font-size: 15px; /* 15px significa 'pixels': o tamanho da fonte base é agora de 10 pixels */
 	font-family: Arial,Helvetica,sans-serif; /*'Menlo', 'Meslo LG', monospace; /* este deve ser o nome da fonte que você obteve no Google Fonts */
 	/*background-color: #1b1b1b; /*#111*/
 	/*background-image: url('https://i.imgur.com/0S817q9.jpg');*/
@@ -11,12 +11,12 @@ html {
     border-right-width: 7px;
     border-bottom-width: 7px;
     border-left-width: 7px;
-    min-height: 100vh;   
+    min-height: 100vh;
 }
 
 /*------------Toggleable color themes----------*/
 
-/* 
+/*
 html[data-theme='light'] {
 	--bg: #fff; /*background-color
 	--bg-secondary: #fcfcfc; /*
@@ -27,7 +27,7 @@ html[data-theme='light'] {
 
 html[data-theme='dark'] {
 	--bg: #1b1b1b; /*background-color
-	--bg-secondary: #444; 
+	--bg-secondary: #444;
 	--headings: white; /*#39f, azul
 	--text: #c9cacc; /*bbb
 	--border-color: #00a86b;
@@ -66,6 +66,36 @@ body {
 
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /*transform: skewY(-6deg) translate(20rem, -2rem);*/
+    transform-origin: top;
+    font-style: italic;
+    text-decoration-line: underline overline;
+    /*text-decoration-color: #c44;*/
+    text-underline-offset: 20%;
+    text-decoration-thickness: .35ex
+}
+
+h1 {
+    transform: skewY(6deg) translate(-2rem, 2rem);
+    text-decoration-color: #c44;
+    text-decoration-line: underline overline;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-decoration-color: #e6c2ec;
+    text-decoration-line: underline;
+}
+
 h1 {
 	font-size: 2.5em;
 	text-align: center;
@@ -73,6 +103,8 @@ h1 {
 	text-shadow: 3px 3px 1px black;
 	margin-bottom: 0em;
 	margin-top: 1.20em;
+    transform: skewY(-2deg)
+        translate(-1rem,-0.4rem);
 
 }
 

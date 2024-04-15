@@ -3,7 +3,7 @@ layout: index
 title: Home
 ---
 
-<h1 class="index-title">Yare Yare ~/.ðÐ...</h1>
+<h1 class="index-title">chmod +rx ~/.ðÐ/old-blog/*</h1>
 <img class="avatar" src="https://avatars1.githubusercontent.com/u/32879431?s=460&v=4" alt="banana" />
 
 
