@@ -152,6 +152,7 @@ a {
 
 .post-article:hover, .post-article:focus { /*Colore a parte de trás do texto*/
 	background-color: #c44; /*salmon salmão*/
+    color: white;
 }
 
 .post-date {
@@ -470,6 +471,7 @@ blockquote.p{
     padding: 1px 5px;
     background-color: #c44; /*#303e80;*/
     border-left: 3px solid
+    font-color: yellow;
 }
 
 code.highlighter-rouge {
