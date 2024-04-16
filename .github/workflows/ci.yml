@@ -19,7 +19,6 @@ jobs:
     - name: Clone main repository
       uses: actions/checkout@v4
 
-
     - name: Add SSH private keys for submodule repositories
       uses: webfactory/ssh-agent@v0.9.0
       with:
@@ -27,14 +26,10 @@ jobs:
         # then add on the current as a secret
         ssh-private-key: ${{ secrets.READ_ONLY_DEPLOY_KEY }}
 
-    - name: fetch private submodules
-      uses: actions/checkout@v4
-      with:
-        submodules: recursive
-    #- name: Clone submodules
-      #run: |
-        #cd ./importRepos
-        #git submodule update --init --recursive --remote
+    - name: Clone submodules
+      run: |
+        cd ./importRepos
+        git submodule update --init --recursive --remote
 
   # Deploy job
   deploy:
