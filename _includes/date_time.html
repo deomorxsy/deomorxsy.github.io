@@ -1,0 +1,19 @@
+<time class="article-date" datetime="{{post.date | date: "%b-%-d-%Y"}}">
+  datetime
+</time>
+
+<span class="article-date" title="Estimated read time">
+  {% assign words = content | number_of_words %}
+  {% if words < 360 %}
+    1 min
+  {% else %}
+    {{ words | divided_by:180 }} mins
+  {% endif %}
+</span>
+
+{% assign words = content | number_of_words %}
+  {% if words < 270 %}
+    1 minute
+  {% else %}
+    {{ words | divided_by:135 }} minutes
+  {% endif %}

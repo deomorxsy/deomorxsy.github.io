@@ -1,0 +1,35 @@
+/*background frente - https://www.runescape.com/img/rsp777/scroll/backdrop_745.gif
+
+background trás- https://www.runescape.com/img/rsp777/bg2.jpg
+
+papiro - https://www.runescape.com/img/rsp777/scroll/backdrop_765_top.gif*/
+
+
+.content {
+ background:url('https://www.runescape.com/img/rsp777/scroll/backdrop_745.gif') repeat-y top center;
+ padding:50px 75px;
+ position:relative
+}
+.content:before,
+.content:after {
+ background:url('https://www.runescape.com/img/rsp777/scroll/backdrop_765_top.gif') no-repeat center top;
+ content:'';
+ height:50px;
+ left:0;
+ position:absolute;
+ top:-11px;
+ width:100%
+}
+.content:after {
+ background:url('https://www.runescape.com/img/rsp777/scroll/backdrop_765_bottom.gif') no-repeat center bottom;
+ bottom:-11px;
+ top:auto
+}
+
+.page-wrap {
+ background:url('https://www.runescape.com/img/rsp777/bg2.jpg') repeat-y center top;
+ margin:0 auto;
+ overflow-y:hidden;
+ padding:0 50px;
+ width:815px
+}

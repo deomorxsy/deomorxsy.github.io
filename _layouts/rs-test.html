@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+
+		<link href='/assets/rs-test.css' rel='stylesheet' type='text/css'>
+		<link href="/assets/highlighter.css" rel="stylesheet">
+		<link href='/assets/osrs-font/os-font.css' rel='stylesheet' type='text/css'>
+
+		<title>{{ page.title }} | {{ site.title }}</title>
+
+		<link rel="stylesheet" href="/assets/osrs-font/os-font.css" />
+
+		
+	</head>
+
+	<style>
+		a {
+			color: #c9cacc;
+		}
+
+		.content {
+			max-width: 580px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+	</style>
+
+	<body>
+		<header>
+				<nav class="menu">
+				<a href="{{site.baseurl}}/" class="menu-item -home -active">Index</a>
+				<a href="{{site.baseurl}}/blog/" class="menu-item">Blog</a>
+				<a href="{{site.baseurl}}/about/" class="menu-item">About</a>
+				<a href="{{site.baseurl}}/quotes/" class="menu-item">Quotes</a>
+				</nav>
+		</header>
+
+		<header class="header">
+			<a>
+			<time class="article-date" datetime="{{post.date | date: "%b-%-d-%Y"}}">
+			{{ page.date | date: "%B %d, %Y "}}
+			<p>{% include posts_read-time.html %} read</p>
+			</time>
+			</a>
+			<h1 class="article-title">{{page.title}}</h1>
+		</header>
+	
+		<div class="contents">
+			<div class="content"> 
+				{{ content }}
+			</div>
+		
+
+			<div class="page-wrap">
+        <header class="banner">
+            <div class="banner__options">
+                <h1 class="banner__title">News</h1>
+                <a id="banner-home" class="banner__home" href="https://oldschool.runescape.com/">Home</a> - <a class="banner__home" href="https://secure.runescape.com/m=news/archive?oldschool=1">News Home</a>
+            </div>
+        </header>
+        <div class="contents">
+            {{ content }}
+        </div>
+    <footer class="footer">
+        <a id="footer-jagex-logo" class="footer__jagex" href="https://www.jagex.com/g=runescape/" target="_blank"><img class="footer__jagex-img" src="https://www.runescape.com/img/rsp777/jagex-logo-landscape.svg" title="Jagex" alt="Jagex"></a>
+        <p>This website and its contents are copyright © 1999 - 2019 Jagex Games Ltd, 220 Science Park, Cambridge, CB4 0WA, United Kingdom.</p>
+        <p>Use of this website is subject to our <a id="footer-terms" href="https://www.jagex.com/g=runescape/terms" target="_blank">Terms &amp; Conditions</a> and <a id="footer-privacy" href="https://www.jagex.com/g=runescape/terms/privacy" target="_blank">Privacy Policy</a></p>
+        <p><a id="footer-cookies" target="_blank" href="https://www.jagex.com/g=runescape/terms/cookies">Change Cookie Settings</a></p>
+        <a id="footer-rss" class="footer__rss" href="https://secure.runescape.com/m=news/latest_news.rss?oldschool=true" target="_blank">RSS Feed</a>
+    </footer>
+
+
+    <script src="https://www.runescape.com/js/c/responsive/vendor-128.js"></script>
+    <script src="https://www.runescape.com/js/c/rs3/modernizr_3_0_0_min-104.js"></script>
+    <script src="https://www.runescape.com/js/osrs/plugins-103.js"></script>
+    <script src="https://www.runescape.com/js/osrs/gtm-103.js"></script>
+    <script src="https://www.runescape.com/js/jagex_global-101.js"></script>
+    <script src="https://www.runescape.com/js/c/os/functions-103.js" async="" defer=""></script>
+        </div>
+        
+		</div>
+
+		<footer>
+			<nav class="menu">
+			<a href="{{site.baseurl}}/" class="menu-item -home -active">Index</a>
+			<a href="{{site.baseurl}}/blog/" class="menu-item">Blog</a>
+			<a href="{{site.baseurl}}/about/" class="menu-item">About</a>
+			<a href="{{site.baseurl}}/quotes/" class="menu-item">Quotes</a>
+			</nav>
+		</footer>
+
+		<script type="text/javascript" src="/assets/osrs-font/os-font.js"></script>
+        <script type="text/javascript">
+            OsFont.compile();
+        </script>
+	</body>
+</html>

@@ -1,0 +1,14 @@
+name: My Jekyll Website
+
+title: ACME Website # setting the title
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+permalink: /:categories/:title/
+
+#variables
+description: 'My personal website, built from the scratch by testing html, css and js features.'
+version: '1.1.0'
+bar: foo

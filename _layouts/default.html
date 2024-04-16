@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+		<link href='/assets/default.css' rel='stylesheet' type='text/css'>
+		<link href="/assets/highlighter.css" rel="stylesheet">
+
+		<title>{{ page.title }} | {{ site.title }}</title>
+	</head>
+
+	<style>
+		a {
+		color: #c9cacc;
+	}
+
+	@media (max-width: 300px) {
+	h1 {
+		font-size: 36px;
+	}
+	li {
+		display: block;
+		padding: 5px;
+	}
+	
+	</style>
+
+	<body>
+		<header>
+			{{ content }}
+		</header>
+	</body>
+</html>
