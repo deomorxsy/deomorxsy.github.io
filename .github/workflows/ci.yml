@@ -1,3 +1,13 @@
+name: submodule to gh-pages ci
+
+on:
+  push:
+    branches:
+      - main
+    pull_request:
+      branches:
+        - main
+
 jobs:
   # Build job
   build:
@@ -17,7 +27,9 @@ jobs:
         ssh-private-key: ${{ secrets.READ_ONLY_DEPLOY_KEY }}
 
     - name: Clone submodules
-      run: git submodule update --init --recursive --remote
+      run: |
+        cd ./importRepos
+        git submodule update --init --recursive --remote
 
   # Deploy job
   deploy:
