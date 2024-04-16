@@ -19,12 +19,24 @@ jobs:
     - name: Clone main repository
       uses: actions/checkout@v4
 
-    - name: Add SSH private keys for submodule repositories
-      uses: webfactory/ssh-agent@v0.9.0
-      with:
+    #- name: Add SSH private keys for submodule repositories
+    #  uses: webfactory/ssh-agent@v0.9.0
+    #  with:
         # setup the deploy key on the private gitmodule repository,
         # then add on the current as a secret
-        ssh-private-key: ${{ secrets.READ_ONLY_DEPLOY_KEY }}
+    #    ssh-private-key: ${{ secrets.READ_ONLY_DEPLOY_KEY }}
+
+    - name: Create SSH key
+      env:
+        SSH_PRIVATE_KEY: ${{secrets.READ_ONLY_DEPLOY_KEY }}
+      run: |
+        echo "$SSH_PRIVATE_KEY" > private.key
+        sudo chmod 400 private.key
+
+    - name: add key to ssh agent via ssh-add
+      run: |
+        eval `ssh-agent -s`
+        ssh-add private.key
 
     - name: Clone submodules
       run: |
