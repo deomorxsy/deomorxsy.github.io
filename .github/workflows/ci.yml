@@ -27,9 +27,7 @@ jobs:
         ssh-private-key: ${{ secrets.READ_ONLY_DEPLOY_KEY }}
 
     - name: Clone submodules
-      run: |
-        cd ./importRepos
-        git submodule update --init --recursive --remote
+      run: git submodule update --init --recursive --remote
 
   # Deploy job
   deploy:
