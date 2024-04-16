@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<head>
+    <title>misti</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="/assets/music-player/music-player.css">
+    <style>
+        body{
+            background: white;
+        }
+    </style>
+    <script type="text/javascript" src="/assets/music-player/jqueryMP.min.js"></script>
+    <script>
+        var songs = Array(
+            // A Perfect Circle
+            "zlysZAUNyFg, A Perfect Circle, Blue",
+            "yzf09PYSuhk, A Perfect Circle, Judith",
+            "lrEP3RPgEao, A Perfect Circle, Pet",
+            "BVXTmav24Wk, A Perfect Circle, The Noose",
+            
+            // Blind Melon
+            "Miec205fvnE, Blind Melon, No Rain",
+            
+            // Cat Stevens
+            "fvTVnX5PiVQ, Cat Stevens, Another Saturday Night",
+            "NPazGVuBXmY, Cat Stevens, Moonshadow",
+            "_6mKMV0d2cs, Cat Stevens, Peace Train",
+            "aBccr-aLu4I, Cat Stevens, The First Cut is the Deepest",
+            "y8pvXLVu8Yk, Cat Stevens, Wild World",
+            
+            // Creedence Clearwater Revival
+            "5BmEGm-mraE, Creedence Clearwater Revival, Bad Moon Rising",
+            "ec0XKhAHR5I, Creedence Clearwater Revival, Fortunate Son",
+            "bO28lB1uwp4, Creedence Clearwater Revival, Have You Ever Seen The Rain?",
+            "GeJuUqDqY00, Creedence Clearwater Revival, Lookin&rsquo; Out My Back Door",
+            
+            // Enya
+            "H5_QryY_A2Y, Enya, It&rsquo;s In The Rain",
+            "upkYQqbrjSc, Enya, Only Time",
+            "4jg_F9VBgTw, Enya, Wild Child",
+            
+            // Escape the Fate
+            "iLN4plEYX6Q, Escape The Fate, City of Sin",
+            "om2K8PP0OJE, Escape The Fate, Gorgeous Nightmare",
+            "o0i91Zez5jk, Escape The Fate, I Won&rsquo;t Break",
+            "JY7WJrf0-XI, Escape The Fate, Issues",
+            "zRWMMZkTkPk, Escape The Fate, Situations",
+            
+            // Fall Out Boy
+            "vtZpP1QIHSU, Fall Out Boy, A Little Less Sixteen Candles A Little More &ldquo;Touch Me&rdquo;",
+            "MuNTFGnVm4k, Fall Out Boy, Alone Together",
+            "5CnE5Q2bbEY, Fall Out Boy, Bang The Doldrums",
+            "qVmnkZdbH2U, Fall Out Boy, Dance&#44; Dance",
+            "KqSoHWqWBN0, Fall Out Boy, Death Valley",
+            "iya-EjXapCg, Fall Out Boy, Fame &lt; Infamy",
+            "1j4Pf228vhE, Fall Out Boy, Fourth of July",
+            "5jT1ETM5HUA, Fall Out Boy, Get Busy Living Or Get Busy Dying",
+            "VZtRK2LRfnI, Fall Out Boy, Hum Hallelujah",
+            "iq2gpwecmFA, Fall Out Boy, Jet Pack Blues",
+            "TJqL-UHQuP8, Fall Out Boy, Just One Yesterday",
+            "Juxr9PIc2pE, Fall Out Boy, Novocaine",
+            "alD4BbpBoyA, Fall Out Boy, Sophomore Slump or Comeback of the Year",
+            "3n-9Rsn52Qk, Fall Out Boy, Sugar&sbquo; We&rsquo;re Goin Down",
+            "B6aEU4hB4O0, Fall Out Boy, The Carpal Tunnel of Love",
+            "9iW6wx7CEDU, Fall Out Boy, Thnks Fr Th Mmrs",
+            "20KcK0OhOGo, Fall Out Boy, Where Did The Party Go",
+            "5qPXDE-OsIw, Fall Out Boy, XO",
+            
+            // Foo Fighters
+            "crOZk88eCcg, Foo Fighters, Everlong",
+            "7dwuzqF6huc, Foo Fighters, Learn To Fly",
+            
+            // Halsey
+            "1rfSHisyHdc, Halsey, Castle",
+            "Trzzg6qL7Ic, Halsey, Colors",
+            "zRHNi3QfFlE, Halsey, Gasoline",
+            "zLFSVBO9WOE, Halsey, New Americana",
+            
+            // Incubus
+            "_9wPvlTBgZw, Incubus, Anna Molly",
+            "sRUf30Afcyo, Incubus, Drive",
+            "0IlPlKBXRHE, Incubus, Here in My Room",
+            "F5ODqve9cOI, Incubus, In The Company of Wolves",
+            "QGhNv8PGZJg, Incubus, Isadore",
+            "aDUEKeXDCr4, Incubus, Make Out Party",
+            "IhZvDJ2opsM, Incubus, Pardon Me",
+            "OUSoSTaLRkI, Incubus, Sick Sad Little World",
+            "pKYGZxPF0yA, Incubus, Stellar",
+            "g5qe6fAbug0, Incubus, The Warmth",
+            "EyXL2rCFyqA, Incubus, Warning",
+            "mZnUYsqw8BA, Incubus, Wish You Were Here",
+            
+            // Justin Timberlake
+            "fJ2ClPjFnB8, Justin Timberlake, Can&rsquo;t Stop The Feeling",
+            "RwPLmiwf9fM, Justin Timberlake, Drink You Away",
+            "zRlugwoiC2g, Justin Timberlake, Strawberry Bubblegum",
+            "NXGaooLi6v8, Justin Timberlake, Suit &amp; Tie",
+            
+            // Marina and the Diamonds
+            "d1eQLw0Nwto, Marina and the Diamonds, Bubblegum Bitch",
+            "BI_0HIz_4JY, Marina and the Diamonds, Froot",
+            
+            // Maroon 5
+            "T59kB3hq3Yg, Maroon 5, This Summer",
+            
+            // Panic! at the Disco
+            "zyx0W5UhJGM, Panic! At The Disco, Casual Affair",
+            "KEpAyfC-8z0, Panic! At The Disco, Death of a Bachelor",
+            "ZNnYu6PbHrc, Panic! At The Disco, Girls/Girls/Boys",
+            "K_-IkM0IchU, Panic! At The Disco, Golden Days",
+            "lJeTUb_J1D0, Panic! At The Disco, Hallelujah",
+            "KuliCkN2oic, Panic! At The Disco, House of Memories",
+            "vO94TXhIW5c, Panic! At The Disco, Hurricane",
+            "bVXkWDI1Ouw, Panic! At The Disco, I Write Sins Not Tragedies",
+            "gT5Z12LWGfk, Panic! At The Disco, Lying Is The Most Fun A Girl Can Have Without...",
+            "3fm8egqOM44, Panic! At The Disco, Miss Jackson",
+            "nV97_YorkbU, Panic! At The Disco, Sarah Smiles",
+            "Y1B4XeLOt0A, Panic! At The Disco, The Ballad of Mona Lisa",
+            
+            // Puscifer
+            "3MjFYHilo6Y, Puscifer, Conditions of My Parole",
+            "aTLd49DcGac, Puscifer, Monsoons",
+            
+            // TOOL
+            "neGdoqsuiN8, Tool, Ænema",
+            "Tja6_h4lT6A, Tool, Forty Six &amp; 2",
+            "8qtIdhpw6hc, Tool, Hooker with a Penis",
+            "EF0lVn3n12I, Tool, Jambi",
+            "awYc9xvqnv0, Tool, Lateralus",
+            "9vluBFWv4mE, Tool, Parabol / Parabola",
+            "klOnDr9Xrvc, Tool, Prison Sex",
+            "gzB9XCrwvMk, Tool, Right in Two",
+            "uytWxYKSupI, Tool, Rosetta Stoned",
+            "GqmRDV0a_70, Tool, Sober",
+            "XW0j0smt8fY, Tool, The Pot",
+            "_6hYe6FbA60, Tool, Third Eye",
+            "iOKV9Stri_M, Tool, Vicarious",
+            "A46dVwpd71o, Tool, Undertow"
+        );
+        
+    </script>
+</head>
+
+<body>
+    
+    <script>
+        $(document).ready(function() {
+            var randSong = Math.floor( (Math.random() * songs.length) );
+            var paramarr = songs[randSong].split(", ");
+            
+            parent.changeMusic(paramarr[0], paramarr[1], paramarr[2]);
+            
+            for (var i = 0; i < songs.length; i++) {
+                var splitter = songs[i].split(", ");
+                
+                if ($("h3:contains('" + splitter[1] + "')").index() == -1) {
+                    $("body").append("<h3>" + splitter[1] + "</h3>");
+                }
+                
+                $("body").append("<p class='song'><a onClick=\"parent.changeMusic('" + splitter[0] + "', '" + splitter[1] + "', '" + splitter[2] + "'); return false;\" href=\"#\">" + splitter[2] + "</a></p>");
+                
+            }
+        });
+    </script>
+</body>

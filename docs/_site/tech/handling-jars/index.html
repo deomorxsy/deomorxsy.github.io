@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+
+		<link href='/assets/indexpage.css' rel='stylesheet' type='text/css'>
+		<link href="/assets/highlighter.css" rel="stylesheet">
+		<!--link href='/assets/osrs-font/os-font.css' rel='stylesheet' type='text/css'-->
+		<link rel="shortcut icon" type="image/png" href="/images/index.png">
+
+		<title>Handling jar compressed files | ACME Website</title>
+
+		<link rel="stylesheet" href="/assets/osrs-font/os-font.css" />
+
+		
+	</head>
+
+	<style>
+		a {
+			color: #c9cacc;
+		}
+
+		.content {
+			max-width: 890px; /*580*/
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+	</style>
+
+	<body>
+		<header>
+				<nav class="menu">
+				<a href="/" class="menu-item -home -active">Index</a>
+				<a href="/blog/" class="menu-item">Blog</a>
+				<a href="/about/" class="menu-item">About</a>
+				<a href="/quotes/" class="menu-item">Quotes</a>
+				</nav>
+		</header>
+
+		<header class="header">
+			<a>
+			<time class="article-date" datetime="">
+			April 07, 2024 
+			<p> <i class="fa fa-clock-o" aria-hidden=true>  </i> <span class="reading-time" title="Estimated read time">
+  
+  
+    2 mins
+  
+</span>
+
+ read
+			</p>
+			</time>
+			</a>
+			<h3 class="article-title">Handling jar compressed files</h3>
+		</header>
+	
+		<div class="content">
+		<h2 id="handling-jar-compressed-files">Handling jar compressed files</h2>
+
+<p>Quick notes about handling jars on the CLI in maven projects with java. Dependencies:</p>
+<ul>
+  <li>jar</li>
+  <li>unzip</li>
+  <li>mvn</li>
+</ul>
+
+<p>generate jar passing the directory the pom.xml is located:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">;</span> mvn package <span class="nt">-f</span> ./server/
+</code></pre></div></div>
+<p>path to the jar:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">;</span> file ./server/target/server-1.0-SNAPSHOT.jar
+./server/target/server-1.0-SNAPSHOT.jar: Java archive data <span class="o">(</span>JAR<span class="o">)</span>
+</code></pre></div></div>
+
+<p>list contents with index of the jar</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">;</span> jar tf ./server/target/server-1.0-SNAPSHOT.jar
+</code></pre></div></div>
+
+<p>to find the mainClass of the generated jar, you can decompress the META-INF/MANIFEST.MF file to stdout:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">;</span> unzip <span class="nt">-p</span> ./server/target/server-1.0-SNAPSHOT.jar META-INF/MANIFEST.MF
+Manifest-Version: 1.0
+Created-By: Maven JAR Plugin 3.3.0
+Build-Jdk-Spec: 17
+Implementation-Title: server
+Implementation-Version: 1.0-SNAPSHOT
+Main-Class: org.springframework.boot.loader.launch.JarLauncher
+Start-Class: com.organization.app.App
+Spring-Boot-Version: 3.2.4
+Spring-Boot-Classes: BOOT-INF/classes/
+Spring-Boot-Lib: BOOT-INF/lib/
+Spring-Boot-Classpath-Index: BOOT-INF/classpath.idx
+Spring-Boot-Layers-Index: BOOT-INF/layers.idx
+
+<span class="p">;</span>
+</code></pre></div></div>
+
+<p>Above, the mainClass is “Main-Class: org.springframework.boot.loader.launch.JarLauncher”.  Now, you can execute the app in these two ways:</p>
+
+<ol>
+  <li>directly execute the mainClass app in the jar:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">;</span> java <span class="nt">-cp</span> ./server/target/server-1.0-SNAPSHOT.jar org.springframework.boot.loader.launch.JarLauncher
+Hello World!
+<span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>…or just pass the jar file as parameter using the jar flag:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">;</span> java <span class="nt">-jar</span> ./server/target/server-1.0-SNAPSHOT.jar
+Hello World!
+<span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="layered-jars">Layered jars</h3>
+<p>Spring boot provides the default 4 layers on jars:</p>
+
+<ul>
+  <li>dependencies: dependencies from third parties</li>
+  <li>snapshot-dependencies: snapshot dependencies from third parties</li>
+  <li>resources: static resources</li>
+  <li>application: application code and resources</li>
+</ul>
+
+<p>to examine the layers of any layered jar (example using Spring Boot):</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">;</span> java <span class="nt">-Djarmode</span><span class="o">=</span>layertools <span class="nt">-jar</span> ./server/target/server-1.0-SNAPSHOT.jar list
+dependencies
+spring-boot-loader
+snapshot-dependencies
+application
+<span class="p">;</span>
+</code></pre></div></div>
+
+<p>to extract the layers of any layered jar:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">;</span> java <span class="nt">-Djarmode</span><span class="o">=</span>layertools <span class="nt">-jar</span> ./server/target/server-1.0-SNAPSHOT.jar extract
+</code></pre></div></div>
+
+		</div>
+
+		<footer>
+	<nav class="menu">
+	<div class="footer-c">
+		&copy; 2019 <a class="footer-a" href="https://github.com/deomorxsy" style="font-style:oblique;"> <b>~/.ðÐ</b> </a>
+		<p>All rights reserved.</p>
+	</div>
+	</nav>
+	<!-- <a href="/" class="menu-item -home -active">Index</a>
+	<a href="/blog/" class="menu-item">Blog</a>
+	<a href="/about/" class="menu-item">About</a>
+	<a href="/quotes/" class="menu-item">Quotes</a>
+	</nav>-->
+</footer>
+
+		<script type="text/javascript" src="/assets/osrs-font/os-font.js"></script>
+        <script type="text/javascript">
+            OsFont.compile();
+        </script>
+	</body>
+</html>

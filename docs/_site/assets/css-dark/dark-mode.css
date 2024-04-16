@@ -1,0 +1,43 @@
+html[data-theme='light'] {
+	--bg: #fff; /*background-color*/
+	--bg-secondary: #fcfcfc; /**/
+	--headings: #444; /*#07f, azul*/
+	--text: #444; /*#333*/
+	--border-color: #e6e6e6; /*new one*/
+}
+
+html[data-theme='dark'] {
+	--bg: #1b1b1b; /*background-color*/
+	--bg-secondary: #444; /**/
+	--headings: white; /*#39f, azul*/
+	--text: #c9cacc; /*bbb*/
+	--border-color: #00a86b;
+}
+
+body {
+	background-color: var(--bg);
+}
+
+.container {
+	background-color: var(--bg-secondary);
+}
+
+h1 { /*anterior: h2, h3, h4, h5, h6 */
+	color: var(--headings);
+}
+
+h2, h3, h4, h5, h6 {
+	color: var(--text);
+}
+
+p, strong, b, em, span, code, small, a { /*anterior não tinha 'a'*/
+	color: var(--text);
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+	transition: all 650ms !important;
+	transition-delay: 0 !important;
+}

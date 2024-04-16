@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+
+		<link href='/assets/indexpage.css' rel='stylesheet' type='text/css'>
+		<link href="/assets/highlighter.css" rel="stylesheet">
+		<!--link href='/assets/osrs-font/os-font.css' rel='stylesheet' type='text/css'-->
+		<link rel="shortcut icon" type="image/png" href="/images/index.png">
+
+		<title>Setup QEMU storage virtualization | ACME Website</title>
+
+		<link rel="stylesheet" href="/assets/osrs-font/os-font.css" />
+
+		
+	</head>
+
+	<style>
+		a {
+			color: #c9cacc;
+		}
+
+		.content {
+			max-width: 890px; /*580*/
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+	</style>
+
+	<body>
+		<header>
+				<nav class="menu">
+				<a href="/" class="menu-item -home -active">Index</a>
+				<a href="/blog/" class="menu-item">Blog</a>
+				<a href="/about/" class="menu-item">About</a>
+				<a href="/quotes/" class="menu-item">Quotes</a>
+				</nav>
+		</header>
+
+		<header class="header">
+			<a>
+			<time class="article-date" datetime="">
+			March 31, 2024 
+			<p> <i class="fa fa-clock-o" aria-hidden=true>  </i> <span class="reading-time" title="Estimated read time">
+  
+  
+    2 mins
+  
+</span>
+
+ read
+			</p>
+			</time>
+			</a>
+			<h3 class="article-title">Setup QEMU storage virtualization</h3>
+		</header>
+	
+		<div class="content">
+		<h2 id="virtual-storage-for-qemu">Virtual Storage for QEMU</h2>
+
+<p>quick notes about the different ways to handle storage virtualization for QEMU</p>
+
+<h3 id="0-mknod">0. mknod</h3>
+<blockquote>
+  <p>[31/03/2024 10:07]
+mknod can be used for creating block or character special files, such asdevice nodes (special directories). It is an alternative for the powerful dd command which could wipe your root system at runtime.</p>
+</blockquote>
+
+<h3 id="1-sparse-file-with-dd">1. sparse file with dd</h3>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">dd </span><span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>./utils/storage/kernel-hd <span class="nv">bs</span><span class="o">=</span>1M <span class="nv">count</span><span class="o">=</span>2048
+mkfs.ext4 ./utils/storage/kernel-hd
+</code></pre></div></div>
+<p>then you boot qemu with this, passing as <code class="language-plaintext highlighter-rouge">-drive file=./utils/storage/kernel-hd,format=raw</code></p>
+
+<h3 id="2-qcow2-format">2. qcow2 format</h3>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>qemu-img create <span class="nt">-f</span> qcow2 disk.qcow2 1G
+</code></pre></div></div>
+
+<h3 id="3-file-allocation-with-fallocate">3. file allocation with fallocate</h3>
+<p>allocating a new file of size 100M by doing the command below. Then format the disk using whatever, like fdisk or mkfs from the step 1.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fallocate <span class="nt">-l100M</span> image
+</code></pre></div></div>
+
+<h3 id="4-libguestfs-guestmount">4. libguestfs’ guestmount</h3>
+<blockquote>
+  <p>[03/04/2024 22:15]
+guestmount has as dependency libguestfs.</p>
+  <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>pacman <span class="nt">-S</span> libguestfs
+</code></pre></div>  </div>
+  <p>now mount the qcow2 image using the “-i” flag</p>
+  <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>guestmount <span class="nt">-a</span> path_to_image.qcow2 <span class="nt">-i</span> <span class="nt">--ro</span> /mount_point
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="5-nbd-network-block-device">5. nbd (Network Block Device)</h3>
+<p>“With nbd compiled in the kernel (or as a module), Linux can use a remote server as one of its block devices. So every time the client computer wants to read, e.g., /dev/nb0, it sends a request over TCP to the server, which will reply with the data read. This can be used for stations with low disk space (or even diskless) to borrow disk space from another computer. Unlike NFS, it is possible to put any filesystem on it, etc.” <a href="https://docs.kernel.org/admin-guide/blockdev/nbd.html">source</a></p>
+
+<p>the problem is that if nbd wasn’t compiled on the kernel, you would have to use the kernel module version, which would taint your kernel. Not really a problem in a controlled environment.</p>
+
+<p>for how to mount, check this <a href="https://gist.github.com/shamil/62935d9b456a6f9877b5">gist</a> or this <a href="https://unix.stackexchange.com/a/598265/358160">unix exchange</a> answer.</p>
+
+		</div>
+
+		<footer>
+	<nav class="menu">
+	<div class="footer-c">
+		&copy; 2019 <a class="footer-a" href="https://github.com/deomorxsy" style="font-style:oblique;"> <b>~/.ðÐ</b> </a>
+		<p>All rights reserved.</p>
+	</div>
+	</nav>
+	<!-- <a href="/" class="menu-item -home -active">Index</a>
+	<a href="/blog/" class="menu-item">Blog</a>
+	<a href="/about/" class="menu-item">About</a>
+	<a href="/quotes/" class="menu-item">Quotes</a>
+	</nav>-->
+</footer>
+
+		<script type="text/javascript" src="/assets/osrs-font/os-font.js"></script>
+        <script type="text/javascript">
+            OsFont.compile();
+        </script>
+	</body>
+</html>

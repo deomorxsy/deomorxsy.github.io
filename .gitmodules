@@ -1,0 +1,6 @@
+[submodule "importRepos/--force"]
+	path = importRepos/--force
+	url = git@github.com:deomorxsy/contentBlog.git
+[submodule "importRepos/contentBlog"]
+	path = importRepos/contentBlog
+	url = git@github.com:deomorxsy/contentBlog.git

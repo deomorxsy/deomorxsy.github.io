@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+
+		<link href='/assets/indexpage.css' rel='stylesheet' type='text/css'>
+		<link href="/assets/highlighter.css" rel="stylesheet">
+		<!--link href='/assets/osrs-font/os-font.css' rel='stylesheet' type='text/css'-->
+		<link rel="shortcut icon" type="image/png" href="/images/index.png">
+
+		<title>Slim rust/wasm OCI Container | ACME Website</title>
+
+		<link rel="stylesheet" href="/assets/osrs-font/os-font.css" />
+
+		
+	</head>
+
+	<style>
+		a {
+			color: #c9cacc;
+		}
+
+		.content {
+			max-width: 890px; /*580*/
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+	</style>
+
+	<body>
+		<header>
+				<nav class="menu">
+				<a href="/" class="menu-item -home -active">Index</a>
+				<a href="/blog/" class="menu-item">Blog</a>
+				<a href="/about/" class="menu-item">About</a>
+				<a href="/quotes/" class="menu-item">Quotes</a>
+				</nav>
+		</header>
+
+		<header class="header">
+			<a>
+			<time class="article-date" datetime="">
+			April 15, 2024 
+			<p> <i class="fa fa-clock-o" aria-hidden=true>  </i> <span class="reading-time" title="Estimated read time">
+  
+  
+    3 mins
+  
+</span>
+
+ read
+			</p>
+			</time>
+			</a>
+			<h3 class="article-title">Slim rust/wasm OCI Container</h3>
+		</header>
+	
+		<div class="content">
+		<h2 id="slim-rustwasm-oci-containers-common-error-return-messages">Slim Rust/wasm OCI Containers: common error return messages</h2>
+
+<p>This post covers the outcome of a multi-stage Dockerfile for Rust, which handles the app artifact binary to the last layer, discarding the build layer.</p>
+
+<ul>
+  <li>High-level container runtime: Podman</li>
+  <li>Low-level container runtime: crun</li>
+  <li>Trunk with wasm-bidgen as dependency for a Yew project.</li>
+</ul>
+
+<p>OCI Setup specs:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">;</span> podman <span class="nt">-v</span>
+podman version 4.9.0
+<span class="p">;</span>
+<span class="p">;</span> crun <span class="nt">-v</span>
+crun version 1.14
+commit: 667e6ebd4e2442d39512e63215e79d693d0780aa
+rundir: /run/user/1000/crun
+spec: 1.0.0
++SYSTEMD +SELINUX +APPARMOR +CAP +SECCOMP +EBPF +CRIU +YAJL
+<span class="p">;</span>
+</code></pre></div></div>
+
+<p>Two attempts of running without declaring backtrace:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">;</span> podman run <span class="nt">--rm</span> <span class="nt">-it</span> b0ff5e339a75
+thread <span class="s1">'main'</span> panicked at /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/js-sys-0.3.69/src/lib.rs:6013:9:
+cannot call wasm-bindgen imported functions on non-wasm targets
+note: run with <span class="sb">`</span><span class="nv">RUST_BACKTRACE</span><span class="o">=</span>1<span class="sb">`</span> environment variable to display a backtrace
+<span class="p">;</span>
+<span class="p">;</span>
+<span class="p">;</span> podman run <span class="nt">--rm</span> <span class="nt">-it</span> b0ff5e339a75 <span class="nt">-e</span> <span class="nv">RUST_BACKTRACE</span><span class="o">=</span>1
+Error: container create failed <span class="o">(</span>no logs from conmon<span class="o">)</span>: conmon bytes <span class="s2">""</span>: readObjectStart: expect <span class="o">{</span> or n, but found , error found <span class="k">in</span> <span class="c">#0 byte of ...||..., bigger context ...||...</span>
+</code></pre></div></div>
+
+<p>Just pass the environment variable flag “-e” before the image ID:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">;</span>
+<span class="p">;</span> podman run <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-e</span><span class="o">=</span><span class="nv">RUST_BACKTRACE</span><span class="o">=</span>1 b0ff5e339a75
+thread <span class="s1">'main'</span> panicked at /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/js-sys-0.3.69/src/lib.rs:6013:9:
+cannot call wasm-bindgen imported functions on non-wasm targets
+stack backtrace:
+   0: std::panicking::begin_panic
+   1: js_sys::global::get_global_object
+   2: std::sys::pal::common::thread_local::fast_local::Key&lt;T&gt;::try_initialize
+   3: js_sys::global
+   4: web_sys::window
+   5: gloo_utils::document
+   6: client::main
+note: Some details are omitted, run with <span class="sb">`</span><span class="nv">RUST_BACKTRACE</span><span class="o">=</span>full<span class="sb">`</span> <span class="k">for </span>a verbose backtrace.
+<span class="p">;</span>
+</code></pre></div></div>
+
+<p>Getting a verbose backtrace:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">;</span> podman run <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-e</span><span class="o">=</span><span class="nv">RUST_BACKTRACE</span><span class="o">=</span>full b0ff5e339a75
+thread <span class="s1">'main'</span> panicked at /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/js-sys-0.3.69/src/lib.rs:6013:9:
+cannot call wasm-bindgen imported functions on non-wasm targets
+stack backtrace:
+   0:     0x7b6c5848db96 - &lt;std::sys_common::backtrace::_print::DisplayBacktrace as core::fmt::Display&gt;::fmt::hf8249b6db016cdd6
+   1:     0x7b6c584c0af0 - core::fmt::write::h8cd11f932493d2bc
+   2:     0x7b6c5848bd4f - std::io::Write::write_fmt::h37d94ca5dba92725
+   3:     0x7b6c5848d974 - std::sys_common::backtrace::print::h81e1032a6a6ee15a
+   4:     0x7b6c5848f0b7 - std::panicking::default_hook::::h5fbe45a5c9c06360
+   5:     0x7b6c5848ee19 - std::panicking::default_hook::hb25b5c97a3dd366b
+   6:     0x7b6c5848f548 - std::panicking::rust_panic_with_hook::h7d671b1197a07e3d
+   7:     0x7b6c58472aad - std::panicking::begin_panic::::h3980c7524c3a63d3
+   8:     0x7b6c58472a76 - std::sys_common::backtrace::__rust_end_short_backtrace::hb84cae0a7c2b9246
+   9:     0x7b6c5843fd1a - std::panicking::begin_panic::hf35555bd7972a40d
+  10:     0x7b6c584723f9 - js_sys::global::get_global_object::hba56d1ba3757affb
+  11:     0x7b6c5847262a - std::sys::pal::common::thread_local::fast_local::Key&lt;T&gt;::try_initialize::h8ee205ce75587eeb
+  12:     0x7b6c584723a7 - js_sys::global::hd789fb15e9fd1436
+  13:     0x7b6c58471daa - web_sys::window::hca2399c82797c271
+  14:     0x7b6c58471b7b - gloo_utils::document::h1b0bdba7922a03db
+  15:     0x7b6c5844931b - client::main::hd90b0daf8225f262
+  16:     0x7b6c5844a5b3 - std::sys_common::backtrace::__rust_begin_short_backtrace::h2afc5950a67af069
+  17:     0x7b6c5844a5c9 - std::rt::lang_start::::hb50cbb3c95f0e3c4
+  18:     0x7b6c58489478 - std::rt::lang_start_internal::h71ac9203d98bddf4
+  19:     0x7b6c58449f15 - main
+<span class="p">;</span>
+</code></pre></div></div>
+
+<p>This lab setup was inspired by <a href="https://torrust.com/containerizing-rust-applications-best-practices">torrust’s</a> and <a href="https://www.codefeetime.com/post/docker-config-for-actix-web-diesel-and-postgres/">codefeetime’s</a> blog posts.</p>
+
+		</div>
+
+		<footer>
+	<nav class="menu">
+	<div class="footer-c">
+		&copy; 2019 <a class="footer-a" href="https://github.com/deomorxsy" style="font-style:oblique;"> <b>~/.ðÐ</b> </a>
+		<p>All rights reserved.</p>
+	</div>
+	</nav>
+	<!-- <a href="/" class="menu-item -home -active">Index</a>
+	<a href="/blog/" class="menu-item">Blog</a>
+	<a href="/about/" class="menu-item">About</a>
+	<a href="/quotes/" class="menu-item">Quotes</a>
+	</nav>-->
+</footer>
+
+		<script type="text/javascript" src="/assets/osrs-font/os-font.js"></script>
+        <script type="text/javascript">
+            OsFont.compile();
+        </script>
+	</body>
+</html>
