@@ -28,7 +28,7 @@ jobs:
 
     - name: Create SSH key
       env:
-        SSH_PRIVATE_KEY: ${{secrets.READ_ONLY_DEPLOY_KEY }}
+        SSH_PRIVATE_KEY: ${{ secrets.READ_ONLY_DEPLOY_KEY }}
       run: |
         echo "$SSH_PRIVATE_KEY" > private.key
         sudo chmod 400 private.key
