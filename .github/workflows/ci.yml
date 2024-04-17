@@ -43,7 +43,7 @@ jobs:
         bundle exec jekyll build
         cd -
 
-    - name: fix permissions
+    - name: Fix permissions
       run: |
         chmod -c -R +rX "_site/" | while read line; do
           echo "::warning title=Invalid file permissions automatically fixed::$line"
@@ -56,11 +56,6 @@ jobs:
         name: github-pages
         path: ./oldsite/_site
 
-    - name: Archive code coverage results
-      uses: actions/upload-artifact@v4
-      with:
-        name: code-coverage-report
-        path: output/test/code-coverage.html
 
   # Deploy job
   deploy:
