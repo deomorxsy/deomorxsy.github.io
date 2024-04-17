@@ -34,7 +34,7 @@ jobs:
     - name: Install dependencies and build site
       run: |
         cd ./oldsite
-        apt-get install ruby-full
+        sudo apt-get install ruby-full
         gem install jekyll bundler
         bundle install
         bundle exec jekyll build
