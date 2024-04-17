@@ -43,6 +43,12 @@ jobs:
         bundle exec jekyll build
         cd -
 
+    - name: fix permissions
+      run: |
+        chmod -c -R +rX "_site/" | while read line; do
+          echo "::warning title=Invalid file permissions automatically fixed::$line"
+        done
+
     - name: Archive production artifacts
       #(jekyll _site dir)
       uses: actions/upload-artifact@v4
