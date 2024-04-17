@@ -56,12 +56,6 @@ jobs:
         name: github-pages
         path: ./oldsite/_site
 
-    - name: Archive code coverage results
-      uses: actions/upload-pages-artifact@v3
-      with:
-        name: code-coverage-report
-        path: output/test/code-coverage.html
-
   # Deploy job
   deploy:
     # Add a dependency to the build job
