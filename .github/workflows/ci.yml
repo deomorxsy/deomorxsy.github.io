@@ -47,7 +47,7 @@ jobs:
       #(jekyll _site dir)
       uses: actions/upload-artifact@v4
       with:
-        name: dist-without-markdown
+        name: github-pages
         path: ./oldsite/_site
 
     - name: Archive code coverage results
@@ -68,8 +68,7 @@ jobs:
 
     # Deploy to the github-pages environment
     environment:
-      #name: github-pages
-      name: dist-without-markdown
+      name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     # Specify runner + deployment step
