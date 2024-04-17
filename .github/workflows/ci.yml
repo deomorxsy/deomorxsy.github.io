@@ -35,7 +35,7 @@ jobs:
       run: |
         cd ./oldsite
         sudo apt-get install ruby-full rake
-        gem install --install-dir=/usr/lib/ruby/3.0.0/ bundler jekyll
+        gem install --install-dir=~/.ruby/ bundler jekyll
         bundle config path ~/.gem/
         bundle install
         bundle exec jekyll build
