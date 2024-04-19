@@ -30,6 +30,7 @@ jobs:
       run: |
         cd ./importRepos
         git submodule update --init --recursive --remote
+        cp ./importRepos/contentBlog/posts/cs/* ../oldsite/_posts/Tech/
 
     - name: Install dependencies and build site
       run: |
