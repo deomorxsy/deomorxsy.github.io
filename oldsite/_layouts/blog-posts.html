@@ -13,7 +13,7 @@
 
 		<link rel="stylesheet" href="/assets/osrs-font/os-font.css" />
 
-		
+
 	</head>
 
 	<style>
@@ -49,10 +49,11 @@
 			</a>
 			<h3 class="article-title">{{page.title}}</h3>
 		</header>
-	
+
 		<div class="content">
 		{{ content }}
 		</div>
+        {% include utterances.html %}
 
 		{% include footer.html %}
 
@@ -60,5 +61,7 @@
         <script type="text/javascript">
             OsFont.compile();
         </script>
+
+
 	</body>
 </html>

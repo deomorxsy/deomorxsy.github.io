@@ -6,7 +6,7 @@ title: About
 # About
 
 <section class="quotes">
-	<div class="summary">Curiosity about how things work and taking notes. That's the idea behind this blog. </div>
+	<div class="summary">I like to take notes about things I am curious about, and also like the open source principles of sharing knowledge. That's the idea behind this blog. </div>
 	<hr class="-center">
 </section>
 
