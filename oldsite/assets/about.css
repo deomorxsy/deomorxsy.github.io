@@ -1,0 +1,346 @@
+html {
+	font-size: 15px; 
+	font-family:'Menlo', 'Meslo LG', monospace;
+	color: #c9cacc;
+	box-sizing: border-box;
+	cursor: default;
+	border: 7px solid #00a86b; /*#e6e6e6;*/
+    border-top-width: 7px;
+    border-right-width: 7px;
+    border-bottom-width: 7px;
+    border-left-width: 7px;
+    min-height: 100vh;    
+}
+
+body {
+	font-size: 100%;
+	margin: 0 auto;
+	margin-bottom: 42px;
+	/*padding: 0 20px;*/
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 1.725;
+	font-family: Arial,Helvetica,sans-serif; /*'Menlo', monospace;*/
+	text-align: left;
+	background-color: #1b1b1b; /*dark-theme | background-color: #1b1b1b;/*#111*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /*transform: skewY(-6deg) translate(20rem, -2rem);*/
+    transform-origin: top;
+    font-style: italic;
+    text-decoration-line: underline overline;
+    /*text-decoration-color: #c44;*/
+    text-underline-offset: 20%;
+    text-decoration-thickness: .35ex
+}
+
+h1 {
+    transform: skewY(6deg) translate(-2rem, 2rem);
+    text-decoration-color: #c44;
+    text-decoration-line: underline overline;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-decoration-color: #e6c2ec;
+    text-decoration-line: underline;
+}
+
+h1 {
+	font-size: 2.5em;
+	text-align: center;
+	color: white; /*dark-theme | color: white;*/
+	text-shadow: 3px 3px 1px black;
+	margin-bottom: 0em;
+	margin-top: 1.20em;
+    transform: skewY(-2deg)
+        translate(-1rem,-0.4rem);
+
+}
+
+.index-title {
+	margin-bottom: 1em
+}
+
+h2 {
+
+}
+
+
+p {
+}
+
+a {
+
+}
+
+
+
+img {
+}
+
+
+.summary {
+	-webkit-hyphens:none;
+	-ms-hyphens:none;
+	hyphens:none;
+	font-style:italic;
+	color:#c9cacc;
+	text-align:center;
+	font-size: 16px;
+	margin: 0 auto;
+	max-width: 600px;
+}
+.summary p {
+	margin-top: .5em
+
+}
+.summary-index { /*basically, the bio.*/
+	-webkit-hyphens:none;
+	-ms-hyphens:none;
+	hyphens:none;
+	font-style:italic;
+	color:#c9cacc;
+	margin-bottom:0em;
+	margin-top: 1.5em;
+	line-height:1.70;
+	text-align:left;
+	font-size: 16px;
+	border-left: 3px solid; /*NOTE: it creates the sidebar to the bio*/
+}
+
+hr {
+	box-sizing: content-box;
+	overflow: visible;
+	margin-top: 45px;
+	width: 80%;
+	/*text-align: left;*/
+}
+.-center { /*<hr class="-center">*/
+	box-sizing: content-box;
+	overflow: visible;
+	border: 1;
+	margin-top: 25px;
+	margin-bottom: 45px;
+	width: 90px;
+}
+.-footnotes { /*<hr class="-footnotes">*/
+    /*box-sizing: content-box;
+    overflow: visible;
+    border: 1;
+    margin-top: 25px;
+    margin-bottom: 45px;
+    width: 90px*/
+
+	background-color: purple;
+	width: 120%;
+	height: 12px;
+	border-top: 1px solid black
+
+	margin-top: -5px;
+}
+
+.footer-c {
+	font-size: 11px;
+	margin-top: 70px;
+	text-decoration: none;
+}
+
+.footer-a {
+	font-size: 13px;
+	margin-top: 70px;
+	text-decoration: none;
+}
+
+.footer-a:hover, .footer-a:focus { /*Colore a parte de trás do texto*/
+	background-color: #c44;
+}
+
+.footer-c p {
+	font-size: 11px;
+	margin-top: 2px;
+	text-decoration: none;
+}
+
+.mydivbars {
+	font-size: 15px;
+	letter-spacing: -5px;
+}
+
+.article-date {
+	font-family: 'Menlo', 'Meslo LG', monospace;
+	vertical-align:middle;
+	display:block;
+	font-size:12px;
+	text-transform:uppercase;
+	color:#777;
+	letter-spacing:2.5px;
+	white-space:nowrap;
+	line-height:1.5
+	margin-bottom: 0em;
+	margin-top: 3em;
+}
+.article-date p {
+font-family: 'Menlo', 'Meslo LG', monospace;
+vertical-align:middle;
+display:block;
+font-size:12px;
+text-transform:uppercase;
+color:#777;
+letter-spacing:2.5px;
+white-space:nowrap;
+line-height:1.5
+margin-bottom: 0em;
+margin-top: 0em;
+}
+.article-title {
+	margin-bottom: 1.20em;
+	margin-top: 0em;
+}
+header{display:block}
+
+.header{
+	text-align:center
+}
+
+pre { /*code highlight w/ rouge*/
+  font-family: "Menlo", "Meslo LG", monospace;
+  /*font-size: 13px;
+  padding: 10px 15px;
+  line-height: 22px
+  -webkit-border-radius: 4px;
+  overflow-x: auto;*/
+
+	padding: 16px;
+	overflow: auto;
+	font-size: 90%;
+	line-height: 1.45;
+	background-color: #282a36;/*#f6f8fa;*/
+	border-radius: 3px;
+
+    margin-bottom: 0;
+    word-break: normal;
+    word-wrap: normal;
+
+ 	/*white-space: pre;*/
+}
+
+.fa, fa-clock-o { /* Readtime icon. The comma is important.*/
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+        font-size: 14px;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.navigation_wrapper {
+	text-align: center;
+}
+.navigation__item {/*Veaceslav Gaidarji's display items*/
+    display: inline-block;
+    margin: 0 2px;
+    line-height: 1em;
+}
+
+blockquote.p{
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    padding: 1px 5px;
+    background-color: #c44; /*#303e80;*/
+    
+    font-color: yellow;
+}
+
+code.highlighter-rouge {
+    background: #282a36;
+    color: #f8f8f2;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+ 	font-size: 12px;
+
+ 	padding: 4px;
+
+}
+
+.label {
+	display:none;
+}
+
+.button-label { /*the cool salmon button*/
+	position: relative;
+	display: inline-block;
+	padding: 8px 18px 9px 18px;
+	background: #e25440;
+	border-radius: 3px;
+	text-align: center;
+	color: #FFF; }
+
+
+/*--------viewport------------*/
+
+@media (min-width:800px) {
+	.article .header {
+		width:800px;
+		margin-left:-120px;
+		margin-right:-
+	}
+}
+
+@media screen and (max-width: 50em) {
+	body {
+		/*background: #ff0000; /*viewport: red background*/
+		background-color: #1b1b1b;
+	}
+
+	h1 {
+		font-size: 133%;
+	}
+
+	.index-title {
+		font-size: 190%;
+		margin-bottom: 1.7em;
+	}
+
+	img {
+		max-width: 100%;
+		border: 7px solid white;
+		border-radius: 20px;
+	}
+
+	p {
+		line-height: 1.600;
+	}
+}
+
+@media screen and (max-width: 40em) {
+	h2 {
+		font-size: 100%;
+	}
+
+	img {
+		max-width:100%;
+	}
+
+@media screen and (max-width: 30em) {
+	h1 {
+		font-size: 133%;
+	}
+}
+
+@media screen and (min-width: 40.5em) {
+	.product-img {
+		width: 50%;
+		float: left;
+	}
+}
