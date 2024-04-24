@@ -9,7 +9,7 @@ highlighter: rouge
 permalink: /:categories/:title/
 
 # variables
-description: 'My personal website, built from the scratch by testing html, css and js features.'
+description: 'My old personal blog built from scratch with jekyll, now revived with CI ;D'
 version: '1.1.0'
 bar: foo
 

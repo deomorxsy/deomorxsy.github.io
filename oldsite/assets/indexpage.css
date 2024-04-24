@@ -127,9 +127,67 @@ a {
 	font-size: 15px;
 	line-height: 1.5;
 	text-decoration: none;
+    /*background-color: #c44;*/
 }
 
-.post-article { /*a inside the ul from blog posts.*/
+a:link {
+    color: deepskyblue;
+    background-color: transparent;
+    text-decoration: none;
+      }
+a:visited {
+    /*color: deepskyblue;*/
+    color: greenyellow;
+    background-color: transparent;
+    text-decoration: none;
+}
+a.menu-item:visited {
+    color: #FAFAFA;
+}
+a:active {
+    color: yellow;
+    background-color: transparent;
+}
+
+#entries, #footer_nick {
+    color: #c9cacc;
+}
+
+#entries:hover, #footer_nick:hover { /*Colore a parte de trás do texto*/
+	background-color: #c44; /*salmon salmão*/
+    color: white;
+}
+
+#results-container {
+    background-color: #1f262a;
+    text-align: center;
+
+}
+
+#results-container ul a {
+    color: #c44;
+
+    height: 100%;
+    /*margin: 0;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -80px;
+}
+
+ #results-container ul a:hover {
+    background-color: #f0e372;
+    color: #1f262a;
+
+}
+
+
+.content {
+    max-width: 500px;
+    margin: auto;
+}
+
+.post-article, { /*a inside the ul from blog posts.*/
 	/*dssc-config*/
 	box-shadow:none;
 	font-size:16px;
@@ -197,7 +255,7 @@ ol li {
 }
 
 .reference {
-	font-family: /*'Runescape Chat Font Regular';*/
+	font-family: "Runescape Chat Font Regular";
 	font-size: 20px;
 	text-align: left;
 	padding: 0;
@@ -280,7 +338,7 @@ img {
 	color:#FAFAFA;
 	border-bottom:2px solid #FAFAFA;
 }
-.menu-item:active,.menu-item:hover {/*colore a parte de trás do texto*/
+.menu-item:active,.menu-item:hover {/* color background color when hovering */
 	background:0 0;
 	background-color: #c44;
 	outline:0;
@@ -339,7 +397,7 @@ hr {
 .-center { /*<hr class="-center">*/
 	box-sizing: content-box;
 	overflow: visible;
-	border: 1;
+	border: solid;
 	margin-top: 25px;
 	margin-bottom: 45px;
 	width: 90px;

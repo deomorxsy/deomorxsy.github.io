@@ -10,7 +10,7 @@
   </div>
 
   {% include search.html %} <!-- NOTE: inclui search.html para realizar pesquisas -->
-  
+
   <nav class="sidebar-nav">
     {% comment %}
       The code below dynamically generates a sidebar nav of pages with
@@ -29,7 +29,9 @@
     <a class="sidebar-nav-item" href="{{site.baseurl}}/">Index</a>
     <a class="sidebar-nav-item" href="{{site.baseurl}}/blog">Blog</a>
     <a class="sidebar-nav-item" href="{{site.baseurl}}/about">About</a>
-    <a class="sidebar-nav-item" href="{{site.baseurl}}/quotes">Quotes</a>
+    <a class="sidebar-nav-item" href="{{site.baseurl}}/quotes">
+        <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+        Quotes</a>
     <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
   </nav>
 
