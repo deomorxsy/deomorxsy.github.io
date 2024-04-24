@@ -9,7 +9,7 @@ tags:
 
 ## Virtual Storage for QEMU
 
-quick notes about the different ways to handle storage virtualization for QEMU
+Quick notes about the different ways to handle storage virtualization for QEMU
 
 ### 0. mknod
 > \[31/03/2024 10:07]
