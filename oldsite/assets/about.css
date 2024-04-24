@@ -1,5 +1,5 @@
 html {
-	font-size: 15px; 
+	font-size: 15px;
 	font-family:'Menlo', 'Meslo LG', monospace;
 	color: #c9cacc;
 	box-sizing: border-box;
@@ -9,7 +9,7 @@ html {
     border-right-width: 7px;
     border-bottom-width: 7px;
     border-left-width: 7px;
-    min-height: 100vh;    
+    min-height: 100vh;
 }
 
 body {
@@ -84,10 +84,10 @@ a {
 }
 
 
-
-img {
+img[align="left"]
+{
+  padding-right: 20px;
 }
-
 
 .summary {
 	-webkit-hyphens:none;
@@ -259,7 +259,7 @@ blockquote.p{
     border-radius: 2px;
     padding: 1px 5px;
     background-color: #c44; /*#303e80;*/
-    
+
     font-color: yellow;
 }
 
