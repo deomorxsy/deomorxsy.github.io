@@ -1,7 +1,7 @@
 ---
 layout: index
 title: My First Post
-category: personal
+category: templates
 order: 1
 ---
 

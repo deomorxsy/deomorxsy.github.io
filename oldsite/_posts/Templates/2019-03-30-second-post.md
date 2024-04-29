@@ -1,7 +1,7 @@
 ---
 layout: index
 title: My Second Post
-category: personal
+category: templates
 order: 3
 ---
 
