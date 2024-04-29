@@ -34,8 +34,10 @@
 				<nav class="menu">
 				<a href="{{site.baseurl}}/" class="menu-item -home -active">Index</a>
 				<a href="{{site.baseurl}}/blog/" class="menu-item">Blog</a>
+                <a href="{{site.baseurl}}/tags/" class="menu-item">Tags</a>
 				<a href="{{site.baseurl}}/about/" class="menu-item">About</a>
 				<a href="{{site.baseurl}}/quotes/" class="menu-item">Quotes</a>
+                <a href="{{site.baseurl}}/rss.xml" class="menu-item">RSS</a>
 				</nav>
 		</header>
 
@@ -43,8 +45,12 @@
 			<a>
 			<time class="article-date" datetime="{{post.date | date: "%b-%-d-%Y"}}">
 			{{ page.date | date: "%B %d, %Y "}}
-			<p> <i class="fa fa-clock-o" aria-hidden=true>  </i> {% include posts_read-time.html %} read
+			<p>
+                <i class="fa fa-clock-o" aria-hidden=true>  </i> {% include posts_read-time.html %} read
+
 			</p>
+            {%- include tags.html -%}
+            </div>
 			</time>
 			</a>
 			<h3 class="article-title">{{page.title}}</h3>

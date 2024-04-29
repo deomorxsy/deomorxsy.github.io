@@ -1,0 +1,23 @@
+{% assign tag_name = page.tag-name %}
+{% assign years_with_posts = "" %}
+{% for post in site.posts %}
+    {% if post.tags contains tag_name %}
+        {% capture post_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+        {% unless years_with_posts contains post_year %}
+            {% assign years_with_posts = years_with_posts | append: post_year | append: "," %}
+            {% if forloop.index != 1 %}
+                </ul>
+            {% endif %}
+            <h3 id="{{ post_year }}-ref" style="font-style:italic">{{ post_year }}</h3> <!-- print year -->
+            <ul class="alter-padding" style="padding-left: 0px; margin-left: 0px;">
+        {% endunless %}
+        <li>
+            <span class="old-postDate">{{ post.date | date: "%b %d" }} ー</span>
+            <a class="post-article" href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+        {% if forloop.last %}
+            </ul>
+        {% endif %}
+    {% endif %}
+{% endfor %}
+

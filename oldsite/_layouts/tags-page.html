@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+
+    <link href='/assets/indexpage.css' rel='stylesheet' type='text/css'>
+    <link href="/assets/highlighter.css" rel="stylesheet">
+    <!--link href='/assets/osrs-font/os-font.css' rel='stylesheet' type='text/css'-->
+    <link rel="shortcut icon" type="image/png" href="/images/index.png">
+
+    <title>{{ page.title }} | {{ site.title }}</title>
+
+    <link rel="stylesheet" href="/assets/osrs-font/os-font.css" />
+
+
+  </head>
+
+  <style>
+    a {
+      color: #c9cacc;
+    }
+
+    .content {
+      max-width: 890px; /*580*/
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  </style>
+
+  <body>
+    <header>
+        <nav class="menu">
+        <a href="{{site.baseurl}}/" class="menu-item -home -active">Index</a>
+        <a href="{{site.baseurl}}/blog/" class="menu-item">Blog</a>
+        <a href="{{site.baseurl}}/about/" class="menu-item">About</a>
+        <a href="{{site.baseurl}}/quotes/" class="menu-item">Quotes</a>
+        </nav>
+    </header>
+
+    <header class="header">
+      <h3 class="article-title">{{page.title}}</h3>
+    </header>
+
+        <div class="all-tags">
+          All tags:
+        <ul>
+            {% assign tags = site.posts | all_tags %}
+            {% for tag in tags %}
+            {% assign tag_slug = tag['name'] | slugify: "raw" %}
+            <li>
+              <a class="tag-link"
+              href={{ site.baseurl | append: "/tags/" | append: tag_slug | append: "/" }}
+              rel="category tag">
+              #{{ tag['name'] }} ({{ tag['count'] }})
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+
+
+    <div class="content">
+    {{ content }}
+    </div>
+        {% include utterances.html %}
+
+    {% include footer.html %}
+
+  </body>
+</html>

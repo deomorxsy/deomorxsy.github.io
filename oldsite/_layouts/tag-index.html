@@ -1,0 +1,14 @@
+---
+layout: index
+---
+
+{{ content }}
+
+{% include posts-per-tag.html %}
+
+
+{% if post.tags contains page.tag-name %}
+{% endif %}
+
+<! Liquid Syntax: Anything you put between {% comment %} and {% endcomment %} tags
+is turned into a comment. >

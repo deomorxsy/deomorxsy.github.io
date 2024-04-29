@@ -1,0 +1,17 @@
+<ul class="tags">
+    🏷
+    {% for tag in page.tags %}
+      {%- assign slug_tag = tag | slugify -%}
+
+      <li>
+        <a class="tag-nav" href="{{ "/tags/" | append: slug_tag }}">
+          {{ tag }}
+
+          {% comment %}
+          use "/tags#" instead to just redirect to tags page
+          and not for the subdir
+          {% endcomment %}
+        </a>
+      </li>
+    {% endfor %}
+</ul>

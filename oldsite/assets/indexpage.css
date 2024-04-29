@@ -52,18 +52,6 @@ body {
 	text-align: left;
 	background-color: #1b1b1b; /*dark-theme | background-color: #1b1b1b;/*#111*/
 
-	/* try later
-	background-color:#FFF;
-	background-image: url("img/site-background-image-hat.png?v=383a65d1711e"),url("img/site-background-image-kite.png?v=3df4231512ad"),url("img/site-background-image-cl-bl.png?v=7d6d4f78162d"),url("img/site-background-image-cl-br.png?v=3151b7fa713f"),url("img/site-background-image-cl-tl.png?v=8859ac68a7fa"),url("img/site-background-image-cl-tr.png?v=11f8e26a4afc"),url("img/site-background-image-cl-mid.png?v=29ad586b7b2a"),linear-gradient(to bottom,
-	#98DAEA 0%,
-	#aedfed 100%);
-	background-position: top 80% left,top 300px right,bottom left,bottom right,top left,top right,bottom center;
-	background-repeat: no-repeat;
-	background-size: 40%,40%,220px,220px,220px,170px,220px,100%;
-	background-attachment: fixed,scroll,fixed,fixed,fixed,fixed,fixed,fixed;
-	*/
-
-
 }
 
 h1,
@@ -147,6 +135,34 @@ a.menu-item:visited {
 a:active {
     color: yellow;
     background-color: transparent;
+}
+
+a.tag-nav {
+  display:inline-flex;
+  color: white;
+  background-color: #266058;
+  padding: 0.1em 0.8em 0.1em 0.8em;
+  border-radius:3px;
+  margin-right:1em
+  // clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 10px 100%, 0 50%);
+  margin-bottom: 5px;
+}
+
+a.tag-nav:hover{
+  background-color: #60262e;
+}
+
+ul.tags {
+  margin-left: 0px;
+  margin-top: 0.2em;
+  margin-bottom: 2em;
+  list-style: none;
+}
+
+ul.tags > li {
+  display: inline;
+  margin-bottom: 2em;
+  padding-top: 2em;
 }
 
 #entries, #footer_nick {

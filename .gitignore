@@ -6,4 +6,4 @@ _site/
 .bundle/
 vendor/
 sample-js.js
-
+/_tags/*.md
