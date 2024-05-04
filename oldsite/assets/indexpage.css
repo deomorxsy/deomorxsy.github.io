@@ -60,16 +60,17 @@ h3,
 h4,
 h5,
 h6 {
-    /*transform: skewY(-6deg) translate(20rem, -2rem);*/
+
+}
+
+h1 {
     transform-origin: top;
     font-style: italic;
     text-decoration-line: underline overline;
     /*text-decoration-color: #c44;*/
     text-underline-offset: 20%;
-    text-decoration-thickness: .35ex
-}
+    text-decoration-thickness: .35ex;
 
-h1 {
     transform: skewY(6deg) translate(-2rem, 2rem);
     text-decoration-color: #c44;
     text-decoration-line: underline overline;
@@ -80,8 +81,16 @@ h3,
 h4,
 h5,
 h6 {
-    text-decoration-color: #e6c2ec;
-    text-decoration-line: underline;
+    /*text-decoration-color: #00a86b; /*#e6c2ec;*/
+    /*text-decoration-line: overline;*/
+}
+
+h3::after {
+    content: "\A ===================";
+    bottom: 10px;
+    left: 0;
+    white-space: pre-wrap;
+    overflow: hidden;
 }
 
 h1 {

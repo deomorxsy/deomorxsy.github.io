@@ -4,7 +4,13 @@ search: exclude
 ---
 
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns:rss="http://www.sitemaps.org/schemas/sitemap/0.9">
+<channel>
+  <title>deomorxsy's old blog</title>
+    <link>https://deomorxsy.github.io</link>
+    <description>Linux • FOSS • Virtualization</description>
+    <generator>Jekyll</generator>
+    <language>en</language>
 
     {% for page in site.pages %}
     <url>
@@ -23,5 +29,5 @@ search: exclude
         <priority>0.5</priority>
     </url>
     {% endfor %}
-
+    </channel>
 </urlset>
