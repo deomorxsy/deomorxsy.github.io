@@ -178,33 +178,12 @@ ul.tags > li {
     color: #c9cacc;
 }
 
-#entries:hover, #footer_nick:hover { /*Colore a parte de trás do texto*/
-	background-color: #c44; /*salmon salmão*/
+#entries:hover, #footer_nick:hover { /*colors background when hovering*/
+	background-color: #c44; /*salmon*/
     color: white;
 }
 
-#results-container {
-    background-color: #1f262a;
-    text-align: center;
 
-}
-
-#results-container ul a {
-    color: #c44;
-
-    height: 100%;
-    /*margin: 0;*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: -80px;
-}
-
- #results-container ul a:hover {
-    background-color: #f0e372;
-    color: #1f262a;
-
-}
 
 
 .content {

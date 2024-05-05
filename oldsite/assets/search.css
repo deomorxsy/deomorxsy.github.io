@@ -1,0 +1,123 @@
+#results-container {
+    background-color: #1f262a;
+    text-align: center;
+    padding: 0;
+
+}
+
+#results-container ul a {
+    color: #c44;
+    padding-left: 0px;
+    display: flex;
+    }
+
+ #results-container ul a:hover {
+    background-color: #f0e372;
+    color: #1f262a;
+}
+
+.openBtn {
+    position: fixed;
+    top: 4em;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.openBtn span {
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
+ul {
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 5px;
+}
+
+#search-input {
+    position: fixed;
+    margin-bottom: 60px;
+    right: 70%;
+    top: 10%;
+}
+
+/* The overlay effect with black background */
+.overlay {
+  height: 60%;
+  width: 60%;
+  display: none;
+  z-index: 1;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9); /* Black with a little bit see-through */
+  position: fixed;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the element precisely */
+  border-radius: .25rem;
+
+
+}
+
+/* The content */
+.overlay-content {
+  position: fixed;
+  text-align: center;
+  top: 20%;
+  left: 20%;
+
+}
+
+/* Close button */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+
+/* Style the search field */
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
+
+.overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+
+
+
+
+
+/* Style the submit button */
+/*.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}*/
+
+/*
+.overlay button:hover {
+  background: #bbb;
+}
+*/
+
+/*
+ * ==================
+ *
+ * */

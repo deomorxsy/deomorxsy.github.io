@@ -1,11 +1,25 @@
 <!-- Html Elements for Search -->
+<!--
 <div id="search-container">
 <input type="text" id="search-input" placeholder="Search..." style="height: 6px;width: 173.333px;"f>
 <ul id="results-container"></ul>
 </div>
+-->
 
-<!-- Script pointing to search-script.js -->
-<script src="/scripts/search-script.js" type="text/javascript"></script>
+<div id="search-container" class="overlay">
+ <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+ <div class="overlay-content">
+    <input type="text" id="search-input" placeholder="Search..." style="height: 6px;width: 173.333px;"f>
+    <ul id="results-container"></ul>
+</div>
+</div>
+
+<button class="openBtn" onclick="openSearch()">
+    <span>🔍</span>
+</button>
+
+<!-- Script pointing to search.js -->
+<script src="/scripts/search.js" type="text/javascript"></script>
 
 <!-- Configuration -->
 <script>
