@@ -6,4 +6,7 @@ _site/
 .bundle/
 vendor/
 sample-js.js
-/_tags/*.md
+oldsite/_tags/*.md
+oldsite/_posts/Tech/*
+oldsite/assets/svg/
+oldsite/assets/images/

@@ -285,6 +285,39 @@ img {
 	border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px) 60;
 }
 
+/* blockquote note class, .img icon class */
+.tips {
+    display: flex;
+    align-items: center;
+    padding: 0.4rem;
+    /*align-items: center;
+    vertical-align: middle;*/
+}
+
+/* img */
+.icon {
+    width: 10%;
+    margin-right: 0.8rem;
+    /*vertical-align: middle;
+    display: table-cell;*/
+}
+.note img {
+    vertical-align: left;
+}
+
+/* div */
+.note {
+  border-radius: 3px;
+  align-self: flex-start;
+  max-width: 300px; /*600*/
+  padding: .4rem .8rem;
+  overflow: hidden;
+  background-color: #26241c;
+  border-color: #736624;
+  /*vertical-align: middle;
+  display: table-cell;*/
+}
+
 .quotes blockquote p {
 	font-size: 12px;
 	font-family: 'Menlo', 'Meslo LG', monospace; /*note new*/
