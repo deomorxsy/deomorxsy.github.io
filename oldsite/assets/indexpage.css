@@ -302,7 +302,7 @@ img {
     display: table-cell;*/
 }
 .note img {
-    vertical-align: left;
+    vertical-align: center;
 }
 
 /* div */
@@ -316,6 +316,13 @@ img {
   border-color: #736624;
   /*vertical-align: middle;
   display: table-cell;*/
+}
+
+blockquote p {
+    border-radius: 3px;
+    background-color: #504945;
+    border-color: #fbf1c7;
+    padding: .4rem .8rem;
 }
 
 .quotes blockquote p {
