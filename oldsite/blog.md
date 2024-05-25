@@ -6,6 +6,10 @@ title: blog
 # Latest posts
 
 <section class="quotes">
-	<div class="summary">My thoughts about some stuff.</div>
-	<hr class="-center">
+<div class="summary">
+
+coredump and other misc stuff
+
+</div>
+<hr class="-center">
 </section>

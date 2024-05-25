@@ -6,8 +6,10 @@ title: About
 # About
 
 <section class="quotes">
-	<div class="summary"> Template about section </div>
-	<hr class="-center">
+<div class="summary">
+Template about section
+</div>
+<hr class="-center">
 </section>
 
 

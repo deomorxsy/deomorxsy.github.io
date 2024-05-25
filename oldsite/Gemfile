@@ -2,10 +2,15 @@ source "https://rubygems.org"
 
 gem "jekyll"
 gem "jekyll-gist"
+# markdown processor
 gem "kramdown", ">= 2.3.1"
-
+group :jekyll_plugins do
+  gem 'jekyll-commonmark'
+end
 
 
 gem "webrick", "~> 1.7"
 
 gem "ffi", "~> 1.15"
+
+

@@ -4,6 +4,16 @@ title: rstdtmp-proto # setting the title
 
 # Build settings
 markdown: kramdown
+kramdown:
+  parse_block_html: true
+  input: GFM
+  html_to_native: true
+  parse_span_html: true
+
+#kramdown:
+  #parse_block_html: true
+  #html_to_native: true
+#markdown: CommonMark
 highlighter: rouge
 
 permalink: /:categories/:title/
