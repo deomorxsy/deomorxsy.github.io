@@ -32,6 +32,7 @@ jobs:
         git submodule update --init --recursive --remote
         cp ./${{ secrets.POST_SUBMODULE }}/posts/cs/* ../oldsite/_posts/Tech/
         cp ./${{ secrets.POST_SUBMODULE }}/misc/about/about.md ../oldsite/about.md
+        cp ./${{ secrets.POST_SUBMODULE }}/assets/* ../oldsite/assets/
         mkdir -p ../oldsite/images/
         cp ./${{ secrets.POST_SUBMODULE }}/misc/about/images/* ../oldsite/images/
 
