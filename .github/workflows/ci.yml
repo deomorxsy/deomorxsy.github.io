@@ -35,7 +35,7 @@ jobs:
         cp ./${{ secrets.POST_SUBMODULE }}/misc/about/about.md ../oldsite/about.md
 
         cp -r ./${{ secrets.POST_SUBMODULE }}/assets/* ../oldsite/assets/
-        mkdir -p ../oldsite/images/about/
+        mkdir -p ../oldsite/assets/about/
         cp ./${{ secrets.POST_SUBMODULE }}/misc/about/images/* ../oldsite/assets/about/
 
     - name: Install dependencies and build site
