@@ -25,22 +25,72 @@ body {
 	background-color: #1b1b1b; /*dark-theme | background-color: #1b1b1b;/*#111*/
 }
 
+.menu-nav {
+    color: #2bbc8a;
+    letter-spacing: 0.01em;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 0.8rem;
+    box-sizing: border-box;
+	overflow-wrap: break-word;
+}
+
+.menu{
+	font-family: 'Menlo', 'Meslo LG', monospace; /*Arial, Helvetica, sans-serif;*/
+	text-align: center;
+	margin-bottom: -2em;
+	padding: 40px;
+}
+
+.nick-menu {/*testando navbar do h1-header*/
+	font-family: 'Menlo', 'Meslo LG', monospace; /*Arial, Helvetica, sans-serif;*/
+	text-align: center;
+	margin-bottom: 0em;
+}
+.menu-item {
+	border-bottom:0;
+	color:#FAFAFA;
+	padding:2px 0;
+	margin-left: 10px; /*10px*/
+	margin-right: 10px; /*10px*/
+	display: inline-block;
+}
+
+.menu-item.-home {
+	font-weight:700
+	}
+.menu-item.-active {
+	color:#FAFAFA;
+	border-bottom:2px solid #FAFAFA;
+}
+.menu-item:active,.menu-item:hover {/* color background color when hovering */
+	background:0 0;
+	background-color: #c44;
+	outline:0;
+}
+.menu-item:focus {
+	color: #00a86b; /*green #00a86b*/
+	background:#FAFAFA; /*#ff0000; red*/
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    /*transform: skewY(-6deg) translate(20rem, -2rem);*/
+    position: relative;
+
+}
+
+h1 {
     transform-origin: top;
     font-style: italic;
     text-decoration-line: underline overline;
     /*text-decoration-color: #c44;*/
     text-underline-offset: 20%;
-    text-decoration-thickness: .35ex
-}
+    text-decoration-thickness: .35ex;
 
-h1 {
     transform: skewY(6deg) translate(-2rem, 2rem);
     text-decoration-color: #c44;
     text-decoration-line: underline overline;
@@ -51,8 +101,16 @@ h3,
 h4,
 h5,
 h6 {
-    text-decoration-color: #e6c2ec;
-    text-decoration-line: underline;
+    /*text-decoration-color: #00a86b; /*#e6c2ec;*/
+    /*text-decoration-line: overline;*/
+}
+
+h3::after {
+    content: "\A ===================";
+    bottom: 10px;
+    left: 0;
+    white-space: pre-wrap;
+    overflow: hidden;
 }
 
 h1 {
@@ -72,15 +130,14 @@ h1 {
 }
 
 h2 {
-
+	font-size: 1.6em;
 }
 
 
 p {
-}
-
-a {
-
+	font-size: 15px;
+	letter-spacing: 1px;
+	font-family: Arial,Helvetica,sans-serif;
 }
 
 

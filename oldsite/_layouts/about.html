@@ -4,7 +4,8 @@
 		<meta charset='utf-8'>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
 
-		<link href="/assets/about.css" rel="stylesheet" type="text/css">
+        <link href="/assets/about.css" rel="stylesheet" type="text/css">
+        <!-- <link href="/assets/indexpage.css" rel="stylesheet" type="text/css"> -->
 		<link rel="shortcut icon" type="image/png" href="/assets/images/index.png">
 
 		<link href="/assets/sidebar.css" rel="stylesheet" type="text/css">
@@ -26,15 +27,16 @@
 	<body>
 		<!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
-		<!-- <header>
-				<nav class="menu">
-				<a href="{{site.baseurl}}/" class="menu-item -home -active">Index</a>
-				<a href="{{site.baseurl}}/blog/" class="menu-item">Blog</a>
-				<a href="{{site.baseurl}}/about/" class="menu-item">About</a>
-				<a href="{{site.baseurl}}/quotes/" class="menu-item">Quotes</a>
-				</nav>
+
+        <header>
+            <nav class="menu">
+            <a href="{{site.baseurl}}/" class="menu-item -home -active">Index</a>
+            <a href="{{site.baseurl}}/blog/" class="menu-item">Blog</a>
+            <a href="{{site.baseurl}}/tags/" class="menu-item">Tags</a>
+            <a href="{{site.baseurl}}/about/" class="menu-item">About</a>
+            <a href="{{site.baseurl}}/feed.xml" class="menu-item">Subscribe</a>
+            </nav>
 		</header>
-	-->
 
 		<div class="content">
 		{{ content }}
@@ -43,20 +45,5 @@
 		<!--<button class="theme-toggle">Toggle Dark Mode</button>-->
 		<!-- <input id="night-mode" class="lamp" type="checkbox" aria-label="night-mode" /> -->
 
-		{% include sidebar.html %}
-		<script>
-      (function(document) {
-        var toggle = document.querySelector('.sidebar-toggle');
-        var sidebar = document.querySelector('#sidebar');
-        var checkbox = document.querySelector('#sidebar-checkbox');
-        document.addEventListener('click', function(e) {
-          var target = e.target;
-          if(!checkbox.checked ||
-             sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
-          checkbox.checked = false;
-        }, false);
-      })(document);
-    	</script>
 	</body>
 </html>
