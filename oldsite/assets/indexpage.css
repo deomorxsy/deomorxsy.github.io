@@ -353,6 +353,22 @@ img {
   display: table-cell;*/
 }
 
+/*.tips > note.svg-diagram {
+    background-color: white;
+}*/
+
+.svg-diagram {
+  border-radius: 7px;
+  align-self: flex-start;
+  max-width: 800px; /*600*/
+  padding: .4rem .8rem;
+  overflow: hidden;
+  background-color: #b8acac;
+  border-color: red;
+  /*vertical-align: middle;
+  display: table-cell;*/
+}
+
 blockquote p {
     border-radius: 3px;
     background-color: #504945;
