@@ -162,6 +162,33 @@ a.tag-nav:hover{
   background-color: #60262e;
 }
 
+tr:hover, td:hover
+{
+  background-color: #f0e372;
+  color: #1f262a;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(150, 212, 212, 0.4);
+}
+
+th:nth-child(even),td:nth-child(even) {
+  background-color: rgba(150, 212, 212, 0.4);
+}
+
+div.special_table + table {
+    margin-left: auto;
+    margin-right: auto;
+    /*background: #922;*/
+    /*justify-content: center;*/
+}
+
+a > .languageplaintext.highlighter-rouge {
+    /*background-color: #f0e372;*/
+    background: #f0e372;
+    color: red;
+}
+
 ul.tags {
   margin-left: 0px;
   margin-top: 0.2em;
@@ -591,6 +618,23 @@ code.highlighter-rouge {
 
  	padding: 4px;
 
+}
+a:link > code.highlighter-rouge
+{
+    /*background-color: #f0e372;*/
+    color: #f8f8f2;
+    border: 1px solid deepskyblue;
+}
+a:visited > code.highlighter-rouge
+{
+    color: #f8f8f2;
+    border: 1px solid greenyellow;
+}
+
+a:hover > code.highlighter-rouge
+{
+    background-color: #f0e372;
+    color: #1f262a;
 }
 
 /*===== SVG ICONS =====*/
