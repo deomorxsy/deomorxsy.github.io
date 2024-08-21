@@ -41,17 +41,18 @@ jobs:
     - name: Install dependencies and build oci image
       run: |
         docker run -d -p 5000:5000 --name registry registry:2.7
-        docker buildx build -t localhost:5000/gembag:02 -f ${{ github.workspace }}/Dockerfile .
-        docker push localhost:5000/gembag:02
+        docker buildx build -t localhost:5000/gembag:03 -f ${{ github.workspace }}/Dockerfile .
+        docker push localhost:5000/gembag:03
 
 
     - name: Retrieve artifact from image and fix permissions
       run: |
-        docker run -it --name gembag -d localhost:5000/gembag:02
+        #docker run -it --name gembag -d localhost:5000/gembag:03
+        docker create --name gembag $(docker images | head | awk 'NR==2 {print $3}')
         mkdir -p ${{ github.workspace }}/artifacts/oldsite/
-        docker cp gembag:./* ${{ github.workspace }}/artifacts/oldsite/
+        docker cp gembag:./ ${{ github.workspace }}/artifacts/oldsite/
         cd ${{ github.workspace }}/artifacts/ || echo "[Failed] - Can't change directory."
-        chmod -c -R +rX "./oldsite/_site/" | while read line; do
+        chmod -c -R +rX "./oldsite/*" | while read line; do
           echo "::warning title=Invalid file permissions automatically fixed::$line"
         done
         cd - || return

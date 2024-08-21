@@ -57,7 +57,8 @@ CMD ["jekyll", "serve"]
 
 # =====================================
 
-FROM alpine:3.20 as relay
+#FROM alpine:3.20 as relay
+FROM scratch as relay
 
 COPY --from=builder /app/oldsite/_site .
 
