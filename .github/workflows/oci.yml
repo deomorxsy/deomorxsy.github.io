@@ -1,0 +1,87 @@
+name: submodule to gh-pages ci
+
+
+on:
+  workflow_dispatch:
+  push:
+  branches:
+    - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  # Build job
+  build:
+    # <Not provided for brevity>
+    # At a minimum this job should upload artifacts using actions/upload-pages-artifact
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clone main repository
+      uses: actions/checkout@v4
+
+    - name: Add SSH private keys for submodule repositories
+      uses: webfactory/ssh-agent@v0.9.0
+      with:
+        # setup the deploy key on the private gitmodule repository,
+        # then add on the current as a secret
+        ssh-private-key: ${{ secrets.READ_ONLY_DEPLOY_KEY }}
+
+    - name: Clone submodules
+      run: |
+        cd ./importRepos
+        git submodule update --init --recursive --remote
+        cp ./${{ secrets.POST_SUBMODULE }}/posts/cs/* ../oldsite/_posts/Tech/
+        cp ./${{ secrets.POST_SUBMODULE }}/misc/about/about.md ../oldsite/about.md
+
+        cp -r ./${{ secrets.POST_SUBMODULE }}/assets/* ../oldsite/assets/
+        mkdir -p ../oldsite/assets/about/
+        cp ./${{ secrets.POST_SUBMODULE }}/misc/about/images/* ../oldsite/assets/about/
+
+    - name: Install dependencies and build oci image
+      run: |
+        docker run  -d -p 5000:5000 --name registry registry:2.7
+        docker build -t localhost:5000/gembag:02 -f ${{ github.workspace }}/Dockerfile
+        docker push localhost:5000/gembag:02
+
+
+    - name: Retrieve artifact from image and fix permissions
+      run: |
+        docker run -it --name gembag -d localhost:5000/gembag:02
+        mkdir -p ${{ github.workspace }}/artifacts/oldsite/
+        docker cp gembag:./* ${{ github.workspace }}/artifacts/oldsite/
+        cd ${{ github.workspace }}/artifacts/ || echo "[Failed] - Can't change directory."
+        chmod -c -R +rX "./oldsite/_site/" | while read line; do
+          echo "::warning title=Invalid file permissions automatically fixed::$line"
+        done
+        cd - || return
+
+    - name: Archive production artifacts
+      #(jekyll _site dir)
+      uses: actions/upload-pages-artifact@v3
+      with:
+        name: github-pages
+        path: ./artifacts/oldsite/_site/
+
+  # Deploy job
+  deploy:
+    # Add a dependency to the build job
+    needs: build
+
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    # Specify runner + deployment step
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action

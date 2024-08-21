@@ -38,11 +38,22 @@ RUN echo "gem: --user-install" > ~/.gemrc && \
     bundle install && \
     bundle exec jekyll build
 
+
+#bundle exec jekyll serve && \
+#JEKYLL_PID=$! && \
+#sleep 8 && \
+#kill $JEKYLL_PID && \
+#cd -
+
 #RUN cat /root/.local/share/gem/ruby/3.1.0/extensions/x86_64-linux/3.1.0/ffi-1.17.0/mkmf.log
+
+EXPOSE 8080
 
 ENTRYPOINT ["/bin/sh"]
 
 CMD ["jekyll", "serve"]
+
+
 
 # =====================================
 
