@@ -1,14 +1,13 @@
-name: submodule to gh-pages ci
-
+name: Build OCI image
 
 on:
-  workflow_dispatch:
   push:
-  branches:
-    - main
+    branches:
+      - main
   pull_request:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   # Build job
