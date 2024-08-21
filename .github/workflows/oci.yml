@@ -47,7 +47,6 @@ jobs:
 
     - name: Retrieve artifact from image and fix permissions
       run: |
-        #docker run -it --name gembag -d localhost:5000/gembag:03
         docker create --name gembag $(docker images | head | awk 'NR==2 {print $3}')
         mkdir -p ${{ github.workspace }}/artifacts/oldsite/
         docker cp gembag:./ ${{ github.workspace }}/artifacts/oldsite/
