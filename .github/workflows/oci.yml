@@ -57,31 +57,31 @@ jobs:
         done
         cd - || return
 
-    - name: Archive production artifacts
+    #- name: Archive production artifacts
       #(jekyll _site dir)
-      uses: actions/upload-pages-artifact@v3
-      with:
-        name: github-pages
-        path: ./artifacts/oldsite/_site/
+      #uses: actions/upload-pages-artifact@v4
+      #with:
+      #name: github-pages
+      #path: ./artifacts/oldsite/_site/
 
   # Deploy job
-  deploy:
+  #deploy:
     # Add a dependency to the build job
-    needs: build
+    #needs: build
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
+    #permissions:
+    #pages: write      # to deploy to Pages
+    #id-token: write   # to verify the deployment originates from an appropriate source
 
     # Deploy to the github-pages environment
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    #environment:
+    #name: github-pages
+    #url: ${{ steps.deployment.outputs.page_url }}
 
     # Specify runner + deployment step
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
+    #runs-on: ubuntu-latest
+    #steps:
+    #- name: Deploy to GitHub Pages
+    #id: deployment
+    #uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
