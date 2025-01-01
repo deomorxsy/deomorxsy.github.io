@@ -94,6 +94,14 @@ h3::after {
     overflow: hidden;
 }
 
+h4::after {
+    content: "\A ===================";
+    bottom: 10px;
+    left: 0;
+    white-space: pre-wrap;
+    overflow: hidden;
+}
+
 h1 {
 	font-size: 2.5em;
 	text-align: center;
@@ -346,7 +354,6 @@ img {
   align-self: flex-start;
   max-width: 800px; /*600*/
   padding: .4rem .8rem;
-  overflow: hidden;
   background-color: #26241c;
   border-color: #736624;
   /*vertical-align: middle;
@@ -357,17 +364,26 @@ img {
     background-color: white;
 }*/
 
+div{
+//border: solid 1px red;
+}
+
 .svg-diagram {
-  border-radius: 7px;
+  /* Base styles for the diagram */
+  color: blue;
   align-self: flex-start;
-  max-width: 800px; /*600*/
-  padding: .4rem .8rem;
+  max-width: 800px;
+  padding: 0.4rem 0.8rem;
   overflow: hidden;
-  /*background-color: #b8acac;*/
   background-color: #ebdbb2;
-  border-color: red;
-  /*vertical-align: middle;
-  display: table-cell;*/
+  min-height: 200px;
+
+  box-shadow: 0 0 0 5px #6e5773 inset;
+  border: dashed 5px #5c8984;
+
+}
+
+
 }
 
 blockquote p {
