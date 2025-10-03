@@ -9,6 +9,7 @@ kramdown:
   input: GFM
   html_to_native: true
   parse_span_html: true
+  math_engine: katex
 
 #kramdown:
   #parse_block_html: true
@@ -36,3 +37,5 @@ utterances:
   label: "utteranc.es"
   theme: "gruvbox-dark"
   crossorigin: "anonymous"
+
+include: [".well-known"]
