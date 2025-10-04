@@ -161,8 +161,8 @@ a.tag-nav {
   background-color: #266058;
   padding: 0.1em 0.8em 0.1em 0.8em;
   border-radius:3px;
-  margin-right:1em
-  // clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 10px 100%, 0 50%);
+  /*margin-right:1em;*/
+  clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 10px 100%, 0 50%);
   margin-bottom: 5px;
 }
 
@@ -227,7 +227,7 @@ ul.tags > li {
     margin: auto;
 }
 
-.post-article, { /*a inside the ul from blog posts.*/
+.post-article { /*a inside the ul from blog posts.*/
 	/*dssc-config*/
 	box-shadow:none;
 	font-size:16px;
@@ -237,7 +237,7 @@ ul.tags > li {
 	font-family:Istok Web,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,sans-serif;
 	text-transform:none;
 	font-weight:400;
-	text-decoration: none; /*!IMPORTANT! NOTE: retira o sublinhado do link.*/
+	text-decoration: none;
 
 	/*display:block;
 	font-size:100%;
@@ -248,8 +248,8 @@ ul.tags > li {
 	padding-top:2px;*/
 }
 
-.post-article:hover, .post-article:focus { /*Colore a parte de trás do texto*/
-	background-color: #c44; /*salmon salmão*/
+.post-article:hover, .post-article:focus { /*colors text background*/
+	background-color: #c44; /*salmon*/
     color: white;
 }
 
@@ -345,7 +345,7 @@ img {
     display: table-cell;*/
 }
 .note img {
-    vertical-align: center;
+    vertical-align: baseline;
 }
 
 /* div */
@@ -365,12 +365,12 @@ img {
 }*/
 
 div{
-//border: solid 1px red;
+/*border: solid 1px red;*/
 }
 
 .svg-diagram {
   /* Base styles for the diagram */
-  color: blue;
+  color: #1b1b1b;
   align-self: flex-start;
   max-width: 800px;
   padding: 0.4rem 0.8rem;
@@ -381,10 +381,11 @@ div{
   box-shadow: 0 0 0 5px #6e5773 inset;
   border: dashed 5px #5c8984;
 
-}
 
 
 }
+
+
 
 blockquote p {
     border-radius: 3px;
@@ -410,6 +411,11 @@ blockquote p {
 	line-height: 26px;
 	border-left: 1px solid;
 	padding-left: 15px;
+}
+
+note .svg-diagram .quotes bloquote p {
+      background-color: purple;
+      color: green;
 }
 
 .menu-nav {
@@ -767,6 +773,14 @@ embed {
     height: 100%;*/
     display: block;
     margin: auto;
+}
+
+
+/* ----- Katex ----- */
+
+span .katex-display > .katex {
+  text-align: left;
+  white-space: nowrap;
 }
 
 /*--------MEDIA QUERIES------------*/

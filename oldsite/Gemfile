@@ -3,14 +3,15 @@ source "https://rubygems.org"
 gem "jekyll"
 gem "jekyll-gist"
 # markdown processor
-gem "kramdown", ">= 2.3.1"
+gem "kramdown", ">= 2.5.1"
+gem 'kramdown-math-katex', '~> 1.0', '>= 1.0.1'
 group :jekyll_plugins do
   gem 'jekyll-commonmark'
 end
 
 
-gem "webrick", "~> 1.7"
+gem "webrick", "~> 1.9.1"
 
-gem "ffi", "~> 1.15"
+gem "ffi", "~> 1.17.1"
 
 
