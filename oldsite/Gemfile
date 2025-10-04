@@ -12,6 +12,6 @@ end
 
 gem "webrick", "~> 1.9.1"
 
-gem "ffi", "~> 1.17.1"
+gem "ffi", "~> 1.17.2"
 
 

@@ -26,7 +26,7 @@ RUN useradd --uid 1000 --create-home --shell /bin/bash $APPLICATION_USER && \
 #    chown -R $APPLICATION_USER /app
 
 RUN apt-get update && \
-    apt-get install build-essential ruby-full rake -y
+    apt-get install build-essential ruby-full rake nodejs -y
 
 USER $APPLICATION_USER
 
@@ -49,17 +49,29 @@ RUN echo "gem: --user-install" > ~/.gemrc && \
 
 EXPOSE 8080
 
-ENTRYPOINT ["/bin/sh"]
-
-CMD ["jekyll", "serve"]
+# ENTRYPOINT ["/bin/sh"]
+# CMD ["jekyll", "serve"]
 
 
 
 # =====================================
 
-FROM alpine:3.20 as relay
+# FROM alpine:3.20 as relay
+
+FROM nginx:1.27.5-alpine AS relay
+
+RUN apk upgrade && apk update && apk add dumb-init
 
 COPY --from=builder /app/oldsite/_site .
+COPY --from=builder /app/oldsite/_site /usr/share/nginx/html
+
+EXPOSE 80
+
+# ENTRYPOINT ["/docker-entrypoint.sh"]
+# CMD ["nginx", "-g", "daemon off;"]
+
+# podman build -t gembag:04 -f=./Dockerfile
+# podman run --rm -it -p 8080:80 $CONTAINER_IMAGE_NAME
 
 #FROM scratch
 #COPY --from=builder ./_site/ .
