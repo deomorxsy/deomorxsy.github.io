@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "deomorxsy.github.io"
+abstract: "old blog with jekyllrb SSG, now revamped with CI"
+authors:
+- name: deomorxsy
+  orcid: https://orcid.org/0009-0002-8685-3460
+version: v1.0.0
+doi: 10.5281/zenodo.23869178
+date-released: 2026-11-01
+url: "https://github.com/deomorxsy/deomorxsy.github.io"

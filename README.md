@@ -1,5 +1,7 @@
 ### old-blog
 
+[![blog-doi](https://zenodo.org/badge/DOI/10.5281/zenodo.20807933.svg)](https://doi.org/10.5281/zenodo.20807933)
+
 [![Build Status](https://github.com/deomorxsy/deomorxsy.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/deomorxsy/deomorxsy.github.io/actions/workflows/ci.yml)
 [![OCI image](https://github.com/deomorxsy/deomorxsy.github.io/actions/workflows/oci.yml/badge.svg)](https://github.com/deomorxsy/deomorxsy.github.io/actions/workflows/oci.yml)
 [![license](http://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/deomorxsy/deomorxsy.github.io/blob/main/LICENSE)
