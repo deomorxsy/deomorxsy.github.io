@@ -8,6 +8,7 @@ vendor/
 sample-js.js
 oldsite/_tags/*.md
 oldsite/_posts/Tech/*
+oldsite/_posts/seqart/*
 oldsite/assets/svg/
 oldsite/assets/images/
 oldsite/assets/about/*
